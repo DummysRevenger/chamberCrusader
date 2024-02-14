@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b0564156c2e568b44a94919eeaed9ce7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bloodGoblin: {instanceID: 0}
+  - bloodSludge: {instanceID: 0}
+  - meleeEnemyPrefab: {instanceID: 0}
+  - rangedEnemyPrefab: {instanceID: 0}
+  - spider: {instanceID: 0}
+  - dragon: {instanceID: 0}
+  - sandDragon: {instanceID: 0}
+  - scorpion: {instanceID: 0}
+  - cactusGoblin: {fileID: 520558845528515100, guid: a71ff940e1f16eb4492bb822f2aea06a, type: 3}
+  - sandPile: {fileID: 7590301237093702455, guid: a0ba616452d3a014cb15cfe9e648fe67, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

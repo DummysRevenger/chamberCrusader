@@ -1,0 +1,4 @@
+repository "Block Shoot and Survive@Khexpum@cloud"
+  path "/"
+    br "/main"
+    co "/main"
