@@ -23,7 +23,7 @@ public class enemiesInRoomChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tutorialDoneChecker.S.tutorialDone)
+        if (tutorialDoneChecker.tutorialDone)
         {
             if (enemiesInRoomNumber <= 0)
             {

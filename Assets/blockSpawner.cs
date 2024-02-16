@@ -133,10 +133,10 @@ public class blockSpawner : MonoBehaviour
                 }
                 break;
             case 11:
-                /*if (selectCharacter.mapSelected == "desert")
+                if (selectCharacter.mapSelected == "desert")
                 {
                     block = Instantiate(dashODot, transform.position, Quaternion.identity);
-                }*/
+                }
                 if (selectCharacter.mapSelected == "dungeon")
                 {
                     block = Instantiate(dashSDot, transform.position, Quaternion.identity);
@@ -150,10 +150,10 @@ public class blockSpawner : MonoBehaviour
 
             case 12:
 
-                /*if (selectCharacter.mapSelected == "desert")
+                if (selectCharacter.mapSelected == "desert")
                 {
                     block = Instantiate(O, transform.position, Quaternion.identity);
-                }*/
+                }
 
                 if (selectCharacter.mapSelected == "dungeon")
                 {

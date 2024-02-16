@@ -46,6 +46,12 @@ public class gridMakerOld : MonoBehaviour
     public GameObject nextCell; //used to store the next cell to be visited by the algorithm
 
 
+    private Vector3 previousPosition;
+
+    private Vector3 currentPosition;
+
+    private bool playerMoved = false;
+
 
 
     void GenerateGrid()
@@ -181,7 +187,7 @@ public class gridMakerOld : MonoBehaviour
     public static void FindSmallest9Weights(float[,] gridWeights, GameObject destination)
     {
 
-
+        
 
         //float[,] tempGridWeights = new float[numRows, numCols];
 
@@ -219,7 +225,6 @@ public class gridMakerOld : MonoBehaviour
 
             
 
-
             if (gridOfHeuristics[int.Parse(indexParts[0]), int.Parse(indexParts[1])] < smallestHeuristic) 
                 //if that cells heuristic smaller than the smallest heuristic
             {
@@ -239,18 +244,11 @@ public class gridMakerOld : MonoBehaviour
         }
 
 
-
-        
-
-        
-
-
-
         cellArray.Add(gameObjectsArray[index1, index2]);
 
 
-
         
+
 
         if (gridMakerOld.S.grid[index1, index2] != 1)
         {
@@ -261,30 +259,37 @@ public class gridMakerOld : MonoBehaviour
 
 
 
-        calculateDistanceOfGrid(gameObjectsArray[index1, index2], destination); //calculate the distances from the cell to the destination
-
-
-        if (smallestHeuristic > 1f)
+        if (!gridMakerOld.S.playerMoved)
         {
+
             
-            FindSmallest9Weights(gridWeights, destination);
-        }
-        else
-        {
-            // go through the list, highlighting each cell in the list red
-            foreach (GameObject element in cellArray)
+
+            calculateDistanceOfGrid(gameObjectsArray[index1, index2], destination); //calculate the distances from the cell to the destination
+
+
+            if (smallestHeuristic > 1f)
             {
-                if (element != null)
+
+                FindSmallest9Weights(gridWeights, destination);
+            }
+            else
+            {
+                // go through the list, highlighting each cell in the list red
+                foreach (GameObject element in cellArray)
                 {
-                    element.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f);
+                    if (element != null)
+                    {
+                        element.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f);
+                    }
                 }
             }
+
         }
-
-
 
 
     }
+
+
 
     public static void MoveTowardsTarget(int speed, GameObject otm)
     {
@@ -298,6 +303,7 @@ public class gridMakerOld : MonoBehaviour
             
         }
 
+        
         
 
 
@@ -318,6 +324,7 @@ public class gridMakerOld : MonoBehaviour
             //remove the first item in the list
             if (cellArray.Count > 1)
             {
+                cellArray[0].GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
                 cellArray.Remove(cellArray[0]);
             }
 
@@ -380,17 +387,28 @@ public class gridMakerOld : MonoBehaviour
 
                 GameObject cell = gameObjectsArray[row, col];
 
+                
 
                 if (cell != null && gridMakerOld.S.grid[row, col] != 1)
                 {
                     float distance = CalculateEuclideanDistance(cell.transform.position.x, cell.transform.position.y, ooi.transform.position.x, ooi.transform.position.y);
+                    // distance from the cell to the object to move
                     float weight = CalculateEuclideanDistance(cell.transform.position.x, cell.transform.position.y, destination.transform.position.x, destination.transform.position.y);
+                    // distance from the cell to the object to move to (destination, heuristic)
 
+                    
                     float trueWeight = distance + weight;
 
 
                     //gridOfTruth[row, col] = trueWeight;
                     //gridOfHeuristics[row, col] = distance;
+
+
+                    gridOfHeuristics[row, col] = CalculateEuclideanDistance(cell.transform.position.x, cell.transform.position.y, destination.transform.position.x, destination.transform.position.y);
+
+
+                    
+
                     gridWeights[row, col] = distance;
 
                 }
@@ -420,6 +438,8 @@ public class gridMakerOld : MonoBehaviour
 
         cellArray.Clear();
 
+        cellReached = false;
+
         GenerateGrid();
 
 
@@ -428,6 +448,10 @@ public class gridMakerOld : MonoBehaviour
         FindSmallest9Weights(gridWeights, destination);
 
 
+
+        previousPosition = destination.transform.position;
+
+        
 
     }
 
@@ -442,9 +466,35 @@ public class gridMakerOld : MonoBehaviour
     void Update()
     {
 
-        player = GameObject.Find("destination");
+        
 
 
+
+
+
+        currentPosition = destination.transform.position;
+
+
+        playerMoved = currentPosition != previousPosition;
+
+
+        if (playerMoved)
+        {
+            cellArray.Clear();
+
+
+            cellReached = false;
+
+            calculateDistanceOfGrid(player, destination);
+
+
+
+            FindSmallest9Weights(gridWeights, destination);
+
+            
+            
+            previousPosition = currentPosition;
+        }
 
 
 

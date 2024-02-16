@@ -14,6 +14,9 @@ public class selectCharacter : MonoBehaviour
     void Start()
     {
         characterSelected = null;
+
+        
+        
     }
 
     public void select()

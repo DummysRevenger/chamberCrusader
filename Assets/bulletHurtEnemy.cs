@@ -13,11 +13,11 @@ public class bulletHurtEnemy : MonoBehaviour
         
 
 
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("rangedEnemy"))
         {
-            if (!gameObject.name.Contains("RPG") && !gameObject.name.Contains("explosion"))
+            if (!gameObject.name.Contains("RPG") && !gameObject.name.Contains("explosion") && !gameObject.name.Contains("thrown"))
             {
-                //collision.gameObject.GetComponent<hpStore>().health -= 50;
+                collision.gameObject.GetComponent<hpStore>().health -= 50;
 
                 transform.position = new Vector2(999f, 999f);
 
@@ -25,13 +25,16 @@ public class bulletHurtEnemy : MonoBehaviour
                 audioSource.clip = playerAudioStore.S.audioClips[1];
                 audioSource.Play();
 
-               
 
                 Invoke("destroy", 0.5f);
 
-
+                
             }
-            else
+            else if(gameObject.name.Contains("thrown"))
+            {
+                collision.gameObject.GetComponent<hpStore>().health -= 100;
+            }
+            else if (gameObject.name.Contains("RPG") || gameObject.name.Contains("explosion"))
             {
                 
                 collision.gameObject.GetComponent<hpStore>().health -= 300;

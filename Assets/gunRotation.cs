@@ -25,6 +25,8 @@ public class gunRotation : MonoBehaviour
 
     public bool RPGOnCoolDown = false;
 
+    public bool KitchenKnifeCoolDown = false;
+
     public GameObject playerBullet;
 
     public GameObject playerRocket;
@@ -112,7 +114,7 @@ public class gunRotation : MonoBehaviour
             bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
             bulletRigidbody.velocity = 12f * aimDirection;
 
-            Debug.Log("bunny knife");
+            
 
         }
 
@@ -186,7 +188,17 @@ public class gunRotation : MonoBehaviour
             }
             else if (playerSwitcher.S.playerType == "bunny")
             {
-                Shoot();
+                
+
+                if (!KitchenKnifeCoolDown)
+                {
+                    Shoot();
+
+
+
+                    KitchenKnifeCooldowner.S.StartCoroutineFromOutside();
+
+                }
             }
         }
 

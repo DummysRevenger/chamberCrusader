@@ -1,23 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class tutorialDoneChecker : MonoBehaviour
+public class displayHPNumber : MonoBehaviour
 {
-
-    public static tutorialDoneChecker S;
-
-    public static bool tutorialDone = false;
-
     // Start is called before the first frame update
     void Start()
     {
-        S = this;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        Text hpText = GetComponent<Text>();
+
+        hpText.text = (int)hpStorePlayer.S.playerHealth + "/" + hpStorePlayer.S.maxHealth;
     }
 }

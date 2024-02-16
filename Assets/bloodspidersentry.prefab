@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 3030488637364750304}
   - component: {fileID: 4269650504412860514}
   - component: {fileID: 4584859922472448286}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bloodspidersentry
-  m_TagString: enemy
+  m_TagString: rangedEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,3 +310,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   rb2d: {fileID: 4269650504412860514}
+  hitWall: 0

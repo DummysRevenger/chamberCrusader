@@ -114,7 +114,7 @@ public class mouseColorChange : MonoBehaviour
                 alpha -= 0.2f;
                 gameObject.GetComponent<RawImage>().color = new Color(0f, 1f, 0f, alpha);
                 switchWeapons.enabled = false;
-                tutorialDoneChecker.S.tutorialDone = true;
+                tutorialDoneChecker.tutorialDone = true;
                 
 
             }

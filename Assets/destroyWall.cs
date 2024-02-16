@@ -48,9 +48,9 @@ public class destroyWall : MonoBehaviour
             playerObject = bunny;
         }
 
-        if (playerObject.transform.position.y > 6.4f)
+        if (playerObject.transform.position.y > 7.9f)
         {
-            
+            transform.position = new Vector2(99f, 99f);
             Destroy(gameObject);
         }
     }

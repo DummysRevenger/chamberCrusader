@@ -51,6 +51,26 @@ public class playerMovement : MonoBehaviour
     private void Start()
     {
         S = this;
+
+        switch (selectCharacter.characterSelected)
+        {
+            case "bunny":
+                speed = 5f;
+                break;
+            case "knight":
+                speed = 5f;
+                break;
+
+            case "ninja":
+                speed = 7f;
+                break;
+
+            case "soldier":
+                speed = 6f;
+                break;
+
+        }
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

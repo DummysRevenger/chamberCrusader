@@ -8,6 +8,8 @@ public class hpStorePlayer : MonoBehaviour
 
     public float playerHealth;
 
+    public float maxHealth;
+
     public GameObject gameOverText;
 
 
@@ -17,15 +19,50 @@ public class hpStorePlayer : MonoBehaviour
     public GameObject sequence;
 
     // Start is called before the first frame update
-    void Awake()
-    {
-        playerHealth = 1000f;
-        S = this;
-    }
     void Start()
     {
         
+
+        switch(selectCharacter.characterSelected)
+        {
+            case "bunny":
+                playerHealth = 1500f;
+                maxHealth = 1500f;
+                break;
+            case "knight":
+                playerHealth = 1750f;
+                maxHealth = 1750f;
+                break;
+
+            case "ninja":
+                playerHealth = 1000f;
+                maxHealth = 1000f;
+                break;
+
+            case "soldier":
+                playerHealth = 1200f;
+                maxHealth = 1200f;
+                break;
+
+
+
+
+        }
+        S = this;
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (selectCharacter.mapSelected == "desert" && collision.gameObject.CompareTag("wall"))
+        {
+            playerHealth -= 3f;
+
+            
+
+
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -41,12 +78,18 @@ public class hpStorePlayer : MonoBehaviour
             sequence.SetActive(true);
         }
 
-        playerHealth += 0.1f;
-        
+        if (playerHealth < maxHealth)
+        {
+            playerHealth += 0.1f;
+        }
+
+        if (playerHealth > maxHealth)
+        {
+            playerHealth = maxHealth;
+        }
 
 
 
-        
 
     }
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5841736593734729296}
   - component: {fileID: -8148594496154530639}
   - component: {fileID: -2510519232649988571}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cactusGoblin
   m_TagString: enemy
   m_Icon: {fileID: 0}

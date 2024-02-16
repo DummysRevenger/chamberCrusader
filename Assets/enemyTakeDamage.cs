@@ -10,9 +10,9 @@ public class enemyTakeDamage : MonoBehaviour
 
     public Rigidbody2D rb2d;
 
-    
-        
-    
+
+
+    public bool hitWall = false;
 
     private IEnumerator Reset()
     {
@@ -29,67 +29,110 @@ public class enemyTakeDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Contains("playerBullet") || collision.gameObject.CompareTag("sword") || collision.gameObject.CompareTag("boom") )
+        if (collision.gameObject.name.Contains("playerBullet") || collision.gameObject.CompareTag("sword") || collision.gameObject.CompareTag("boom") || collision.gameObject.name.Contains("thrown") )
         {
-            
 
-
-            if (!gameObject.name.Contains("spider"))
+            if (collision.gameObject.CompareTag("sword"))
             {
-                StopAllCoroutines();
-                OnBegin?.Invoke();
+                Vector2 directionFromObjectToSword = collision.transform.position - transform.position;
 
+
+
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, directionFromObjectToSword, directionFromObjectToSword.magnitude);
+
+
+
+
+                // Ray hit an object
+                if (hit.collider != null && hit.collider.CompareTag("wall"))
+                    {
+                        
+
+                        hitWall = true;
+
+                    }
                 
 
-                Vector2 direction = (transform.position - collision.gameObject.transform.position).normalized;
 
-                if (collision.gameObject.CompareTag("bullet"))
+
+
+            }
+
+
+            if (!hitWall)
+            {
+                if (!gameObject.name.Contains("spider"))
                 {
-                    Debug.Log("come on mate");
-                    direction = ((Vector2)transform.position - (Vector2)collision.gameObject.GetComponent<Rigidbody2D>().velocity).normalized;
+                    StopAllCoroutines();
+                    OnBegin?.Invoke();
+
+
+
+                    Vector2 direction = (transform.position - collision.gameObject.transform.position).normalized;
+
+                    if (collision.gameObject.CompareTag("bullet"))
+                    {
+                        direction = ((Vector2)transform.position - (Vector2)collision.gameObject.GetComponent<Rigidbody2D>().velocity).normalized;
+                    }
+
+
+                    if (collision.gameObject.name.Contains("axe"))
+                    {
+                        rb2d.AddForce(direction * 14f, ForceMode2D.Impulse);
+
+                        Debug.Log("yes");
+                    }
+                    else
+                    {
+                        rb2d.AddForce(direction * 7f, ForceMode2D.Impulse);
+                    }
+
+
+                    
+
+                    StartCoroutine(Reset());
                 }
 
 
-
-                rb2d.AddForce(direction * 7f, ForceMode2D.Impulse);
-
-                StartCoroutine(Reset());
-            }
-
-
-            if (collision.gameObject.name.Contains("playerBullet"))
+                if (collision.gameObject.name.Contains("playerBullet"))
                 {
 
 
-                gameObject.GetComponent<hpStore>().health -= 50;
-            }
-            else if( collision.gameObject.name.Contains("sword"))
-            {
-                gameObject.GetComponent<hpStore>().health -= 65;
-
-                
-
-            }
-            else if (collision.gameObject.name.Contains("knife"))
-            {
-                gameObject.GetComponent<hpStore>().health -= 18;
-            }
-            else if (collision.gameObject.name.Contains("katana"))
-            {
-                gameObject.GetComponent<hpStore>().health -= 25;
-            }
-
-            else if (collision.gameObject.CompareTag("boom"))
-            {
-                gameObject.GetComponent<hpStore>().health -= 150;
-            }
-            else if (collision.gameObject.name.Contains("axe"))
-            {
-                gameObject.GetComponent<hpStore>().health -= 115;
-            }
+                    gameObject.GetComponent<hpStore>().health -= 50;
+                }
+                else if (collision.gameObject.name.Contains("sword"))
+                {
+                    gameObject.GetComponent<hpStore>().health -= 65;
 
 
 
+                }
+                else if (collision.gameObject.name.Contains("knife"))
+                {
+                    gameObject.GetComponent<hpStore>().health -= 18;
+                }
+                else if (collision.gameObject.name.Contains("katana"))
+                {
+                    gameObject.GetComponent<hpStore>().health -= 25;
+                }
+
+                else if (collision.gameObject.CompareTag("boom"))
+                {
+                    gameObject.GetComponent<hpStore>().health -= 150;
+                }
+                else if (collision.gameObject.name.Contains("axe"))
+                {
+                    gameObject.GetComponent<hpStore>().health -= 120;
+                }
+                else if (collision.gameObject.name.Contains("thrown"))
+                {
+                    gameObject.GetComponent<hpStore>().health -= 65;
+
+
+                }
+            }
+
+            hitWall = false;
 
 
         }

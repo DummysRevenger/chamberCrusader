@@ -29,6 +29,7 @@ public class playerLoader : MonoBehaviour
     public GameObject axe;
     public GameObject axeAxis;
     public GameObject axeHurt;
+    public GameObject ammoCounter;
 
 
     // Start is called before the first frame update
@@ -57,6 +58,8 @@ public class playerLoader : MonoBehaviour
         {
             bunny.SetActive(true);
             kitchenKnife.SetActive(true);
+            ammoCounter.SetActive(false);
+            
         }
 
     }

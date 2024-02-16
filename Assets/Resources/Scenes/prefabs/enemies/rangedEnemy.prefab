@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 3664502730276702332}
   - component: {fileID: -5777218564661428068}
   - component: {fileID: -2734349112384631274}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rangedEnemy
-  m_TagString: enemy
+  m_TagString: rangedEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   health: 200
   ammo: {fileID: 5464060022766216572, guid: f5e7af4bf7c93654ca398a650a02926b, type: 3}
   smallSkeleton: {fileID: 0}
+  downAnim: {fileID: 0}
 --- !u!114 &3664502730276702332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 584bdf63913c1084c97a61f358f34cce, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.68
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -336,3 +337,4 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   rb2d: {fileID: 1901254167817670285}
+  hitWall: 0

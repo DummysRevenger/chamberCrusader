@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5841736593734729296}
   - component: {fileID: -8148594496154530639}
   - component: {fileID: -2510519232649988571}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bloodGoblin
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -177,6 +177,7 @@ MonoBehaviour:
   health: 200
   ammo: {fileID: 0}
   smallSkeleton: {fileID: 0}
+  downAnim: {fileID: 0}
 --- !u!114 &5841736593734729296
 MonoBehaviour:
   m_ObjectHideFlags: 0

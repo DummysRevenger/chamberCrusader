@@ -22,6 +22,8 @@ public class bulletDoDamage : MonoBehaviour
             audioSource.Play();
             hpStorePlayer.S.playerHealth -= nextRoomChecker.S.projectileDamage;
 
+            
+
         }
     }
     // Update is called once per frame

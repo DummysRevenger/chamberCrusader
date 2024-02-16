@@ -12,6 +12,9 @@ public class hurtEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+
+
         if (collision.gameObject.CompareTag("enemy"))
         {
             if (gameObject.name == "swordHurtBox")

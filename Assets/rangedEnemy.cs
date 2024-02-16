@@ -6,7 +6,7 @@ public class rangedEnemy : MonoBehaviour
 {
     public Transform player;
 
-    private float shootingRange = 5f;
+    private float shootingRange = 9f;
 
     public float chaseSpeed = 3f;
     public float retreatSpeed = 2f;
@@ -19,7 +19,7 @@ public class rangedEnemy : MonoBehaviour
     public GameObject bulletPrefab;
     
 
-    private float bulletSpeed = 5f;
+    private float bulletSpeed = 6.5f;
     private float shootingCooldown = 2f;
 
     private bool isChasing = true;

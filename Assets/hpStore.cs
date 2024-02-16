@@ -134,10 +134,13 @@ public class hpStore : MonoBehaviour
 
         GetComponent<BoxCollider2D>().enabled = false;
 
+
         GetComponent<SpriteRenderer>().enabled = false;
 
-        GetComponent<Rigidbody2D>().isKinematic = true;
-
+        if (!gameObject.name.Contains("dragon"))
+        {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
         GameObject theAnimation = Instantiate(downAnim, transform.position, Quaternion.identity);
 
         if (gameObject.name.Contains("ranged"))

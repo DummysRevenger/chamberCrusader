@@ -65,19 +65,19 @@ public class nextRoomChecker : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (playerSwitcher.S.playerType == "knight")
+        if (selectCharacter.characterSelected == "knight")
         {
             player = knightPlayer;
         }
-        else if (playerSwitcher.S.playerType == "ninja")
+        else if (selectCharacter.characterSelected == "ninja")
         {
             player = ninjaPlayer;
         }
-        else if (playerSwitcher.S.playerType == "soldier")
+        else if (selectCharacter.characterSelected == "soldier")
         {
             player = soldierPlayer;
         }
-        else if (playerSwitcher.S.playerType == "bunny")
+        else if (selectCharacter.characterSelected == "bunny")
         {
             player = bunnyPlayer;
         }
@@ -142,13 +142,13 @@ public class nextRoomChecker : MonoBehaviour
         }
         
 
-        if (player.transform.position.y > 6.5)
+        if (player.transform.position.y > 8f)
         {
 
             random1 = random.Next(0, 10);
             random2 = random.Next(0, 10);
 
-            hpStorePlayer.S.playerHealth = 1000;
+            hpStorePlayer.S.playerHealth = hpStorePlayer.S.maxHealth;
 
             
             roomNumber++;
