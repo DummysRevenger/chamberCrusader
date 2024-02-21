@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 8494220700083223909}
   - component: {fileID: 6475878745838935117}
   - component: {fileID: 7858255904862985350}
+  - component: {fileID: 7775286039739314780}
   m_Layer: 0
   m_Name: ammo
   m_TagString: Untagged
@@ -272,3 +273,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7775286039739314780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5464060022766216572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c189f6a5b3e5cd44bb4a5d59fbe7be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  knight: {fileID: 0}
+  ninja: {fileID: 0}
+  soldier: {fileID: 0}
+  bunny: {fileID: 0}

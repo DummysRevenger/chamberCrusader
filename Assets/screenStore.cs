@@ -35,6 +35,8 @@ public class screenStore : MonoBehaviour
 
     public GameObject NUnlock;
 
+    public GameObject BUnlock;
+
 
 
 
@@ -63,6 +65,29 @@ public class screenStore : MonoBehaviour
 
         switch(screenStore.S.currentScreen)
         {
+            case "stats":
+                title.SetActive(false);
+                selectButton.SetActive(true);
+
+                // show total score
+                // show total deaths
+                // show total kills
+                // show total ammo pickups
+                // show total melee swings
+                // show shots fired
+                // show enemies encountered
+                // show rooms completed
+                // show rooms seen
+                // rooms skipped
+                // show characters unlocked out of 4
+
+
+                startButton.SetActive(false);
+
+                break;
+
+
+
             case "title":
                 //settingsButton.SetActive(true);
                 title.SetActive(true);
@@ -84,6 +109,7 @@ public class screenStore : MonoBehaviour
 
                 NUnlock.SetActive(false);
                 SUnlock.SetActive(false);
+                BUnlock.SetActive(false);
 
                 break;
 

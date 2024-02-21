@@ -33,6 +33,8 @@ public class enemySpawner : MonoBehaviour
 
     public GameObject bloodSpider;
 
+    public GameObject ghostEnemy;
+
 
     // Start is called before the first frame update
     void Start()
@@ -74,7 +76,7 @@ public class enemySpawner : MonoBehaviour
 
     public void spawnEnemy()
     {
-        int enemyType = random.Next(0, 4);
+        int enemyType = random.Next(0, 5);
         if (gameObject.name.Contains("bottom") || gameObject.name.Contains("middle"))
         {
             
@@ -100,6 +102,8 @@ public class enemySpawner : MonoBehaviour
 
                     Instantiate(meleeEnemyPrefab, finalSpawnPosition, Quaternion.identity);
 
+                    
+
 
                     break;
                 case 2:
@@ -121,6 +125,7 @@ public class enemySpawner : MonoBehaviour
                     
                     break;
                 case 3:
+                    Instantiate(ghostEnemy, transform.position, Quaternion.identity);
                     break;
                 default:
                     break;
@@ -166,7 +171,11 @@ public class enemySpawner : MonoBehaviour
                         Instantiate(meleeEnemyPrefab, transform.position, Quaternion.identity);
                         Instantiate(bigSkeleton, transform.position, Quaternion.identity);
                     }
+                    break;
 
+
+                case 4:
+                    Instantiate(ghostEnemy, transform.position, Quaternion.identity);
 
                     break;
             }

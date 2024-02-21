@@ -18,9 +18,10 @@ public class hpStore : MonoBehaviour
     void Start()
     {
 
-        if (!gameObject.name.Contains("dragon"))
+        if (!gameObject.name.Contains("dragon") && !gameObject.name.Contains("ghost"))
         {
             enemiesInRoomChecker.S.enemiesInRoomNumber++;
+
         }
         
         
@@ -104,25 +105,32 @@ public class hpStore : MonoBehaviour
 
 
         }
-        else if (gameObject.name.Contains("dragon"))
+        else if ( gameObject.name.Contains("dragon") || gameObject.name.Contains("ghost") ) 
         {
             health = 99999f;
 
-            
 
-            switch (selectCharacter.mapSelected)
+
+            if (gameObject.name.Contains("dragon"))
+                {
+                switch (selectCharacter.mapSelected)
+                {
+                    case "dungeon":
+                        downAnim = GameObject.Find("ghost dragon death sprite sheet_0");
+                        break;
+
+                    case "blood":
+                        downAnim = GameObject.Find("blood dragon sprite sheet death_0");
+                        break;
+
+                    case "desert":
+                        downAnim = GameObject.Find("bestdragondeathanimation_0");
+                        break;
+                }
+            }
+            else
             {
-                case "dungeon":
-                    downAnim = GameObject.Find("ghost dragon death sprite sheet_0");
-                    break;
-
-                case "blood":
-                    downAnim = GameObject.Find("blood dragon sprite sheet death_0");
-                    break;
-
-                case "desert":
-                    downAnim = GameObject.Find("bestdragondeathanimation_0");
-                    break;
+                downAnim = GameObject.Find("ghost death_0");
             }
 
         }
@@ -161,7 +169,7 @@ public class hpStore : MonoBehaviour
         
         Destroy(theAnimation);
 
-        if (!gameObject.name.Contains("dragon"))
+        if (!gameObject.name.Contains("dragon") && !gameObject.name.Contains("ghost"))
         {
 
 
@@ -187,9 +195,10 @@ public class hpStore : MonoBehaviour
     void Update()
     {
 
-        if (enemiesInRoomChecker.S.enemiesInRoomNumber <= 0 && gameObject.name.Contains("dragon"))
+        if (enemiesInRoomChecker.S.enemiesInRoomNumber <= 0 && (gameObject.name.Contains("dragon") || gameObject.name.Contains("ghost")) )
         {
             health = 0;
+            
         }
 
 

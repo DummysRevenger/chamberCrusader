@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class meleeEnemy : MonoBehaviour
 {
@@ -14,11 +15,31 @@ public class meleeEnemy : MonoBehaviour
     
     public SpriteRenderer spriteRenderer;
 
+    private int randomSpeed;
+
+    public float movementSpeed;
+
+
     private void Start()
     {
-         player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerHP = hpStorePlayer.S.playerHealth;
+
+        if (gameObject.name.Contains("ghost"))
+        {
+            System.Random random = new System.Random();
+            randomSpeed = random.Next(2, 5);
+            movementSpeed = randomSpeed;
+        }
+
+        else
+        {
+            movementSpeed = nextRoomChecker.S.enemyMovementSpeed; 
+        }
+
+
 
     }
 
@@ -30,7 +51,7 @@ public class meleeEnemy : MonoBehaviour
 
         
         // Move towards the player
-        transform.position += direction * nextRoomChecker.S.enemyMovementSpeed * Time.deltaTime;
+        transform.position += direction * movementSpeed * Time.deltaTime;
 
 
         if (Time.frameCount % 60 < 30)
@@ -60,6 +81,23 @@ public class meleeEnemy : MonoBehaviour
                 hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage;
             }
             
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        // Check if the collided object is the player
+        if (collision.gameObject.CompareTag("Player") && gameObject.name.Contains("ghost"))
+        {
+
+            // Inflict damage on the player
+
+
+            if (playerHP != null)
+            {
+                hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage;
+            }
+
         }
     }
 }

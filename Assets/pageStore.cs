@@ -23,27 +23,55 @@ public class pageStore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pageNumber == 1)
-        {
-            left.SetActive(false);
-            right.SetActive(true);
-        }
-        else if(pageNumber == 2)
-        {
-            left.SetActive(true);
-            right.SetActive(true);
-        }
-        
-        
-            
-            
-        
-        else if(pageNumber == 4)
-        {
-            right.SetActive(false);
-            left.SetActive(true);
-        }
 
+
+
+
+        if (screenStore.S.currentScreen == "char")
+        {
+
+
+            if (pageNumber == 1)
+            {
+                left.SetActive(false);
+                right.SetActive(true);
+            }
+            else if (pageNumber == 2)
+            {
+                left.SetActive(true);
+                right.SetActive(true);
+            }
+
+
+            else if (pageNumber == 4)
+            {
+                right.SetActive(false);
+                left.SetActive(true);
+            }
+
+        }
+        else if (screenStore.S.currentScreen == "map")
+        { 
+
+            
+
+            if (pageNumber == 1)
+            {
+                left.SetActive(false);
+                right.SetActive(true);
+            }
+            else if (pageNumber == 2)
+            {
+                left.SetActive(true);
+                right.SetActive(true);
+            }
+            else if (pageNumber == 3)
+            {
+                right.SetActive(false);
+                left.SetActive(true);
+            }
+        }
+        
 
         if (selectCharacter.characterSelected != null && !pagesReset)
         {

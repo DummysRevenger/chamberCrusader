@@ -15,15 +15,29 @@ public class playerPrefsTest : MonoBehaviour
 
     private static int blueBunnyValue;
 
+    private static int tutorialValue;
+
+
+    private static int deathValue;
+    private static int pointsValue;
+    private static int highScoreValue;
+    private static int killsValue;
+    private static int ammoValue;
+    private static int swingsValue;
+    private static int shotsValue;
+    private static int enemiesEncounteredValue;
+    private static int roomsCompleteValue;
+    private static int roomsSeenValue;
+    private static int roomsSkippedValue;
+
     private void Start()
     {
 
         
 
 
-
-    // Load saved data when the game starts
-    LoadGameData();
+        // Load saved data when the game starts
+        LoadGameData();
     }
 
     private void Update()
@@ -50,7 +64,8 @@ public class playerPrefsTest : MonoBehaviour
         {
         // Save game data using PlayerPrefs
 
-
+        tutorialValue = tutorialDoneChecker.tutorialDone ? 1 : 0;
+            
             room10Value = room10Skipper.room10reached ? 1 : 0;
 
             room20Value = room20checker.room20Reached ? 1 : 0;
@@ -63,7 +78,13 @@ public class playerPrefsTest : MonoBehaviour
 
             blueBunnyValue = blueBunnyUnlockStore.bunnyUnlocked ? 1 : 0;
 
-            PlayerPrefs.SetInt("room10", room10Value);
+        // stats for stats screen
+
+
+
+        PlayerPrefs.SetInt("tutorialDone", tutorialValue);
+
+        PlayerPrefs.SetInt("room10", room10Value);
             PlayerPrefs.SetInt("room20", room20Value);
             PlayerPrefs.SetInt("room30", room30Value);
 
@@ -80,9 +101,19 @@ public class playerPrefsTest : MonoBehaviour
         {
         // Load game data from PlayerPrefs
 
+        if (PlayerPrefs.HasKey("tutorialDone"))
+        {
+            tutorialValue = PlayerPrefs.GetInt("tutorialDone");
+
+            tutorialDoneChecker.tutorialDone = true;
+        }
+
+
         if (PlayerPrefs.HasKey("room10"))
         {
             room10Value = PlayerPrefs.GetInt("room10");
+
+            room10Skipper.room10reached = true;
         }
 
         if (PlayerPrefs.HasKey("bunny"))

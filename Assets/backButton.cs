@@ -17,6 +17,7 @@ public class backButton : MonoBehaviour
         if (screenStore.S.currentScreen == "char")
         {
             gameObject.SetActive(false);
+            
             screenStore.S.currentScreen = "title";
             startButtonText.enabled = true;
 
@@ -25,6 +26,10 @@ public class backButton : MonoBehaviour
         {
             selectCharacter.characterSelected = null;
             screenStore.S.currentScreen = "char";
+        }
+        else if(screenStore.S.currentScreen == "stats")
+        {
+            screenStore.S.currentScreen = "title";
         }
 
 

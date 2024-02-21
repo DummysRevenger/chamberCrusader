@@ -42,23 +42,39 @@ public class changeColourOnHit : MonoBehaviour
         
     }
 
+
+    
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert"))
+
+        
+
+
+        if (collision.gameObject.CompareTag("bullet") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert"))
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
 
             StartCoroutine(changeColourToWhite());
         }
 
-        if ( (collision.gameObject.CompareTag("wall") ) )
+        if ( (collision.gameObject.CompareTag("wall") ) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") )
             {
             GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
 
+            Debug.Log("colliding with ghost");
             }
+
+
     }
 
-    
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if ((collision.gameObject.CompareTag("wall")) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike"))
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+        }
+    }
 
     void OnCollisionExit2D(Collision2D collision)
     {

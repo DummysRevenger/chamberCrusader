@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3030488637364750304}
   - component: {fileID: 4269650504412860514}
   - component: {fileID: 4584859922472448286}
+  - component: {fileID: 5140693074009800294}
   m_Layer: 2
   m_Name: spidersentryspritesheet_0
   m_TagString: rangedEnemy
@@ -298,7 +299,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 99999
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -333,3 +334,15 @@ MonoBehaviour:
       m_Calls: []
   rb2d: {fileID: 4269650504412860514}
   hitWall: 0
+--- !u!114 &5140693074009800294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837151383640317000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358facc9463b3d94ba2a1192b07172c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -75,16 +75,40 @@ public class enemyTakeDamage : MonoBehaviour
                         direction = ((Vector2)transform.position - (Vector2)collision.gameObject.GetComponent<Rigidbody2D>().velocity).normalized;
                     }
 
-
                     if (collision.gameObject.name.Contains("axe"))
                     {
-                        rb2d.AddForce(direction * 14f, ForceMode2D.Impulse);
+                        if (gameObject.name.Contains("ghostEnemy"))
+                        {
+                            float ghostSpeed = GetComponent<meleeEnemy>().movementSpeed;
 
-                        Debug.Log("yes");
+                            Debug.Log("movementSpeed = " + GetComponent<meleeEnemy>().movementSpeed);
+                            rb2d.AddForce(direction * ghostSpeed * 20f, ForceMode2D.Impulse);
+                        }
+                        else
+                        {
+                            rb2d.AddForce(direction * 14f, ForceMode2D.Impulse);
+                        }
+
+
                     }
                     else
                     {
-                        rb2d.AddForce(direction * 7f, ForceMode2D.Impulse);
+
+                        if (gameObject.name.Contains("ghostEnemy"))
+                        {
+                            float ghostSpeed = GetComponent<meleeEnemy>().movementSpeed;
+
+                            Debug.Log("movementSpeed = " + GetComponent<meleeEnemy>().movementSpeed);
+
+                            rb2d.AddForce(direction * ghostSpeed * 15f, ForceMode2D.Impulse);
+                        }
+                        else
+                        {
+                            rb2d.AddForce(direction * 7f, ForceMode2D.Impulse);
+                        }
+
+
+                        
                     }
 
 

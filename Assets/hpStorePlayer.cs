@@ -64,6 +64,7 @@ public class hpStorePlayer : MonoBehaviour
     }
 
 
+
     // Update is called once per frame
     void Update()
     {
@@ -73,6 +74,12 @@ public class hpStorePlayer : MonoBehaviour
             audioSource.clip = playerAudioStore.S.audioClips[0];
             audioSource.Play();
             gameOver = true;
+
+            statsStore.deaths++;
+
+            Debug.Log(statsStore.deaths);
+
+
             DecreaseAudioSourceVolumes();
 
             sequence.SetActive(true);

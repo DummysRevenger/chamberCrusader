@@ -30,6 +30,11 @@ public class nextRoomChecker : MonoBehaviour
     public int random1;
     public int random2;
 
+    public int blueBunnyRandom;
+
+    public GameObject blueBunny;
+
+
     public GameObject bottomLeftSpawner;
     public GameObject bottomRightSpawner;
     public GameObject topLeftSpawner;
@@ -51,6 +56,14 @@ public class nextRoomChecker : MonoBehaviour
 
 
 
+
+    void Awake()
+    {
+        roomNumber = 0;
+
+        Debug.Log("fuck off ");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +71,7 @@ public class nextRoomChecker : MonoBehaviour
 
         
 
-        roomNumber = 0;
+        
     }
 
     // Update is called once per frame
@@ -153,8 +166,14 @@ public class nextRoomChecker : MonoBehaviour
             
             roomNumber++;
 
+            blueBunnyRandom = random.Next(0,70);
 
-            
+            Debug.Log(blueBunnyRandom);
+
+            if (blueBunnyRandom == 69)
+            {
+                blueBunny.SetActive(true);
+            }
 
             projectileDamage = 50 + roomNumber;
 
@@ -208,12 +227,12 @@ public class nextRoomChecker : MonoBehaviour
             topMiddleWall.SetActive(true);
 
             bottomLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
-            middleLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
+            
             topLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
 
             topRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
             bottomRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
-            middleRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
+            
 
             
             
