@@ -1588,16 +1588,29 @@ MonoBehaviour:
   swordUI: {fileID: 2077470518}
   swordAxis: {fileID: 506649413}
   swordHurtBox: {fileID: 453601408}
+  katanaAxis: {fileID: 392458440}
+  katanaHurtBox: {fileID: 447763122}
+  knifeAxis: {fileID: 1295436818}
+  knifeHurtBox: {fileID: 240188364}
+  axeAxis: {fileID: 1244663783}
+  axeHurtBox: {fileID: 2133079610}
   room: {fileID: 1999360137}
   score: {fileID: 1448530256}
   gun: {fileID: 382349139}
+  shotgun: {fileID: 832930562}
+  rpg: {fileID: 355724706}
+  thrownKnife: {fileID: 1417897972}
   TextColor: {r: 0, g: 0, b: 0, a: 0}
   player: {fileID: 138793054}
   knight: {fileID: 950239465}
   ninja: {fileID: 138793054}
+  soldier: {fileID: 6945359463098782842}
+  bunny: {fileID: 885198124}
   rip: {fileID: 21300000, guid: 32376890a7f14d74fbc0688fd049ea11, type: 3}
   scriptToDisable: {fileID: 138793070}
   scriptToDisable2: {fileID: 950239474}
+  scriptToDisable3: {fileID: 6945359463098782860}
+  scriptToDisable4: {fileID: 885198143}
 --- !u!1 &224191240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1622,7 @@ GameObject:
   - component: {fileID: 224191241}
   - component: {fileID: 224191244}
   - component: {fileID: 224191243}
+  - component: {fileID: 224191245}
   m_Layer: 5
   m_Name: skipTo10
   m_TagString: Untagged
@@ -1677,6 +1691,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224191240}
   m_CullTransparentMesh: 1
+--- !u!114 &224191245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224191240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d11a6bb0caa2464cb9af3d3877e9426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 224191243}
 --- !u!1001 &228430389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5736,7 +5763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743f198006ced464f82a221b1fd39a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipped: 0
   skipTo10: {fileID: 224191240}
 --- !u!1 &603792615
 GameObject:
@@ -6329,7 +6355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743f198006ced464f82a221b1fd39a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipped: 0
   skipTo10: {fileID: 224191240}
 --- !u!4 &639524481
 Transform:
@@ -7066,7 +7091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &702745514
 Transform:
   m_ObjectHideFlags: 0
@@ -10277,6 +10302,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54170e2ddc08482489fc5ed93df364df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &885198143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3692799559594166895, guid: 4c1366f78ab45244692e4ca3c40dd97a, type: 3}
+  m_PrefabInstance: {fileID: 885198123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885198124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8b61c739bd0e745a87fa52be9da9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &895369650
@@ -16001,7 +16037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1450475650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23547,6 +23583,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54170e2ddc08482489fc5ed93df364df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6945359463098782860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3692799559594166895, guid: 4c1366f78ab45244692e4ca3c40dd97a, type: 3}
+  m_PrefabInstance: {fileID: 7846366103709922908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945359463098782842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8b61c739bd0e745a87fa52be9da9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7435320637686429427

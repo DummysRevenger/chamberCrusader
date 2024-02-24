@@ -158,6 +158,7 @@ public class gunRotation : MonoBehaviour
             if (playerSwitcher.S.playerType == "knight")
             {
                 Shoot();
+                statsStore.shotsFired++;
                 ammoStore.S.playerAmmo--;
             }
             else if (playerSwitcher.S.playerType == "ninja")
@@ -166,7 +167,7 @@ public class gunRotation : MonoBehaviour
                 {
                     Shoot();
 
-                    
+                    statsStore.shotsFired += 3;
 
                     shotGunCooldowner.S.StartCoroutineFromOutside();
 
@@ -179,7 +180,7 @@ public class gunRotation : MonoBehaviour
                 {
                     Shoot();
 
-
+                    statsStore.shotsFired++;
 
                     RPGCooldowner.S.StartCoroutineFromOutside();
 

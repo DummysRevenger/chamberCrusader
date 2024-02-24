@@ -15,6 +15,7 @@ public class statsStore : MonoBehaviour
     public static int roomsComplete;
     public static int roomsSeen;
     public static int roomsSkipped;
+    public static int charactersUnlocked;
 
     public static statsStore S;
 

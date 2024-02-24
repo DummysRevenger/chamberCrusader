@@ -77,7 +77,7 @@ public class hpStorePlayer : MonoBehaviour
 
             statsStore.deaths++;
 
-            Debug.Log(statsStore.deaths);
+            
 
 
             DecreaseAudioSourceVolumes();

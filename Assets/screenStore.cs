@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class screenStore : MonoBehaviour
 {
@@ -37,10 +38,38 @@ public class screenStore : MonoBehaviour
 
     public GameObject BUnlock;
 
+    public GameObject statsButton;
 
+    //stats screen
+    public GameObject theStatsTitleText;
 
+    public GameObject totalScoreText;
 
+    public GameObject totalDeathsText;
 
+    public GameObject totalKillsText;
+
+    public GameObject totalAmmoPickupsText;
+
+    public GameObject totalMeleeSwingsText;
+
+    public GameObject shotsFiredText;
+
+    public GameObject enemiesEncounteredText;
+
+    public GameObject roomsCompletedText;
+
+    public GameObject roomsSeenText;
+
+    public GameObject roomsSkippedText;
+
+    public GameObject charactersUnlockedText;
+
+    public GameObject highScore;
+
+    public GameObject statsBackground;
+
+    public Text statsButtonText;
 
     // Start is called before the first frame update
     void Start()
@@ -67,28 +96,90 @@ public class screenStore : MonoBehaviour
         {
             case "stats":
                 title.SetActive(false);
-                selectButton.SetActive(true);
+                selectButton.SetActive(false);
 
-                // show total score
-                // show total deaths
-                // show total kills
-                // show total ammo pickups
-                // show total melee swings
-                // show shots fired
-                // show enemies encountered
-                // show rooms completed
-                // show rooms seen
-                // rooms skipped
-                // show characters unlocked out of 4
+                Debug.Log("show stats screen");
+
+                statsBackground.SetActive(true);
+
+                highScore.SetActive(true);
+
+                theStatsTitleText.SetActive(true);
+
+                totalScoreText.SetActive(true);
+
+                totalDeathsText.SetActive(true); 
+                
+                totalKillsText.SetActive(true); 
+
+                totalAmmoPickupsText.SetActive(true); 
+
+                totalMeleeSwingsText.SetActive(true); 
+
+                shotsFiredText.SetActive(true);
+
+                enemiesEncounteredText.SetActive(true); 
+
+                roomsCompletedText.SetActive(true);
+
+                roomsSeenText.SetActive(true); 
+
+                roomsSkippedText.SetActive(true); 
+
+                charactersUnlockedText.SetActive(true); 
+
+    
 
 
                 startButton.SetActive(false);
+
+                statsButtonText.enabled = false;
+
+                statsButton.SetActive(false);
+
+                backButton.SetActive(true);
+
 
                 break;
 
 
 
             case "title":
+                highScore.SetActive(false);
+
+                statsButton.SetActive(true);
+
+                statsButtonText.enabled = true;
+
+
+
+                statsBackground.SetActive(false);
+
+                theStatsTitleText.SetActive(false);
+
+                totalScoreText.SetActive(false);
+
+                totalDeathsText.SetActive(false);
+
+                totalKillsText.SetActive(false);
+
+                totalAmmoPickupsText.SetActive(false);
+
+                totalMeleeSwingsText.SetActive(false);
+
+                shotsFiredText.SetActive(false);
+
+                enemiesEncounteredText.SetActive(false);
+
+                roomsCompletedText.SetActive(false);
+
+                roomsSeenText.SetActive(false);
+
+                roomsSkippedText.SetActive(false);
+
+                charactersUnlockedText.SetActive(false); 
+
+
                 //settingsButton.SetActive(true);
                 title.SetActive(true);
                 selectButton.SetActive(false);
@@ -114,6 +205,10 @@ public class screenStore : MonoBehaviour
                 break;
 
             case "char":
+
+                statsButton.SetActive(false);
+
+
                 //settingsButton.SetActive(false);
                 title.SetActive(false);
                 selectButton.SetActive(true);

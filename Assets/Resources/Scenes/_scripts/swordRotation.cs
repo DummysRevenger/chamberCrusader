@@ -81,6 +81,8 @@ public class swordRotation : MonoBehaviour
 
             onCooldown = true;
 
+            statsStore.swings++;
+
             if (playerSwitcher.S.playerType == "knight")
             {
                 Invoke("coolDown", 0.6f);

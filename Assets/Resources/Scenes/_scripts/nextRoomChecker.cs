@@ -54,14 +54,14 @@ public class nextRoomChecker : MonoBehaviour
     public static bool Desertappeared = false;
     public static bool Bloodappeared = false;
 
-
+    private bool roomNumberIncremented = false;
 
 
     void Awake()
     {
         roomNumber = 0;
 
-        Debug.Log("fuck off ");
+        
     }
 
     // Start is called before the first frame update
@@ -69,7 +69,7 @@ public class nextRoomChecker : MonoBehaviour
     {
         S = this;
 
-        
+        statsStore.roomsSeen++;
 
         
     }
@@ -119,6 +119,20 @@ public class nextRoomChecker : MonoBehaviour
 
         }
 
+        if (roomNumber > 0 && enemiesInRoomChecker.S.enemiesInRoomNumber == 0 && !roomNumberIncremented)
+        {
+            
+
+                statsStore.roomsComplete++;
+
+            if (roomNumber == 10 && room10Skipper.skipped)
+            {
+                statsStore.roomsComplete--;
+            }
+
+            roomNumberIncremented = true;
+        }
+
         if (roomNumber == 30 && enemiesInRoomChecker.S.enemiesInRoomNumber == 0)
         {
 
@@ -157,6 +171,11 @@ public class nextRoomChecker : MonoBehaviour
 
         if (player.transform.position.y > 8f)
         {
+
+            roomNumberIncremented = false;
+
+
+            statsStore.roomsSeen++;
 
             random1 = random.Next(0, 10);
             random2 = random.Next(0, 10);

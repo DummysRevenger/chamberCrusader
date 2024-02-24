@@ -17,6 +17,7 @@ public class hpStore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        statsStore.enemies++;
 
         if (!gameObject.name.Contains("dragon") && !gameObject.name.Contains("ghost"))
         {
@@ -204,7 +205,8 @@ public class hpStore : MonoBehaviour
 
         if (health <= 0 && !alreadyDead)
         {
-            
+
+            statsStore.kills++;
 
             if (!gameObject.name.Contains("sentry") || !gameObject.name.Contains("dragon"))
             {

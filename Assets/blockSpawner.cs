@@ -69,11 +69,11 @@ public class blockSpawner : MonoBehaviour
 
         dashSDot = GameObject.Find("-s.");
 
-        //dashODot = GameObject.Find("-O.");
+        dashODot = GameObject.Find("-O.");
 
         B = GameObject.Find("B");
 
-        //O = GameObject.Find("O");
+        O = GameObject.Find("O");
 
         S = GameObject.Find("S");
 

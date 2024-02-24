@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class room10Skipper : MonoBehaviour
 {
-    public bool skipped = false;
+    public static bool skipped = false;
     public GameObject skipTo10;
     public static bool room10reached = false;
 
@@ -50,6 +50,9 @@ public class room10Skipper : MonoBehaviour
 
             skipped = true;
             nextRoomChecker.S.roomNumber = 10;
+
+            statsStore.roomsSkipped += 10;
+
             skipTo10.SetActive(false);
         }
         else if(nextRoomChecker.S.roomNumber != 0 && !skipped)

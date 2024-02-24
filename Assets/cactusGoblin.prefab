@@ -192,9 +192,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   damage: 10
-  rightSprite: {fileID: -1053813018, guid: 434fe0b56196e014aa2a215e39f7a56f, type: 3}
-  leftSprite: {fileID: -1176420091, guid: 434fe0b56196e014aa2a215e39f7a56f, type: 3}
-  spriteRenderer: {fileID: 0}
+  rightSprite: {fileID: 615795257, guid: d74a1c4f86b711a41b4d77e85bd5e359, type: 3}
+  leftSprite: {fileID: -1440750273, guid: d74a1c4f86b711a41b4d77e85bd5e359, type: 3}
+  spriteRenderer: {fileID: 8768798533907816486}
+  movementSpeed: 0
 --- !u!95 &-8148594496154530639
 Animator:
   serializedVersion: 5
@@ -203,7 +204,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520558845528515100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ba6e5c7289af18a498ba6283abf8af7f, type: 2}
   m_CullingMode: 0
@@ -259,3 +260,4 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   rb2d: {fileID: 8703107150145462227}
+  hitWall: 0

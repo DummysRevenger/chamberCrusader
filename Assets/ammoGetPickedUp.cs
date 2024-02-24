@@ -12,16 +12,20 @@ public class ammoGetPickedUp : MonoBehaviour
             {
                 case "knight":
                     ammoStore.S.playerAmmo += 5;
+                    statsStore.ammo += 5;
                     break;
                 case "ninja":
                     ammoStore.S.playerAmmo += 3;
+                    statsStore.ammo += 3;
                     break;
                 case "soldier":
                     ammoStore.S.playerAmmo += 1;
+                    statsStore.ammo++;
                     break;
 
             }
-           
+
+            
 
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.Play();
