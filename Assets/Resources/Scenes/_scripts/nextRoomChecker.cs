@@ -36,9 +36,13 @@ public class nextRoomChecker : MonoBehaviour
 
 
     public GameObject bottomLeftSpawner;
+    public GameObject bottomLeftSpawner2;
     public GameObject bottomRightSpawner;
+    public GameObject bottomRightSpawner2;
     public GameObject topLeftSpawner;
+    public GameObject topLeftSpawner2;
     public GameObject topRightSpawner;
+    public GameObject topRightSpawner2;
     public GameObject middleLeftSpawner;
     public GameObject middleMiddleSpawner;
     public GameObject middleRightSpawner;
@@ -246,18 +250,27 @@ public class nextRoomChecker : MonoBehaviour
             topMiddleWall.SetActive(true);
 
             bottomLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
-            
+
+            bottomLeftSpawner2.GetComponent<enemySpawner>().spawnEnemy();
+
             topLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
 
+            topLeftSpawner2.GetComponent<enemySpawner>().spawnEnemy();
+
             topRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
+
+            topRightSpawner2.GetComponent<enemySpawner>().spawnEnemy();
+
             bottomRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
-            
 
-            
-            
+            bottomRightSpawner2.GetComponent<enemySpawner>().spawnEnemy();
 
 
-            
+
+
+
+
+
             middleLeftSpawner.GetComponent<blockSpawner>().spawnBlock();
             
 

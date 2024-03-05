@@ -98,7 +98,7 @@ public class screenStore : MonoBehaviour
                 title.SetActive(false);
                 selectButton.SetActive(false);
 
-                Debug.Log("show stats screen");
+                
 
                 statsBackground.SetActive(true);
 

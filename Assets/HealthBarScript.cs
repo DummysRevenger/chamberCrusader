@@ -5,38 +5,75 @@ public class HealthBarScript : MonoBehaviour
 {
     public Slider slider;
     public Image fill;
-    public float playerHealth;
+    private float Health;
+    private float maxHealth;
     public RectTransform fillRect;
     private float initialFillWidth;
     public GameObject player;
     public GameObject ninja;
     public GameObject soldier;
     public GameObject knight;
+    public GameObject bunny;
+
+    public GameObject enemyObject;
+
+    
 
     public void Start()
     {
         initialFillWidth = fillRect.sizeDelta.x;
 
-        if (playerSwitcher.S.playerType == "knight")
+        if (gameObject.name.Contains("player"))
         {
-            player = knight;
-        }
-        if (playerSwitcher.S.playerType == "ninja")
-        {
-            player = ninja;
-        }
-        else if (playerSwitcher.S.playerType == "soldier")
-        {
-            player = soldier;
+
+            if (playerSwitcher.S.playerType == "knight")
+            {
+                player = knight;
+            }
+            if (playerSwitcher.S.playerType == "ninja")
+            {
+                player = ninja;
+            }
+            else if (playerSwitcher.S.playerType == "soldier")
+            {
+                player = soldier;
+            }
+            else if (playerSwitcher.S.playerType == "bunny")
+            {
+                player = bunny;
+            }
         }
 
     }
     public void Update()
     {
 
-        
 
-        playerHealth = hpStorePlayer.S.playerHealth;
+        if (!gameObject.CompareTag("enemyHP"))
+        {
+            Health = hpStorePlayer.S.playerHealth;
+            maxHealth = hpStorePlayer.S.maxHealth;
+            
+
+            // set maxhealth value
+        }
+        else
+        {
+            
+
+            Health = enemyObject.GetComponent<hpStore>().health;
+
+            maxHealth = enemyObject.GetComponent<hpStore>().maxHealth;
+
+
+            // access the enemy game object 
+
+
+            //hpStore enemyHPStore =
+
+            // set maxhealth value
+        }
+
 
         SetHealth();
 
@@ -47,9 +84,10 @@ public class HealthBarScript : MonoBehaviour
 
     public void SetHealth()
     {
-        slider.value = playerHealth;
-        float fillAmount = playerHealth / 1000;
+        slider.value = Health;
+        float fillAmount = Health / maxHealth;
         fill.color = new Color(1 - fillAmount, fillAmount, 0);
+
 
         float newWidth = initialFillWidth * fillAmount;
         fillRect.sizeDelta = new Vector2(newWidth, fillRect.sizeDelta.y);

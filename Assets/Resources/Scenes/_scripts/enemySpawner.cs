@@ -35,11 +35,14 @@ public class enemySpawner : MonoBehaviour
 
     public GameObject ghostEnemy;
 
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
         
+
 
         if (selectCharacter.mapSelected == "blood")
         {
@@ -68,15 +71,16 @@ public class enemySpawner : MonoBehaviour
 
         if (dragon == null)
         {
-            spider = meleeEnemyPrefab;
+            dragon = spider;
         }
+
 
 
     }
 
     public void spawnEnemy()
     {
-        int enemyType = random.Next(0, 5);
+        int enemyType = random.Next(0, 6);
         if (gameObject.name.Contains("bottom") || gameObject.name.Contains("middle"))
         {
             
@@ -85,6 +89,9 @@ public class enemySpawner : MonoBehaviour
             {
                 case 0:
                     Instantiate(meleeEnemyPrefab, transform.position, Quaternion.identity);
+
+                    
+
                     Instantiate(bigSkeleton, transform.position, Quaternion.identity);
                     break;
                 case 1:
@@ -127,6 +134,12 @@ public class enemySpawner : MonoBehaviour
                 case 3:
                     Instantiate(ghostEnemy, transform.position, Quaternion.identity);
                     break;
+                case 4:
+                    if (spider != null)
+                    {
+                        Instantiate(spider, transform.position, Quaternion.identity);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -152,6 +165,7 @@ public class enemySpawner : MonoBehaviour
                     break;
 
                 case 1:
+
                     Instantiate(rangedEnemyPrefab, transform.position, Quaternion.identity);
                     break;
                 case 2:
@@ -175,8 +189,19 @@ public class enemySpawner : MonoBehaviour
 
 
                 case 4:
+                    
                     Instantiate(ghostEnemy, transform.position, Quaternion.identity);
 
+                    break;
+
+                case 5:
+                    if (spider != null)
+                    {
+                        Instantiate(spider, transform.position, Quaternion.identity);
+                    }
+                    break;
+
+                default:
                     break;
             }
         }

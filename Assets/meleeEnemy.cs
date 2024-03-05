@@ -19,10 +19,15 @@ public class meleeEnemy : MonoBehaviour
 
     public float movementSpeed;
 
+    public GameObject healthBar;
 
     private void Start()
     {
+
+        
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerHP = hpStorePlayer.S.playerHealth;
@@ -78,7 +83,14 @@ public class meleeEnemy : MonoBehaviour
             
             if (playerHP != null)
             {
-                hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage;
+                if (gameObject.name.Contains("ghost"))
+                {
+                    hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage * 2;
+                }
+                else
+                {
+                    hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage;
+                }
             }
             
         }

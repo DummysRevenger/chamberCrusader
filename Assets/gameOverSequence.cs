@@ -51,6 +51,9 @@ public class gameOverSequence : MonoBehaviour
     public playerMovement scriptToDisable3;
     public playerMovement scriptToDisable4;
 
+    
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,10 +72,13 @@ public class gameOverSequence : MonoBehaviour
         soldier.GetComponent<SpriteRenderer>().sprite = rip;
         bunny.GetComponent<SpriteRenderer>().sprite = rip;
 
+
         statsStore.highScore = pointsStore.S.points;
 
         scriptToDisable.enabled = false;
         scriptToDisable2.enabled = false;
+        scriptToDisable3.enabled = false;
+        scriptToDisable4.enabled = false;
 
 
         if (selectCharacter.mapSelected == "blood")

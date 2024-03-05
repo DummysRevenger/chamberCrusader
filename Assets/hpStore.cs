@@ -6,7 +6,11 @@ public class hpStore : MonoBehaviour
 {
     public float health = 200;
 
+    public float maxHealth = 200;
+
     public GameObject ammo;
+
+    private GameObject theHealthBar;
 
     public GameObject smallSkeleton;
 
@@ -17,6 +21,9 @@ public class hpStore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        
+
         statsStore.enemies++;
 
         if (!gameObject.name.Contains("dragon") && !gameObject.name.Contains("ghost"))
@@ -48,6 +55,7 @@ public class hpStore : MonoBehaviour
             }
             
                 health = nextRoomChecker.S.enemyHealth;
+            maxHealth = nextRoomChecker.S.enemyHealth;
         }
         else if(gameObject.name.Contains("sentry"))
         {
@@ -67,7 +75,8 @@ public class hpStore : MonoBehaviour
             }
 
             health = nextRoomChecker.S.enemyHealth * 2.5f;
-            
+            maxHealth = nextRoomChecker.S.enemyHealth * 2.5f;
+
         }
         else if(gameObject.name.Contains("bigSkeleton"))
         {
@@ -75,6 +84,7 @@ public class hpStore : MonoBehaviour
             downAnim = GameObject.Find("skeleton death_0");
 
             health = nextRoomChecker.S.enemyHealth * 3f;
+            maxHealth = nextRoomChecker.S.enemyHealth * 3f;
         }
 
         else if (gameObject.name.Contains("smallSkeleton"))
@@ -83,11 +93,13 @@ public class hpStore : MonoBehaviour
             downAnim = GameObject.Find("smallskeletondeath");
 
             health = nextRoomChecker.S.enemyHealth * 1.5f;
-            
+            maxHealth = nextRoomChecker.S.enemyHealth * 1.5f;
+
         }
         else if (gameObject.name.Contains("ranged"))
         {
             health = nextRoomChecker.S.enemyHealth/2;
+            maxHealth = nextRoomChecker.S.enemyHealth / 2;
 
             switch (selectCharacter.mapSelected)
             {
@@ -211,22 +223,33 @@ public class hpStore : MonoBehaviour
             if (!gameObject.name.Contains("sentry") || !gameObject.name.Contains("dragon"))
             {
                 pointsStore.S.points = pointsStore.S.points + 100 + (nextRoomChecker.S.roomNumber - 1) * 50;
+
+                statsStore.points = statsStore.points + 300 + (nextRoomChecker.S.roomNumber - 1) * 50;
+
+                
             }
             else
             {
                 pointsStore.S.points = pointsStore.S.points + 300 + (nextRoomChecker.S.roomNumber - 1) * 50;
+
+                statsStore.points = statsStore.points +  300 + (nextRoomChecker.S.roomNumber - 1) * 50;
+
+
             }
-            
+
             if (gameObject.name.Contains("bigSkeleton"))
             {
                 pointsStore.S.points = pointsStore.S.points + 150 + (nextRoomChecker.S.roomNumber - 1) * 50;
 
+                statsStore.points = statsStore.points + 150 + (nextRoomChecker.S.roomNumber - 1) * 50;
 
                 StartCoroutine(spawnSmallSkeletons());
-                
+
 
 
             }
+
+
 
 
 

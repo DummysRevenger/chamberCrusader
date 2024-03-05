@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5841736593734729296}
   - component: {fileID: -8148594496154530639}
   - component: {fileID: -2510519232649988571}
+  - component: {fileID: 401939458629856830}
   m_Layer: 2
   m_Name: cactusGoblin
   m_TagString: enemy
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  maxHealth: 200
   ammo: {fileID: 0}
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
@@ -196,6 +198,7 @@ MonoBehaviour:
   leftSprite: {fileID: -1440750273, guid: d74a1c4f86b711a41b4d77e85bd5e359, type: 3}
   spriteRenderer: {fileID: 8768798533907816486}
   movementSpeed: 0
+  healthBar: {fileID: 0}
 --- !u!95 &-8148594496154530639
 Animator:
   serializedVersion: 5
@@ -261,3 +264,17 @@ MonoBehaviour:
         m_CallState: 2
   rb2d: {fileID: 8703107150145462227}
   hitWall: 0
+--- !u!114 &401939458629856830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520558845528515100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef890a66c322a849b06b92b8fb99b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStore: {fileID: 0}
+  healthBarPrefab: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}

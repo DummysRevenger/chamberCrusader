@@ -195,6 +195,7 @@ MonoBehaviour:
   rightSprite: {fileID: -220854618, guid: 0eb5998d5ce0e794c9562ed7bf36ca4f, type: 3}
   leftSprite: {fileID: 1680472162, guid: 0eb5998d5ce0e794c9562ed7bf36ca4f, type: 3}
   spriteRenderer: {fileID: 0}
+  movementSpeed: 0
 --- !u!95 &-8148594496154530639
 Animator:
   serializedVersion: 5

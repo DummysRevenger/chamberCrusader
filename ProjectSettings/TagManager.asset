@@ -14,6 +14,7 @@ TagManager:
   - rpg
   - rangedEnemy
   - hazard
+  - enemyHP
   layers:
   - Default
   - TransparentFX

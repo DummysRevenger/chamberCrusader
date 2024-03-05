@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3664502730276702332}
   - component: {fileID: -5777218564661428068}
   - component: {fileID: -2734349112384631274}
+  - component: {fileID: -8350233007139216713}
   m_Layer: 2
   m_Name: rangedEnemy
   m_TagString: rangedEnemy
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  maxHealth: 200
   ammo: {fileID: 5464060022766216572, guid: f5e7af4bf7c93654ca398a650a02926b, type: 3}
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
@@ -338,3 +340,17 @@ MonoBehaviour:
         m_CallState: 2
   rb2d: {fileID: 1901254167817670285}
   hitWall: 0
+--- !u!114 &-8350233007139216713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590301237093702455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef890a66c322a849b06b92b8fb99b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStore: {fileID: 0}
+  healthBarPrefab: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}

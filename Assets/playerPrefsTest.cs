@@ -80,7 +80,9 @@ public class playerPrefsTest : MonoBehaviour
             blueBunnyValue = blueBunnyUnlockStore.bunnyUnlocked ? 1 : 0;
 
         // stats for stats screen
+
         
+
         deathValue = statsStore.deaths;
         pointsValue = statsStore.points;
         highScoreValue = statsStore.highScore;
@@ -94,6 +96,8 @@ public class playerPrefsTest : MonoBehaviour
         roomsSkippedValue = statsStore.roomsSkipped;
 
         charactersUnlockedValue = statsStore.charactersUnlocked;
+
+        
 
 
         PlayerPrefs.SetInt("deaths", deathValue);
@@ -137,50 +141,94 @@ public class playerPrefsTest : MonoBehaviour
         {
             deathValue = PlayerPrefs.GetInt("deaths");
 
+            statsStore.deaths = deathValue;
+
         }
         if (PlayerPrefs.HasKey("points"))
         {
             pointsValue = PlayerPrefs.GetInt("points");
+            statsStore.points = pointsValue;
         }
         if (PlayerPrefs.HasKey("highscore"))
         {
             highScoreValue = PlayerPrefs.GetInt("highscore");
+            statsStore.highScore = highScoreValue;
         }
         if (PlayerPrefs.HasKey("kills"))
         {
+            
             killsValue = PlayerPrefs.GetInt("kills");
+
+            
+            
+
+            statsStore.kills = killsValue;
+
         }
         if (PlayerPrefs.HasKey("ammo"))
         {
             ammoValue = PlayerPrefs.GetInt("ammo");
+
+            statsStore.ammo = ammoValue;
         }
         if (PlayerPrefs.HasKey("swings"))
         {
             swingsValue = PlayerPrefs.GetInt("swings");
+
+            statsStore.swings = swingsValue;
         }
         if (PlayerPrefs.HasKey("shots"))
         {
             shotsValue = PlayerPrefs.GetInt("shots");
+
+            statsStore.shotsFired = shotsValue;
+
+            
+            
+            
+
         }
         if (PlayerPrefs.HasKey("enemies"))
         {
             enemiesEncounteredValue = PlayerPrefs.GetInt("enemies");
+
+            statsStore.enemies = enemiesEncounteredValue;
+
+            
+            
+
         }
         if (PlayerPrefs.HasKey("roomsCompleted"))
         {
             roomsCompleteValue = PlayerPrefs.GetInt("roomsCompleted");
+
+            statsStore.roomsComplete = roomsCompleteValue;
+
+            
+            
+            
         }
         if (PlayerPrefs.HasKey("roomsSeen"))
         {
             roomsSeenValue = PlayerPrefs.GetInt("roomsSeen");
+
+            statsStore.roomsSeen = roomsSeenValue;
         }
         if (PlayerPrefs.HasKey("roomsSkipped"))
         {
             roomsSkippedValue = PlayerPrefs.GetInt("roomsSkipped");
+            statsStore.roomsSkipped = roomsSkippedValue;
         }
         if (PlayerPrefs.HasKey("charsUnlocked"))
         {
             charactersUnlockedValue = PlayerPrefs.GetInt("charsUnlocked");
+
+            statsStore.charactersUnlocked = charactersUnlockedValue;
+
+            
+            
+
+            
         }
 
 

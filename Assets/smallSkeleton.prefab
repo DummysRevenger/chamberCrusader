@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4663894814018661963}
   - component: {fileID: 140114871055762894}
   - component: {fileID: 7526190729974987927}
+  - component: {fileID: 6757383285817916770}
   m_Layer: 2
   m_Name: smallSkeleton
   m_TagString: enemy
@@ -125,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  maxHealth: 200
   ammo: {fileID: 0}
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
@@ -190,6 +192,8 @@ MonoBehaviour:
   rightSprite: {fileID: 0}
   leftSprite: {fileID: 0}
   spriteRenderer: {fileID: 4418534191952084775}
+  movementSpeed: 0
+  healthBar: {fileID: 0}
 --- !u!50 &4663894814018661963
 Rigidbody2D:
   serializedVersion: 4
@@ -260,6 +264,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   rb2d: {fileID: 4663894814018661963}
+  hitWall: 0
 --- !u!114 &7526190729974987927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +277,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41a95b43a11d2749b8fcb69a0ab8101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6757383285817916770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785747222804049020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef890a66c322a849b06b92b8fb99b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStore: {fileID: 0}
+  healthBarPrefab: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}

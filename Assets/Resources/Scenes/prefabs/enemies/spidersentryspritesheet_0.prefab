@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4269650504412860514}
   - component: {fileID: 4584859922472448286}
   - component: {fileID: 5140693074009800294}
+  - component: {fileID: -8486837417887416893}
   m_Layer: 2
   m_Name: spidersentryspritesheet_0
   m_TagString: rangedEnemy
@@ -284,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  maxHealth: 200
   ammo: {fileID: 5464060022766216572, guid: f5e7af4bf7c93654ca398a650a02926b, type: 3}
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
@@ -346,3 +348,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358facc9463b3d94ba2a1192b07172c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8486837417887416893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837151383640317000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef890a66c322a849b06b92b8fb99b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStore: {fileID: 0}
+  healthBarPrefab: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}

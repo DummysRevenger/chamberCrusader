@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3030488637364750304}
   - component: {fileID: 4269650504412860514}
   - component: {fileID: 4584859922472448286}
+  - component: {fileID: 3559019701543245517}
   m_Layer: 2
   m_Name: scorpionsentry
   m_TagString: rangedEnemy
@@ -283,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  maxHealth: 200
   ammo: {fileID: 5464060022766216572, guid: f5e7af4bf7c93654ca398a650a02926b, type: 3}
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
@@ -333,3 +335,17 @@ MonoBehaviour:
       m_Calls: []
   rb2d: {fileID: 4269650504412860514}
   hitWall: 0
+--- !u!114 &3559019701543245517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837151383640317000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef890a66c322a849b06b92b8fb99b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStore: {fileID: 0}
+  healthBarPrefab: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}

@@ -33,7 +33,8 @@ public class changeColourOnHit : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert"))
+        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") 
+            || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 78f/255f, 78f/255f);
 
@@ -51,18 +52,18 @@ public class changeColourOnHit : MonoBehaviour
         
 
 
-        if (collision.gameObject.CompareTag("bullet") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert"))
+        if (collision.gameObject.CompareTag("bullet") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
 
             StartCoroutine(changeColourToWhite());
         }
 
-        if ( (collision.gameObject.CompareTag("wall") ) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") )
+        if ( (collision.gameObject.CompareTag("wall") ) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") && hpStorePlayer.S.playerHealth > 0)
             {
             GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
 
-            Debug.Log("colliding with ghost");
+            
             }
 
 
@@ -70,7 +71,7 @@ public class changeColourOnHit : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if ((collision.gameObject.CompareTag("wall")) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike"))
+        if ((collision.gameObject.CompareTag("wall")) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") && hpStorePlayer.S.playerHealth > 0)
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
         }
@@ -78,7 +79,7 @@ public class changeColourOnHit : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert"))
+        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
         {
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
 

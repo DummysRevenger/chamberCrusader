@@ -13,6 +13,7 @@ public class room10Skipper : MonoBehaviour
     void Start()
     {
 
+        room10reached = false;
 
         nextRoomChecker.S.roomNumber = 0;
 

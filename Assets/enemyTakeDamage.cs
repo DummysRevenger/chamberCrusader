@@ -98,7 +98,6 @@ public class enemyTakeDamage : MonoBehaviour
                         {
                             float ghostSpeed = GetComponent<meleeEnemy>().movementSpeed;
 
-                            Debug.Log("movementSpeed = " + GetComponent<meleeEnemy>().movementSpeed);
 
                             rb2d.AddForce(direction * ghostSpeed * 15f, ForceMode2D.Impulse);
                         }

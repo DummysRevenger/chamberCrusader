@@ -50,6 +50,8 @@ public class selectCharacter : MonoBehaviour
                     if (blueBunnyUnlockStore.bunnyUnlocked)
                     {
                         characterSelected = "bunny";
+
+                        pageStore.S.pageNumber = 1;
                     }
                     break;
             }
