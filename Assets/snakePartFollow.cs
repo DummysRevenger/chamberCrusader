@@ -16,6 +16,24 @@ public class snakePartFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        /*
+       if (gameObject == createBodyParts.S.body1)
+       {
+            partToFollow = createBodyParts.S.theSnake;
+       }
+       else if(gameObject == createBodyParts.S.body2)
+        {
+            partToFollow = createBodyParts.S.body1;
+        }
+        else if(gameObject == createBodyParts.S.body3)
+        {
+            partToFollow = createBodyParts.S.body2;
+        }
+       else if(gameObject == createBodyParts.S.body4)
+        {
+            partToFollow = createBodyParts.S.body3;
+        }*/
+
 
 
         float distance = Vector3.Distance(transform.position, partToFollow.transform.position);

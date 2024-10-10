@@ -6,10 +6,13 @@ public class rangedEnemy : MonoBehaviour
 {
     public Transform player;
 
-    private float shootingRange = 9f;
+    public float shootingRange = 9f;
+
 
     public float chaseSpeed = 3f;
     public float retreatSpeed = 2f;
+
+    public bool enemySlowedDown;
 
 
     public Sprite anim1;
@@ -19,7 +22,7 @@ public class rangedEnemy : MonoBehaviour
     public GameObject bulletPrefab;
     
 
-    private float bulletSpeed = 6.5f;
+    public float bulletSpeed = 6.5f;
     private float shootingCooldown = 2f;
 
     private bool isChasing = true;
@@ -30,15 +33,40 @@ public class rangedEnemy : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public GameObject iceBulletPrefab;
+
+    public GameObject darkBulletPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        if (gameObject.name.Contains("rangedGangstaZombie"))
+        {
+            shootingCooldown = 4f;
+        }
+        else if (gameObject.name.Contains("fireElemental"))
+        {
+            shootingCooldown = 9999f;
+        }
+        
+        if (gameObject.name.Contains("iceElemental"))
+        {
+            bulletPrefab = iceBulletPrefab;
+        }
+
+        if (gameObject.name.Contains("darkElemental"))
+        {
+            bulletPrefab = darkBulletPrefab;
+        }
+
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -78,11 +106,24 @@ public class rangedEnemy : MonoBehaviour
         }
 
         // Check if it's time to shoot
-        if (distanceToPlayer <= shootingRange && !isShooting)
+        if (distanceToPlayer < shootingRange && !isShooting)
         {
             isShooting = true;
             shootingTimer = shootingCooldown;
-            Shoot();
+
+            if (gameObject.name.Contains("rangedGangstaZombie"))
+            {
+                Shoot();
+                Invoke("Shoot", 0.2f);
+                Invoke("Shoot", 0.4f);
+                Invoke("Shoot", 0.6f);
+                Invoke("Shoot", 0.8f);
+                Invoke("Shoot", 1f);
+            }
+            else
+            {
+                Shoot();
+            }
         }
 
         // Update the shooting cooldown timer
@@ -101,7 +142,8 @@ public class rangedEnemy : MonoBehaviour
     {
         // Instantiate a bullet and set its velocity towards the player
 
-        if (bullet != null)
+        
+        if (bullet != null && !gameObject.name.Contains("fireElemental"))
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
@@ -111,6 +153,9 @@ public class rangedEnemy : MonoBehaviour
             AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.Play();
         }
+
+
+        
     }
 
 }

@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class updateAmmo : MonoBehaviour
 {
+
     public Text text;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,4 +20,6 @@ public class updateAmmo : MonoBehaviour
     {
         text.text = ammoStore.S.playerAmmo.ToString();
     }
+
+
 }

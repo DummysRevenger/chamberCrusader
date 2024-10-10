@@ -19,7 +19,9 @@ public class RPGCooldowner : MonoBehaviour
     IEnumerator cooldown()
     {
         gunRotation.S.RPGOnCoolDown = true;
-        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(1.2f - (barrelCountStore.barrelCount * 0.2f));
+
         gunRotation.S.RPGOnCoolDown = false;
     }
     // Update is called once per frame

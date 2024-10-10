@@ -26,6 +26,12 @@ public class chamberTextChange : MonoBehaviour
             case 3:
                 gameObject.GetComponent<Text>().text = "The Desert";
                 break;
+            case 4:
+                gameObject.GetComponent<Text>().text = "The Onion City";
+                break;
+            case 5:
+                gameObject.GetComponent<Text>().text = "RETRIBUTION";
+                break;
         }
 
     }

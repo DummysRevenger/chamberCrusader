@@ -66,9 +66,9 @@ public class showsStats : MonoBehaviour
                 GetComponent<Text>().text = "Rooms Skipped = " + playerPrefsTest.roomsSkippedValue;
                 break;
 
-            case "totalCharactersUnlocked":
+            /*case "totalCharactersUnlocked":
                 GetComponent<Text>().text = "Characters Unlocked = " + playerPrefsTest.charactersUnlockedValue + "/3";
-                break;
+                break;*/
         }
 
     }

@@ -6,9 +6,26 @@ public class changeColourOnHit : MonoBehaviour
 {
     private float currentHealth;
     private float previousHealth;
+
+
+   
+
+
+    public GameObject shield;
+
+    private activateShield activateShieldScript;
+
+    private protectiveAbility protectiveScript;
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -24,65 +41,118 @@ public class changeColourOnHit : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        
-        
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
-        
 
-    }
-
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") 
-            || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 78f/255f, 78f/255f);
-
-
-        }
-        
     }
 
 
     
 
+
+
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-
         
 
-
-        if (collision.gameObject.CompareTag("bullet") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
+        if (gameObject.name == "player") // if the player is the knight
         {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
 
-            StartCoroutine(changeColourToWhite());
-        }
-
-        if ( (collision.gameObject.CompareTag("wall") ) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") && hpStorePlayer.S.playerHealth > 0)
+            if (protectiveScript != null)
             {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
+                if (!protectiveScript.abilityRunning)
+                {
+                    if (!protectiveScript.abilityRunning &&
+                        !collision.gameObject.name.Contains("scytheRay") && !collision.gameObject.name.Contains("Fork") && !collision.gameObject.name.Contains("coinBullet") &&
+                        (collision.gameObject.CompareTag("hazard") || collision.gameObject.CompareTag("bullet") 
+                        || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0))
+                    {
 
-            
+                        GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
+
+                    }
+
+
+
+                    if (!protectiveScript.abilityRunning && !collision.gameObject.name.Contains("Fork") && 
+                        !collision.gameObject.name.Contains("scytheRay") && !collision.gameObject.name.Contains("coinBullet")
+                        && (collision.gameObject.CompareTag("hazard") || collision.gameObject.CompareTag("wall")) 
+                        || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") && hpStorePlayer.S.playerHealth > 0)
+                    {
+                        GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
+
+                    }
+                    
+                }
             }
+        }
+        else // if the player is any other character
+        {
 
+            if (!collision.gameObject.name.Contains("scytheRay") && !collision.gameObject.name.Contains("Fork") && !collision.gameObject.name.Contains("coinBullet") && (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy")
+                        || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0))
+            {
+                GetComponent<SpriteRenderer>().color = new Color(1f, 78f / 255f, 78f / 255f);
+
+
+                
+
+
+            }
+        }
 
     }
 
+
+
     void OnTriggerExit2D(Collider2D collision)
     {
-        if ((collision.gameObject.CompareTag("wall")) || collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike") && hpStorePlayer.S.playerHealth > 0)
+        StartCoroutine(changeColourToWhite());
+
+        if (protectiveScript != null)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+            if (!protectiveScript.abilityRunning)
+            {
+                if (!protectiveAbility.S.abilityRunning && (collision.gameObject.CompareTag("wall") || 
+                    collision.gameObject.name.Contains("ghost") || collision.gameObject.name.Contains("spike")
+                    && hpStorePlayer.S.playerHealth > 0))
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+                }
+
+            }
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
-        {
-            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+        StartCoroutine(changeColourToWhite());
 
+        if (gameObject.name == "player")
+        {
+            if (protectiveScript != null)
+            {
+                if (!protectiveScript.abilityRunning)
+                {
+                    if (!protectiveScript.abilityRunning && !collision.gameObject.name.Contains("coinBullet") &&
+                        !collision.gameObject.name.Contains("scytheRay") && !collision.gameObject.name.Contains("Fork")
+                        && collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || 
+                        (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0)
+                    {
+                        GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+
+                    }
+
+                }
+            }
+        }
+        else
+        {
+            if ((!collision.gameObject.name.Contains("scytheRay") && !collision.gameObject.name.Contains("Fork") && !collision.gameObject.name.Contains("coinBullet")
+                || collision.gameObject.CompareTag("bullet") || collision.gameObject.CompareTag("enemy") || (collision.gameObject.CompareTag("wall") && selectCharacter.mapSelected == "desert") && hpStorePlayer.S.playerHealth > 0))
+            {
+                GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+            }
         }
     }
 

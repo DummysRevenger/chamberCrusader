@@ -24,7 +24,15 @@ public class spawnHealthBar : MonoBehaviour
 
         healthStore = GetComponent<hpStore>(); // the enemy's hp store script
 
-        canvas = GameObject.FindObjectOfType<Canvas>(); // the scene canvas
+        
+
+        GameObject canvasGameObject = GameObject.Find("theCanvas");
+
+
+
+
+
+        canvas = canvasGameObject.GetComponent<Canvas>();
 
 
         healthBar = Instantiate(healthBarPrefab, canvas.transform);

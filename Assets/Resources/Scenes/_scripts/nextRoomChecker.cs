@@ -11,18 +11,26 @@ public class nextRoomChecker : MonoBehaviour
     public GameObject ninjaPlayer;
     public GameObject soldierPlayer;
     public GameObject bunnyPlayer;
+    public GameObject shopPlayer;
+
+    public GameObject playerBeginning;
 
     public GameObject ninjaUnlocked;
+
+    public GameObject youFoundMeExe;
+
     public GameObject soldierUnlocked;
 
     public GameObject DUnlocked;
     public GameObject BZUnlocked;
 
+    public bool rollDone;
+
 
     public GameObject player;
 
-    public float enemyHealth = 50f;
-    public int projectileDamage = 50;
+    public float enemyHealth = 45f;
+    public float projectileDamage = 50f;
     public float meleeDamage = 1f;
     public float enemyMovementSpeed = 2f;
 
@@ -33,6 +41,8 @@ public class nextRoomChecker : MonoBehaviour
     public int blueBunnyRandom;
 
     public GameObject blueBunny;
+
+    public bool nextRoom;
 
 
     public GameObject bottomLeftSpawner;
@@ -47,9 +57,17 @@ public class nextRoomChecker : MonoBehaviour
     public GameObject middleMiddleSpawner;
     public GameObject middleRightSpawner;
 
-    public GameObject thirdSong;
-    public GameObject secondSong;
-    public GameObject song;
+    public GameObject thirdSong; // desert
+    public GameObject secondSong; // blood 
+    public GameObject song; // dungeon
+    public GameObject onionSong; //onion
+    public GameObject caveSong; // limbo 
+    public GameObject mudSong; // mud
+    public GameObject goldSong; // gold
+    public GameObject darkSong; // dark
+    public GameObject stormSong; // lust storm
+    public GameObject b4StormSong; // before the storm (plays in vestibule and swamp for now and first 3 levels of storm)
+    public GameObject gottaGetOutSong; // plays in the fire zone for now
 
 
     public static bool Ninjaappeared = false;
@@ -60,12 +78,17 @@ public class nextRoomChecker : MonoBehaviour
 
     private bool roomNumberIncremented = false;
 
+    public bool spawn;
+
 
     void Awake()
     {
         roomNumber = 0;
+    }
 
-        
+    void setFlag()
+    {
+        nextRoom = false;
     }
 
     // Start is called before the first frame update
@@ -73,35 +96,109 @@ public class nextRoomChecker : MonoBehaviour
     {
         S = this;
 
+        player = GameObject.FindGameObjectWithTag("Player");
+
         statsStore.roomsSeen++;
 
-        
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
 
-        if (selectCharacter.characterSelected == "knight")
+        if (roomNumber % 10 == 0 && !rollDone)
         {
-            player = knightPlayer;
+            randomEventsTrigger.S.roll = true;
         }
-        else if (selectCharacter.characterSelected == "ninja")
+        else if (roomNumber % 10 != 0)
         {
-            player = ninjaPlayer;
+            rollDone = false;
         }
-        else if (selectCharacter.characterSelected == "soldier")
+
+
+        if (selectCharacter.mapSelected == "blood")
         {
-            player = soldierPlayer;
+            secondSong.SetActive(true);
+            song.SetActive(false);
         }
-        else if (selectCharacter.characterSelected == "bunny")
+        else if (selectCharacter.mapSelected == "desert")
         {
-            player = bunnyPlayer;
+            thirdSong.SetActive(true);
+            secondSong.SetActive(false);
+            song.SetActive(false);
         }
+        else if (selectCharacter.mapSelected == "onion")
+        {
+            onionSong.SetActive(true);
+            secondSong.SetActive(false);
+            song.SetActive(false);
+            thirdSong.SetActive(false);
+        }
+        else if (selectCharacter.mapSelected == "retribution")
+        {
+            switch (retributionMapStore.S.mapType)
+            {
+                case "vestibule": // 0 to 10
+                    b4StormSong.SetActive(true);
+                    break;
+                case "limbo": // 11 to 20
+                    caveSong.SetActive(true);
+                    b4StormSong.SetActive(false);
+                    break;
+                case "lust": // 21 to 30
+                    if (roomNumber < 24)
+                    {
+                        b4StormSong.SetActive(true);
+                        caveSong.SetActive(false);
+                    }
+                    else
+                    {
+                        stormSong.SetActive(true);
+                        b4StormSong.SetActive(false);
+                    }
+                    break;
+                case "muddy":
+                    mudSong.SetActive(true);
+                    stormSong.SetActive(false);
+                    break;
+                case "greedy":
+                    goldSong.SetActive(true);
+                    mudSong.SetActive(false);
+                    break;
+                case "angry":
+                    b4StormSong.SetActive(true);
+                    goldSong.SetActive(false);
+                    break;
+                case "fire":
+                    gottaGetOutSong.SetActive(true);
+                    b4StormSong.SetActive(false);
+                    break;
+                case "violence":
+                    secondSong.SetActive(true);
+                    gottaGetOutSong.SetActive(false);
+                    break;
+                case "dark":
+                    darkSong.SetActive(true);
+                    secondSong.SetActive(false);
+                    break;
+                case "ice":
+                    thirdSong.SetActive(true);
+                    darkSong.SetActive(false);
+                    break;
+            }
+        }
+
+
+
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+
 
         if (roomNumber == 20 && enemiesInRoomChecker.S.enemiesInRoomNumber == 0)
         {
-            if (selectCharacter.mapSelected == "dungeon" && !Bloodappeared)
+            /*if (selectCharacter.mapSelected == "dungeon" && !Bloodappeared)
             {
                 room20checker.S.dungeon20Reached();
 
@@ -117,17 +214,17 @@ public class nextRoomChecker : MonoBehaviour
                 Desertappeared = true;
 
                 DUnlocked.SetActive(true);
-            }
-            
+            }*/
+
 
 
         }
 
         if (roomNumber > 0 && enemiesInRoomChecker.S.enemiesInRoomNumber == 0 && !roomNumberIncremented)
         {
-            
 
-                statsStore.roomsComplete++;
+
+            statsStore.roomsComplete++;
 
             if (roomNumber == 10 && room10Skipper.skipped)
             {
@@ -141,7 +238,7 @@ public class nextRoomChecker : MonoBehaviour
         {
 
 
-            if (selectCharacter.mapSelected == "dungeon" && !Ninjaappeared)
+            /*if (selectCharacter.mapSelected == "dungeon" && !Ninjaappeared)
             {
                 room30checker.S.dungeon30Reached();
                 Ninjaappeared = true;
@@ -155,103 +252,146 @@ public class nextRoomChecker : MonoBehaviour
                 soldierUnlocked.SetActive(true);
 
                 
-            }
+            }*/
 
         }
 
 
-        if (selectCharacter.mapSelected == "blood")
+        if (roomNumber == 100)
         {
-            secondSong.SetActive(true);
-            song.SetActive(false);
-        }
-        else if (selectCharacter.mapSelected == "desert")
-        {
-            thirdSong.SetActive(true);
-            secondSong.SetActive(false);
-            song.SetActive(false);
+            youFoundMeExe.SetActive(true);
+
+            enemiesInRoomChecker.S.enemiesInRoomNumber = 99999;
         }
         
 
-        if (player.transform.position.y > 8f)
+        if (player != null)
         {
 
-            roomNumberIncremented = false;
-
-
-            statsStore.roomsSeen++;
-
-            random1 = random.Next(0, 10);
-            random2 = random.Next(0, 10);
-
-            hpStorePlayer.S.playerHealth = hpStorePlayer.S.maxHealth;
-
-            
-            roomNumber++;
-
-            blueBunnyRandom = random.Next(0,70);
-
-            Debug.Log(blueBunnyRandom);
-
-            if (blueBunnyRandom == 69)
+            if (player.transform.position.y > 7.9f && enemiesInRoomChecker.S.enemiesInRoomNumber == 0
+                && tutorialDoneChecker.tutorialDone)
             {
-                blueBunny.SetActive(true);
-            }
-
-            projectileDamage = 50 + roomNumber;
-
-            meleeDamage = 0.05f * roomNumber;
-
-            enemyMovementSpeed += 0.025f * roomNumber;
-
-            if (enemyMovementSpeed >= 4.5f)
-            {
-                enemyMovementSpeed = 4f;
-            }
-
-            enemyHealth += 10;
 
 
+                
 
-            if (selectCharacter.mapSelected == "blood")
-            {
-                projectileDamage = 60 + roomNumber;
+                roomNumberIncremented = false;
 
-                meleeDamage = 0.075f * roomNumber;
+                
 
-                enemyMovementSpeed += 0.045f * roomNumber;
+                
+
+
+                // destroy all walls
+
+                /*
+                GameObject[] walls = GameObject.FindGameObjectsWithTag("wall");
+
+                foreach (GameObject wall in walls)
+                {
+                    Destroy(wall);
+                }
+                */
+
+
+                nextRoom = true;
+
+
+
+                statsStore.roomsSeen++;
+
+                random1 = random.Next(0, 10);
+                random2 = random.Next(0, 10);
+
+                hpStorePlayer.S.playerHealth = hpStorePlayer.S.maxHealth;
+
+
+                roomNumber++;
+
+                blueBunnyRandom = random.Next(0, 70);
+
+                if (blueBunnyRandom == 69)
+                {
+                    blueBunny.SetActive(true);
+                }
+
+                projectileDamage = 50 + roomNumber;
+
+                meleeDamage = 0.05f * roomNumber;
+
+                enemyMovementSpeed += 0.025f * roomNumber;
 
                 if (enemyMovementSpeed >= 4.5f)
                 {
                     enemyMovementSpeed = 4f;
                 }
 
-                enemyHealth += 15;
-            }
-            else if (selectCharacter.mapSelected == "desert")
-            {
-                projectileDamage = 75 + roomNumber;
+                enemyHealth += 5;
 
-                meleeDamage = 0.1f * roomNumber;
 
-                enemyMovementSpeed += 0.065f * roomNumber;
 
-                if (enemyMovementSpeed >= 4.5f)
+                if (selectCharacter.mapSelected == "blood")
                 {
-                    enemyMovementSpeed = 4f;
+                    projectileDamage = 60 + roomNumber;
+
+                    meleeDamage = 0.075f * roomNumber;
+
+                    enemyMovementSpeed += 0.045f * roomNumber;
+
+                    if (enemyMovementSpeed >= 4.5f)
+                    {
+                        enemyMovementSpeed = 4f;
+                    }
+
+                    enemyHealth += 8;
+                }
+                else if (selectCharacter.mapSelected == "desert")
+                {
+                    projectileDamage = 75 + roomNumber;
+
+                    meleeDamage = 0.1f * roomNumber;
+
+                    enemyMovementSpeed += 0.065f * roomNumber;
+
+                    if (enemyMovementSpeed >= 4.5f)
+                    {
+                        enemyMovementSpeed = 4f;
+                    }
+
+                    enemyHealth += 12;
                 }
 
-                enemyHealth += 20;
+
+
+                
+
+                topMiddleWall.SetActive(true);
+
+
+                Invoke("setFlag", 1f);
+
+                if (roomNumber % 10 != 0)
+                {
+                    triggerSpawners();
+
+                }
+
+                
+
             }
+        }
+    }
 
+    public void triggerSpawners()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = playerBeginning.transform.position;
 
+        if (roomNumber != 0)
+        {
+            //bottomLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
 
-            playerMovement.S.transform.position = new Vector3(0f, -3f, 0f);
-            topMiddleWall.SetActive(true);
-
-            bottomLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
-
-            bottomLeftSpawner2.GetComponent<enemySpawner>().spawnEnemy();
+            //bottomLeftSpawner2.GetComponent<enemySpawner>().spawnEnemy();
 
             topLeftSpawner.GetComponent<enemySpawner>().spawnEnemy();
 
@@ -261,26 +401,15 @@ public class nextRoomChecker : MonoBehaviour
 
             topRightSpawner2.GetComponent<enemySpawner>().spawnEnemy();
 
-            bottomRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
+            //bottomRightSpawner.GetComponent<enemySpawner>().spawnEnemy();
 
-            bottomRightSpawner2.GetComponent<enemySpawner>().spawnEnemy();
-
-
-
-
-
-
+            //bottomRightSpawner2.GetComponent<enemySpawner>().spawnEnemy();
 
             middleLeftSpawner.GetComponent<blockSpawner>().spawnBlock();
-            
 
-            
-            
             middleRightSpawner.GetComponent<blockSpawner>().spawnBlock();
 
             middleMiddleSpawner.GetComponent<blockSpawner>().spawnBlock();
-            
-
         }
     }
 }

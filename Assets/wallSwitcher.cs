@@ -15,14 +15,38 @@ public class wallSwitcher : MonoBehaviour
 
 
 
+    }
+
+    
+
+    // Update is called once per frame
+    void Update()
+    {
+        Sprite dungeonEndWall = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/endwall");
+        Sprite dungeon1x1 = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/1x1");
+        Sprite dungeon2x1 = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/dungeon2x1");
 
 
+        Sprite bloodendwall = Resources.Load<Sprite>("Scenes/new walls/blood walls/bloodendwall");
+        Sprite blood1x1 = Resources.Load<Sprite>("Scenes/new walls/blood walls/1x1");
+        Sprite blood2x1 = Resources.Load<Sprite>("Scenes/new walls/blood walls/blood2x1");
+
+        Sprite desertendwall = Resources.Load<Sprite>("Scenes/new walls/desert walls/endwall");
+        Sprite desert1x1 = Resources.Load<Sprite>("Scenes/new walls/desert walls/1x1");
+        Sprite desert2x1 = Resources.Load<Sprite>("Scenes/new walls/desert walls/2x1");
+
+        Sprite onionEndwall = Resources.Load<Sprite>("Scenes/new walls/onion walls/endwall");
+        Sprite onion1x1 = Resources.Load<Sprite>("Scenes/new walls/onion walls/1x1");
+        Sprite onion2x1 = Resources.Load<Sprite>("Scenes/new walls/onion walls/2x1");
+
+
+        Sprite iceEndWall = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/iceendwall");
+        Sprite ice1x1 = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/1x1ice");
+        Sprite ice2x1 = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/ice2x1");
 
         if (selectCharacter.mapSelected == "dungeon")
         {
-            Sprite dungeonEndWall = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/endwall");
-            Sprite dungeon1x1 = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/1x1");
-            Sprite dungeon2x1 = Resources.Load<Sprite>("Scenes/new walls/dungeon walls/dungeon2x1");
+            
 
 
             if (gameObject.CompareTag("wall"))
@@ -31,7 +55,7 @@ public class wallSwitcher : MonoBehaviour
                 {
                     spriteRenderer.sprite = dungeon1x1;
                 }
-                else 
+                else
                 {
                     spriteRenderer.sprite = dungeon2x1;
                 }
@@ -44,11 +68,9 @@ public class wallSwitcher : MonoBehaviour
         }
         else if (selectCharacter.mapSelected == "blood")
         {
-            Sprite bloodendwall = Resources.Load<Sprite>("Scenes/new walls/blood walls/bloodendwall");
-            Sprite blood1x1 = Resources.Load<Sprite>("Scenes/new walls/blood walls/1x1");
-            Sprite blood2x1 = Resources.Load<Sprite>("Scenes/new walls/blood walls/blood2x1");
+            
 
-            spriteRenderer.color = new Color(0.6f,0.6f,0.6f);
+            spriteRenderer.color = new Color(0.6f, 0.6f, 0.6f);
 
 
             if (gameObject.CompareTag("wall"))
@@ -59,10 +81,10 @@ public class wallSwitcher : MonoBehaviour
                 }
                 else
                 {
-                    
+
                     spriteRenderer.sprite = blood2x1;
                 }
-                
+
             }
             else
             {
@@ -71,9 +93,7 @@ public class wallSwitcher : MonoBehaviour
         }
         else if (selectCharacter.mapSelected == "desert")
         {
-            Sprite desertendwall = Resources.Load<Sprite>("Scenes/new walls/desert walls/endwall");
-            Sprite desert1x1 = Resources.Load<Sprite>("Scenes/new walls/desert walls/1x1");
-            Sprite desert2x1 = Resources.Load<Sprite>("Scenes/new walls/desert walls/2x1");
+            
 
             if (gameObject.CompareTag("wall"))
             {
@@ -93,14 +113,149 @@ public class wallSwitcher : MonoBehaviour
                 spriteRenderer.sprite = desertendwall;
             }
         }
+        else if (selectCharacter.mapSelected == "retribution")
+        {
+            
 
-    }
 
-    
+            if (gameObject.CompareTag("wall"))
+            {
+                if (gameObject.name.Contains("blockWall"))
+                {
+                    spriteRenderer.sprite = dungeon1x1;
+                }
+                else
+                {
+                    spriteRenderer.sprite = dungeon2x1;
+                }
+            }
+            else
+            {
+                spriteRenderer.sprite = dungeonEndWall;
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            switch (retributionMapStore.S.mapType)
+            {
+                case "vestibule":
+                    spriteRenderer.color = new Color(255f / 255f, 0f / 255f, 0f);
+                    break;
+                case "limbo":
+                    spriteRenderer.color = new Color(150f / 255f, 75f / 255f, 0f);
+                    break;
+                case "lust":
+                    spriteRenderer.color = new Color(150f / 255f, 150f / 255f, 150f/255f);
+                    break;
+                case "muddy":
+                    
+
+                    if (gameObject.CompareTag("wall"))
+                    {
+                        if (gameObject.name.Contains("blockWall"))
+                        {
+                            spriteRenderer.sprite = onion1x1;
+                        }
+                        else
+                        {
+
+                            spriteRenderer.sprite = onion2x1;
+                        }
+
+                    }
+                    else
+                    {
+                        spriteRenderer.sprite = onionEndwall;
+                    }
+
+
+                    spriteRenderer.color = new Color(150f / 255f, 75f / 255f, 0f);
+                    break;
+                case "greedy":
+                    spriteRenderer.color = new Color(200f / 255f, 150f / 255f, 0f);
+                    break;
+                case "angry":
+                    
+
+                    if (gameObject.CompareTag("wall"))
+                    {
+                        if (gameObject.name.Contains("blockWall"))
+                        {
+                            spriteRenderer.sprite = onion1x1;
+                        }
+                        else
+                        {
+
+                            spriteRenderer.sprite = onion2x1;
+                        }
+
+                    }
+                    else
+                    {
+                        spriteRenderer.sprite = onionEndwall;
+                    }
+
+                    spriteRenderer.color = new Color(0f / 255f, 100f / 255f, 0f);
+                    break;
+                case "fire":
+                    spriteRenderer.color = new Color(255 / 255f, 60 / 255f, 0f);
+                    break;
+                case "violence":
+                    
+
+                    spriteRenderer.color = new Color(0.6f, 0.6f, 0.6f);
+
+                    if (gameObject.CompareTag("wall"))
+                    {
+                        if (gameObject.name.Contains("blockWall"))
+                        {
+                            spriteRenderer.sprite = blood1x1;
+                        }
+                        else
+                        {
+
+                            spriteRenderer.sprite = blood2x1;
+                        }
+
+                    }
+                    else
+                    {
+                        spriteRenderer.sprite = bloodendwall;
+                    }
+                    break;
+                case "dark":
+                    spriteRenderer.color = new Color(20f / 255f, 20f / 255f, 20f/255f);
+                    break;
+                case "ice":
+
+                    // fix this
+
+
+                    spriteRenderer.color = new Color(186f / 255f, 242f / 255f, 239/255f);
+                    break;
+
+            }
+
+        }
+        else if (selectCharacter.mapSelected == "onion")
+        {
+            
+
+            if (gameObject.CompareTag("wall"))
+            {
+                if (gameObject.name.Contains("blockWall"))
+                {
+                    spriteRenderer.sprite = onion1x1;
+                }
+                else
+                {
+
+                    spriteRenderer.sprite = onion2x1;
+                }
+
+            }
+            else
+            {
+                spriteRenderer.sprite = onionEndwall;
+            }
+        }
     }
 }

@@ -23,6 +23,11 @@ public class enemiesInRoomChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //Debug.Log(enemiesInRoomNumber);
+
+        
+
         if (tutorialDoneChecker.tutorialDone)
         {
             if (enemiesInRoomNumber <= 0)
@@ -37,6 +42,10 @@ public class enemiesInRoomChecker : MonoBehaviour
                 TopWall.SetActive(true);
 
             }
+        }
+        else
+        {
+            TopWall.SetActive(true);
         }
     }
 }

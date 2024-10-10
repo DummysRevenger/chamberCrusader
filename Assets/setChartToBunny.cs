@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class setChartToBunny : MonoBehaviour
 {
+    public GameObject bunny;
+
+
+
     void Awake()
     {
 
         selectCharacter.characterSelected = "bunny";
-
-        selectCharacter.mapSelected = "desert";
-
         
+
+        bunny.SetActive(true);
 
     }
 
@@ -19,12 +22,12 @@ public class setChartToBunny : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        playerSwitcher.S.playerType = "bunny";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

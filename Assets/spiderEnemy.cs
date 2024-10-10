@@ -18,7 +18,7 @@ public class spiderEnemy : MonoBehaviour
 
 
     private float bulletSpeed = 5f;
-    private float shootingCooldown = 1f;
+    private float shootingCooldown = 2f;
 
     private bool isChasing = true;
     private float shootingTimer = 0f;
@@ -44,9 +44,6 @@ public class spiderEnemy : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        
-
-       
         
 
         // Check if it's time to shoot

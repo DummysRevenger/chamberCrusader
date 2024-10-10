@@ -33,6 +33,9 @@ public class textChangeColor : MonoBehaviour
         {
             theText.color = Color.black;
         }
-
+        else if (selectCharacter.mapSelected == "retribution" && (retributionMapStore.S.mapType == "fire" || retributionMapStore.S.mapType == "violence"))
+        {
+            theText.color = Color.blue;
+        }
     }
 }

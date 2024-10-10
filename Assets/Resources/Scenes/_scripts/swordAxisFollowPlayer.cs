@@ -4,30 +4,25 @@ using UnityEngine;
 
 public class swordAxisFollowPlayer : MonoBehaviour
 {
-    public GameObject knightObject;
-    public GameObject ninjaObject;
-    public GameObject soldierObject;
-    public GameObject bunnyObject;
+    private GameObject player;
+    
+
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerSwitcher.S.playerType == "knight")
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
         {
-            transform.position = knightObject.transform.position;
-        }
-        else if (playerSwitcher.S.playerType == "ninja")
-        {
-            transform.position = ninjaObject.transform.position;
-        }
-        else if (playerSwitcher.S.playerType == "soldier")
-        {
-            transform.position = soldierObject.transform.position;
-        }
-        else if (playerSwitcher.S.playerType == "bunny")
-        {
-            transform.position = bunnyObject.transform.position;
+            transform.position = player.transform.position;
         }
     }
 }

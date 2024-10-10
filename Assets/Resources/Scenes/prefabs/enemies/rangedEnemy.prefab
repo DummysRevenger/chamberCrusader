@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -8350233007139216713}
   m_Layer: 2
   m_Name: rangedEnemy
-  m_TagString: rangedEnemy
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7590301237093702455}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -149,7 +150,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,7 +162,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &8586778587040584047
@@ -178,8 +179,12 @@ MonoBehaviour:
   health: 200
   maxHealth: 200
   ammo: {fileID: 5464060022766216572, guid: f5e7af4bf7c93654ca398a650a02926b, type: 3}
+  midasTouched: 0
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
+  playerMovementScript: {fileID: 0}
+  paladinSword: {fileID: 0}
+  paladinHurtBox: {fileID: 0}
 --- !u!114 &3664502730276702332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,13 +198,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  shootingRange: 9
   chaseSpeed: 3
   retreatSpeed: 2
+  enemySlowedDown: 0
   anim1: {fileID: 21300000, guid: e5a47b9e9b1c5104b951fa3e766db622, type: 3}
   anim2: {fileID: 21300000, guid: f1dbded7d900ecd4f9ebdbf1bf60a01d, type: 3}
   anim3: {fileID: 21300000, guid: ca4f6b884d7f78144b0e93bbfb25685e, type: 3}
-  bulletPrefab: {fileID: 2416608592549022103, guid: a684821a08cd47d4ea287005b90e5827, type: 3}
-  bullet: {fileID: 2416608592549022103, guid: a684821a08cd47d4ea287005b90e5827, type: 3}
+  bulletPrefab: {fileID: 2416608592549022103, guid: d34649c8cbca937478d7bccefee61c2e, type: 3}
+  bulletSpeed: 6.5
+  bullet: {fileID: 2416608592549022103, guid: d34649c8cbca937478d7bccefee61c2e, type: 3}
+  iceBulletPrefab: {fileID: 0}
+  darkBulletPrefab: {fileID: 0}
 --- !u!82 &-5777218564661428068
 AudioSource:
   m_ObjectHideFlags: 0
@@ -212,7 +222,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 584bdf63913c1084c97a61f358f34cce, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.24
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -339,6 +349,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   rb2d: {fileID: 1901254167817670285}
+  bloodGoblinPrefab: {fileID: 0}
   hitWall: 0
 --- !u!114 &-8350233007139216713
 MonoBehaviour:

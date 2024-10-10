@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: e0eddacbd9452fb48a81572da30b87e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6675934375261013653
+    second: coin spin_flip_0
+  - first:
+      213: 7423205638645953627
+    second: coin spin_flip_1
+  - first:
+      213: -8218884053104002263
+    second: coin spin_flip_2
+  - first:
+      213: -2897958015750138971
+    second: coin spin_flip_3
+  - first:
+      213: 2369827017496340684
+    second: coin spin_flip_4
+  - first:
+      213: 3029070850205626914
+    second: coin spin_flip_5
+  - first:
+      213: 2317712075003371256
+    second: coin spin_flip_6
+  - first:
+      213: -4878801978002455009
+    second: coin spin_flip_7
+  - first:
+      213: 4069366078655484512
+    second: coin spin_flip_8
+  - first:
+      213: -2920504033006254397
+    second: coin spin_flip_9
+  - first:
+      213: -981742683597133758
+    second: coin spin_flip_10
+  - first:
+      213: 7848374534308020695
+    second: coin spin_flip_11
+  - first:
+      213: -864933834820620513
+    second: coin spin_flip_12
+  - first:
+      213: -6192946297970471256
+    second: coin spin_flip_13
+  - first:
+      213: -487581532974285042
+    second: coin spin_flip_14
+  - first:
+      213: 2545965071268656831
+    second: coin spin_flip_15
+  - first:
+      213: 7802186050744156637
+    second: coin spin_flip_16
+  - first:
+      213: 9038989475617087934
+    second: coin spin_flip_17
+  - first:
+      213: -2467381650881252952
+    second: coin spin_flip_18
+  - first:
+      213: 1958015876058829431
+    second: coin spin_flip_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coin spin_flip_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 47
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596804591fea5ac50800000000000000
+      internalID: 6675934375261013653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 47
+        width: 94
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b543b22d236840760800000000000000
+      internalID: 7423205638645953627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_2
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 47
+        width: 82
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92bfc9ccf78a0fd80800000000000000
+      internalID: -8218884053104002263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_3
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 47
+        width: 66
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a39739e98268c7d0800000000000000
+      internalID: -2897958015750138971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_4
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 47
+        width: 46
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc82ef4dd1153e020800000000000000
+      internalID: 2369827017496340684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_5
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 47
+        width: 26
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2223ff9b3eb690a20800000000000000
+      internalID: 3029070850205626914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_6
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 47
+        width: 42
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe953a3ada2a2020800000000000000
+      internalID: 2317712075003371256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_7
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 47
+        width: 62
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16c0b333730b4cb0800000000000000
+      internalID: -4878801978002455009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_8
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 47
+        width: 82
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062d84b53ea497830800000000000000
+      internalID: 4069366078655484512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_9
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 47
+        width: 94
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c601933e094877d0800000000000000
+      internalID: -2920504033006254397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_10
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 47
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248aa531b362062f0800000000000000
+      internalID: -981742683597133758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_11
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 47
+        width: 94
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1c6a57e070bec60800000000000000
+      internalID: 7848374534308020695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_12
+      rect:
+        serializedVersion: 2
+        x: 2459
+        y: 47
+        width: 82
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1fec4582432ff3f0800000000000000
+      internalID: -864933834820620513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_13
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 47
+        width: 62
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae4664572c3e0aa0800000000000000
+      internalID: -6192946297970471256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_14
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 47
+        width: 42
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ff608dd23cb39f0800000000000000
+      internalID: -487581532974285042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_15
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 47
+        width: 26
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb635834eb5155320800000000000000
+      internalID: 2545965071268656831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_16
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 47
+        width: 46
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd10d1a10eee64c60800000000000000
+      internalID: 7802186050744156637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_17
+      rect:
+        serializedVersion: 2
+        x: 3467
+        y: 47
+        width: 66
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1a6a69901f07d70800000000000000
+      internalID: 9038989475617087934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_18
+      rect:
+        serializedVersion: 2
+        x: 3659
+        y: 47
+        width: 82
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1f7e5167912cdd0800000000000000
+      internalID: -2467381650881252952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin spin_flip_19
+      rect:
+        serializedVersion: 2
+        x: 3855
+        y: 47
+        width: 94
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772df05b0154c2b10800000000000000
+      internalID: 1958015876058829431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      coin spin_flip_0: 6675934375261013653
+      coin spin_flip_1: 7423205638645953627
+      coin spin_flip_10: -981742683597133758
+      coin spin_flip_11: 7848374534308020695
+      coin spin_flip_12: -864933834820620513
+      coin spin_flip_13: -6192946297970471256
+      coin spin_flip_14: -487581532974285042
+      coin spin_flip_15: 2545965071268656831
+      coin spin_flip_16: 7802186050744156637
+      coin spin_flip_17: 9038989475617087934
+      coin spin_flip_18: -2467381650881252952
+      coin spin_flip_19: 1958015876058829431
+      coin spin_flip_2: -8218884053104002263
+      coin spin_flip_3: -2897958015750138971
+      coin spin_flip_4: 2369827017496340684
+      coin spin_flip_5: 3029070850205626914
+      coin spin_flip_6: 2317712075003371256
+      coin spin_flip_7: -4878801978002455009
+      coin spin_flip_8: 4069366078655484512
+      coin spin_flip_9: -2920504033006254397
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

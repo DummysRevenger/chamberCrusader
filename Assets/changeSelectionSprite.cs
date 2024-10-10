@@ -9,6 +9,15 @@ public class changeSelectionSprite : MonoBehaviour
     public Sprite Soldier;
     public Sprite Bunny;
 
+    public Sprite shopKeep;
+    public Sprite pride;
+    public Sprite lust;
+    public Sprite greed;
+    public Sprite gluttony;
+    public Sprite envy;
+    public Sprite wrath;
+    public Sprite sloth;
+
     public SpriteRenderer spriterenderer;
 
     public GameObject ninjaUnlockCondition;
@@ -42,20 +51,20 @@ public class changeSelectionSprite : MonoBehaviour
 
                 
 
-                if (room30checker.room30Reached)
-                {
+                //if (room30checker.room30Reached)
+                //{
                     
                     newColor = new Color(1f, 1f, 1f);
                     spriterenderer.color = newColor;
                     soldierUnlockCondition.SetActive(false);
-                }
-                else
+                //}
+                /*else
                 {
                     newColor = new Color(0f, 0f, 0f);
                     spriterenderer.color = newColor;
                     ninjaUnlockCondition.SetActive(true);
                     soldierUnlockCondition.SetActive(false);
-                }
+                }*/
                 break;
 
             case 3:
@@ -65,14 +74,14 @@ public class changeSelectionSprite : MonoBehaviour
                 {
                     transform.position = new Vector2(transform.position.x, transform.position.y - 1f);
                 }
-                if (room30checker.bloodRoom30Reached)
-                {
+                //if (room30checker.bloodRoom30Reached)
+                //{
                     newColor = new Color(1f, 1f, 1f);
                     spriterenderer.color = newColor;
                     ninjaUnlockCondition.SetActive(false);
                     soldierUnlockCondition.SetActive(false);
                     bunnyUnlockCondition.SetActive(false);
-                }
+                /*}
                 else
                 {
                     newColor = new Color(0f, 0f, 0f);
@@ -80,7 +89,7 @@ public class changeSelectionSprite : MonoBehaviour
                     soldierUnlockCondition.SetActive(true);
                     ninjaUnlockCondition.SetActive(false);
                     bunnyUnlockCondition.SetActive(false);
-                }
+                }*/
                 break;
 
 
@@ -89,24 +98,48 @@ public class changeSelectionSprite : MonoBehaviour
 
                 if (transform.position.y != -1f)
                 {
-                    transform.position = new Vector2(transform.position.x, transform.position.y + 1f);
+                    transform.position = new Vector2(transform.position.x, transform.position.y);
                 }
 
 
-                if (blueBunnyUnlockStore.bunnyUnlocked)
-                {
+                //if (blueBunnyUnlockStore.bunnyUnlocked)
+                //{
                     newColor = new Color(1f, 1f, 1f);
                     spriterenderer.color = newColor;
                     bunnyUnlockCondition.SetActive(false);
                     soldierUnlockCondition.SetActive(false);
-                }
+                /*}
                 else
                 {
                     newColor = new Color(0f, 0f, 0f);
                     spriterenderer.color = newColor;
                     bunnyUnlockCondition.SetActive(true);
                     soldierUnlockCondition.SetActive(false);
-                }
+                }*/
+                break;
+            case 5:
+                spriterenderer.sprite = shopKeep;
+                break;
+            case 6:
+                spriterenderer.sprite = pride;
+                break;
+            case 7:
+                spriterenderer.sprite = envy;
+                break;
+            case 8:
+                spriterenderer.sprite = wrath;
+                break;
+            case 9:
+                spriterenderer.sprite = sloth;
+                break;
+            case 10:
+                spriterenderer.sprite = greed;
+                break;
+            case 11:
+                spriterenderer.sprite = gluttony;
+                break;
+            case 12:
+                spriterenderer.sprite = lust;
                 break;
         }
     }

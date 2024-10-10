@@ -6,7 +6,7 @@ public class ammoGetPickedUp : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.name == "grabberIncreasedRange")
         {
             switch(playerSwitcher.S.playerType)
             {

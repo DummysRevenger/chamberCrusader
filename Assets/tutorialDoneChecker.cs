@@ -13,6 +13,9 @@ public class tutorialDoneChecker : MonoBehaviour
     void Start()
     {
         S = this;
+
+        tutorialDone = false;
+
     }
 
     // Update is called once per frame

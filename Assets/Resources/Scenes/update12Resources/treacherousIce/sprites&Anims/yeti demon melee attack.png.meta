@@ -1,0 +1,324 @@
+fileFormatVersion: 2
+guid: c48bdfe0c0d84374bb593df139fcc657
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5998367151169441862
+    second: yeti demon melee attack_0
+  - first:
+      213: -2036265410300582629
+    second: yeti demon melee attack_1
+  - first:
+      213: 5090801643703246471
+    second: yeti demon melee attack_2
+  - first:
+      213: -8200866529800058866
+    second: yeti demon melee attack_3
+  - first:
+      213: -2651079146372850351
+    second: yeti demon melee attack_4
+  - first:
+      213: -5287813568246452925
+    second: yeti demon melee attack_5
+  - first:
+      213: -7907664503802906483
+    second: yeti demon melee attack_6
+  - first:
+      213: 7556748842219918323
+    second: yeti demon melee attack_7
+  - first:
+      213: -7287556842967827660
+    second: yeti demon melee attack_8
+  - first:
+      213: 6313173450337465681
+    second: yeti demon melee attack_9
+  - first:
+      213: -1384410088860114902
+    second: yeti demon melee attack_10
+  - first:
+      213: 2131009186604399967
+    second: yeti demon melee attack_11
+  - first:
+      213: 3117390068167274434
+    second: yeti demon melee attack_12
+  - first:
+      213: -7160411245234957045
+    second: yeti demon melee attack_13
+  - first:
+      213: 8397164359084998746
+    second: yeti demon melee attack_14
+  - first:
+      213: 8261619518962000727
+    second: yeti demon melee attack_15
+  - first:
+      213: 4082414036083386467
+    second: yeti demon melee attack_16
+  - first:
+      213: -3312445371932317787
+    second: yeti demon melee attack_17
+  - first:
+      213: 1630178326822954093
+    second: yeti demon melee attack_18
+  - first:
+      213: 5628642215821410235
+    second: yeti demon melee attack_19
+  - first:
+      213: 275814212532815882
+    second: yeti demon melee attack_20
+  - first:
+      213: -6870158030373572913
+    second: yeti demon melee attack_21
+  - first:
+      213: 3742396959724375325
+    second: yeti demon melee attack_22
+  - first:
+      213: 4697945129706873317
+    second: yeti demon melee attack_23
+  - first:
+      213: -2512011306708834445
+    second: yeti demon melee attack_24
+  - first:
+      213: 7771697817482869929
+    second: yeti demon melee attack_25
+  - first:
+      213: 8856084932586849898
+    second: yeti demon melee attack_26
+  - first:
+      213: -8443911304898515263
+    second: yeti demon melee attack_27
+  - first:
+      213: -1408776453590523310
+    second: yeti demon melee attack_28
+  - first:
+      213: 891859682462869603
+    second: yeti demon melee attack_29
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yeti demon melee attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88af39555eef3284292c197c135a20e4
+      internalID: -920424242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti demon melee attack_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f509925e8dbfa4ab355c3c6fef052a
+      internalID: -271826392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti demon melee attack_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8c6677e293aec4c9e51f76ec27ba3e
+      internalID: -386971962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti demon melee attack_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da4cedc0b09d164fba4a69284558a5e
+      internalID: 677790173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti demon melee attack_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fb1dfbe86bdeb4eb49dd3afaa2120b
+      internalID: 859270896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 702f1cee77a409c468ab7ad78843e164
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      yeti demon melee attack_0: -920424242
+      yeti demon melee attack_1: -271826392
+      yeti demon melee attack_2: -386971962
+      yeti demon melee attack_3: 677790173
+      yeti demon melee attack_4: 859270896
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

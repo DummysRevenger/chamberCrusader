@@ -9,6 +9,7 @@ public class setCharToKnight : MonoBehaviour
 
         selectCharacter.characterSelected = "knight";
         selectCharacter.mapSelected = "dungeon";
+        playerSwitcher.S.playerType = "knight";
     }
 
 

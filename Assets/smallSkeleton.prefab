@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 140114871055762894}
   - component: {fileID: 7526190729974987927}
   - component: {fileID: 6757383285817916770}
+  - component: {fileID: -572735994923353781}
   m_Layer: 2
   m_Name: smallSkeleton
   m_TagString: enemy
@@ -94,7 +95,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &8763828363237844073
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,6 +109,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -130,6 +132,7 @@ MonoBehaviour:
   ammo: {fileID: 0}
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
+  playerMovementScript: {fileID: 0}
 --- !u!61 &105037358774768466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,6 +141,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5785747222804049020}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -161,7 +165,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +177,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &9127952314033052781
@@ -206,8 +210,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 100
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -264,6 +268,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   rb2d: {fileID: 4663894814018661963}
+  bloodGoblinPrefab: {fileID: 0}
   hitWall: 0
 --- !u!114 &7526190729974987927
 MonoBehaviour:
@@ -291,3 +296,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthStore: {fileID: 0}
   healthBarPrefab: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}
+--- !u!114 &-572735994923353781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785747222804049020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037d7a225cef8c340a58694aa99377ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

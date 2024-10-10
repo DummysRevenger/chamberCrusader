@@ -8,21 +8,27 @@ public class startButton : MonoBehaviour
     public Text theText;
     
 
-    IEnumerator changeScreen()
+    void changeScreen()
     {
-        yield return new WaitForSeconds(0.5f);
 
+        
+        
         screenStore.S.currentScreen = "char";
+
+        
+
+
     }
 
 
-    public void OnClick()
+
+    public void Select()
     {
 
         
 
         theText.enabled = false;
-        StartCoroutine(changeScreen());
+        Invoke("changeScreen", 0.5f);
     }
 
     

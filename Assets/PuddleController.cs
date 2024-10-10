@@ -8,56 +8,46 @@ public class PuddleController : MonoBehaviour
     private GameObject knight;
     private GameObject ninja;
     private GameObject soldier;
+    private GameObject bunny;
+
+    public GameObject player;
+
+    private Vector3 playerDirection;
+
+    public bool cooldownOver = true;
 
     void Start()
     {
-
-        
-
-
-        
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
 
     void LateUpdate()
     {
-        if (selectCharacter.characterSelected == "knight")
-        {
-            knight = GameObject.Find("player");
-            theMovementScript = knight.GetComponent<playerMovement>();
+        player = GameObject.FindGameObjectWithTag("Player");
 
 
-        }
-        else if (selectCharacter.characterSelected == "ninja")
-        {
-
-
-            ninja = GameObject.Find("playerninja");
-
-
-            theMovementScript = ninja.GetComponent<playerMovement>();
-        }
-        else if (selectCharacter.characterSelected == "soldier")
-        {
-            soldier = GameObject.Find("playersoldier");
-            theMovementScript = soldier.GetComponent<playerMovement>();
-        }
+        theMovementScript = player.GetComponent<playerMovement>();
 
 
     }
+
+    void endCooldown()
+    {
+        cooldownOver = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the colliding object is the player
-        if (collision.gameObject.CompareTag("Player"))
-        {
 
+
+        // Check if the colliding object is the player
+        if (collision.gameObject.CompareTag("Player") && cooldownOver)
+        {
 
             
 
             Rigidbody2D playerRigidbody = collision.gameObject.GetComponent<Rigidbody2D>();
-
-            
 
 
             if (playerRigidbody != null)
@@ -67,26 +57,29 @@ public class PuddleController : MonoBehaviour
                 if (theMovementScript != null)
                 {
                     theMovementScript.enabled = false;
-                    
                 }
 
 
-                
 
 
-                // Calculate the player's movement direction
-                Vector3 playerDirection = theMovementScript.movement.normalized;
+                if (theMovementScript.movement == new Vector3(0f, 0f, 0f))
+                {
+                    playerDirection = new Vector3(1f, 1f, 0f);
 
-                Debug.Log(playerDirection.magnitude);
+                    playerRigidbody.AddForce(playerDirection * 100000f, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    // Calculate the player's movement direction
+                    playerDirection = theMovementScript.movement.normalized;
 
-                
+                    // Apply force to the player in the direction they were moving
+                    playerRigidbody.AddForce(playerDirection * 100000f, ForceMode2D.Impulse);
+                }
 
-                
-                // Apply force to the player in the direction they were moving
-                playerRigidbody.AddForce(playerDirection * 10f, ForceMode2D.Impulse);
 
-                    
-
+                cooldownOver = false;
+                Invoke("endCooldown", 0.5f);
 
             }
         }

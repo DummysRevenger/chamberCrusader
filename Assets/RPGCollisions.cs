@@ -18,11 +18,9 @@ public class RPGCollisions : MonoBehaviour
 
         if (collision.gameObject.CompareTag("wall") || collision.gameObject.CompareTag("metawall") || collision.gameObject.CompareTag("enemy"))
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
-
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             
-
-            Destroy(gameObject);
         }
 
         

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneReloader : MonoBehaviour
+public class restartGame : MonoBehaviour
 {
     private void Update()
     {
@@ -11,7 +11,7 @@ public class SceneReloader : MonoBehaviour
         }
     }
 
-    private void ReloadScene()
+    public static void ReloadScene()
     {
         
         SceneManager.LoadScene("characterSelect");

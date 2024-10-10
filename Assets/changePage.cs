@@ -18,10 +18,9 @@ public class changePage : MonoBehaviour
 
         if (gameObject.name == "RightArrow")
         {
-
             pageStore.S.pageNumber++;
         }
-        else if (gameObject.name == "LeftArrow")
+        else if (gameObject.name.Contains("Left"))
         {
             pageStore.S.pageNumber--;
         }

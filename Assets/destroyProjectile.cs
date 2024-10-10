@@ -12,10 +12,10 @@ public class destroyProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("bullet"))
+        if (other.gameObject.CompareTag("bullet") && !other.gameObject.name.Contains("scytheRay") && !other.gameObject.name.Contains("coinBullet"))
         {
 
-            if(!other.gameObject.name.Contains("RPG"))
+            if(!other.gameObject.name.Contains("Wrath") && !other.gameObject.name.Contains("bloodBullet") && !other.gameObject.name.Contains("RPG") && !other.gameObject.name.Contains("beam") && !other.gameObject.name.Contains("stun"))
             {
                 Destroy(other.gameObject);
             }

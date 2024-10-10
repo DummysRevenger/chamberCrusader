@@ -33,6 +33,40 @@ public class gameOverSequence : MonoBehaviour
     public GameObject rpg;
     public GameObject thrownKnife;
 
+    // pride
+    public GameObject prideSwordAxis;
+    public GameObject prideSwordHurtSpin;
+    public GameObject prideSwordHurtSwing;
+    public GameObject prideSwordHurtThrust;
+
+    // lust
+    public GameObject gauntletAxis;
+    public GameObject gauntletHurtBox;
+    public GameObject gauntletL;
+    public GameObject gauntletR;
+
+    // sloth
+    public GameObject spearAxis;
+
+
+
+
+
+    // envy
+    public GameObject envyStaff;
+
+    // gluttony
+    public GameObject gluttonyFork;
+
+    // greed
+    public GameObject greedBow;
+
+    // wrath
+    public GameObject wrathClaw;
+    public GameObject wrathHurtBox;
+
+
+
     public Color TextColor;
 
 
@@ -60,6 +94,8 @@ public class gameOverSequence : MonoBehaviour
     {
         StartCoroutine(startSequence());
 
+
+        player = GameObject.FindGameObjectWithTag("Player");
         
     }
 
@@ -67,10 +103,8 @@ public class gameOverSequence : MonoBehaviour
 
     IEnumerator startSequence()
     {
-        knight.GetComponent<SpriteRenderer>().sprite = rip;
-        ninja.GetComponent<SpriteRenderer>().sprite = rip;
-        soldier.GetComponent<SpriteRenderer>().sprite = rip;
-        bunny.GetComponent<SpriteRenderer>().sprite = rip;
+        player.GetComponent<SpriteRenderer>().sprite = rip;
+        
 
 
         statsStore.highScore = pointsStore.S.points;
@@ -81,7 +115,8 @@ public class gameOverSequence : MonoBehaviour
         scriptToDisable4.enabled = false;
 
 
-        if (selectCharacter.mapSelected == "blood")
+        if (selectCharacter.mapSelected == "blood" || (selectCharacter.mapSelected == "retribution" 
+            && (retributionMapStore.S.mapType == "blood" || retributionMapStore.S.mapType == "fire")))
         {
             TextColor = new Color(0f, 0f, 1f);
         }
@@ -122,9 +157,40 @@ public class gameOverSequence : MonoBehaviour
         thrownKnife.SetActive(false);
         rpg.SetActive(false);
 
+        prideSwordAxis.SetActive(false);
+        prideSwordHurtSpin.SetActive(false);
+    prideSwordHurtSwing.SetActive(false);
+        prideSwordHurtThrust.SetActive(false);
+
+        // lust
+        gauntletAxis.SetActive(false);
+        gauntletHurtBox.SetActive(false);
+        gauntletL.SetActive(false);
+        gauntletR.SetActive(false);
+
+        // sloth
+        spearAxis.SetActive(false);
 
 
-        yield return new WaitForSeconds(2f);
+
+
+
+        // envy
+        envyStaff.SetActive(false);
+
+        // gluttony
+        gluttonyFork.SetActive(false);
+
+        // greed
+        greedBow.SetActive(false);
+
+        // wrath
+        wrathClaw.SetActive(false);
+    wrathHurtBox.SetActive(false);
+
+
+
+    yield return new WaitForSeconds(2f);
         GO.SetActive(true);
         yield return new WaitForSeconds(1f);
         DGU.SetActive(true);

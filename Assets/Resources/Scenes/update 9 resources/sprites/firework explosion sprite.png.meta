@@ -1,0 +1,735 @@
+fileFormatVersion: 2
+guid: 7a3f100eb90991c4abb32c7bf526eaa9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2835849829172044078
+    second: firework explosion sprite_0
+  - first:
+      213: 6390179576873146756
+    second: firework explosion sprite_1
+  - first:
+      213: 6455970366930770052
+    second: firework explosion sprite_2
+  - first:
+      213: -1513071550082756693
+    second: firework explosion sprite_3
+  - first:
+      213: -7945654487333298731
+    second: firework explosion sprite_4
+  - first:
+      213: -2825186301161969732
+    second: firework explosion sprite_5
+  - first:
+      213: -3616652579245158547
+    second: firework explosion sprite_6
+  - first:
+      213: -3508110107718277116
+    second: firework explosion sprite_7
+  - first:
+      213: -2704324787520347076
+    second: firework explosion sprite_8
+  - first:
+      213: 1194707774305675172
+    second: firework explosion sprite_9
+  - first:
+      213: 5383460049296293818
+    second: firework explosion sprite_10
+  - first:
+      213: 176114676077292242
+    second: firework explosion sprite_11
+  - first:
+      213: 3811954003733676211
+    second: firework explosion sprite_12
+  - first:
+      213: 5372180621161862895
+    second: firework explosion sprite_13
+  - first:
+      213: -3629023981774719534
+    second: firework explosion sprite_14
+  - first:
+      213: 8883799748793534355
+    second: firework explosion sprite_15
+  - first:
+      213: -4499431920712761514
+    second: firework explosion sprite_16
+  - first:
+      213: -7084259423957165142
+    second: firework explosion sprite_17
+  - first:
+      213: 8378946033611486681
+    second: firework explosion sprite_18
+  - first:
+      213: 4688453325014407176
+    second: firework explosion sprite_19
+  - first:
+      213: -4121895968007366759
+    second: firework explosion sprite_20
+  - first:
+      213: -1636866266568777951
+    second: firework explosion sprite_21
+  - first:
+      213: 7146060320507578682
+    second: firework explosion sprite_22
+  - first:
+      213: 8695619454120847860
+    second: firework explosion sprite_23
+  - first:
+      213: -6398350557659419809
+    second: firework explosion sprite_24
+  - first:
+      213: -6600377516436411158
+    second: firework explosion sprite_25
+  - first:
+      213: -6824435760066732406
+    second: firework explosion sprite_26
+  - first:
+      213: 904366169952838117
+    second: firework explosion sprite_27
+  - first:
+      213: -9138851959214514253
+    second: firework explosion sprite_28
+  - first:
+      213: 3672744501755760981
+    second: firework explosion sprite_29
+  - first:
+      213: -753131309914932069
+    second: firework explosion sprite_30
+  - first:
+      213: -3192033809895022802
+    second: firework explosion sprite_31
+  - first:
+      213: 8342987842603857184
+    second: firework explosion sprite_32
+  - first:
+      213: -1306825508126375602
+    second: firework explosion sprite_33
+  - first:
+      213: 7354125903445570700
+    second: firework explosion sprite_34
+  - first:
+      213: 5511527951625400105
+    second: firework explosion sprite_35
+  - first:
+      213: -2271895995963668585
+    second: firework explosion sprite_36
+  - first:
+      213: -6674794416847746729
+    second: firework explosion sprite_37
+  - first:
+      213: 6062873390372650931
+    second: firework explosion sprite_38
+  - first:
+      213: 8990382533098002140
+    second: firework explosion sprite_39
+  - first:
+      213: -7277186544300510535
+    second: firework explosion sprite_40
+  - first:
+      213: 5274423876378583195
+    second: firework explosion sprite_41
+  - first:
+      213: -5961826913279052497
+    second: firework explosion sprite_42
+  - first:
+      213: -4002291507363664176
+    second: firework explosion sprite_43
+  - first:
+      213: 3342025669868699051
+    second: firework explosion sprite_44
+  - first:
+      213: -3343132009005558719
+    second: firework explosion sprite_45
+  - first:
+      213: 4403264732499714305
+    second: firework explosion sprite_46
+  - first:
+      213: -6247251630854235254
+    second: firework explosion sprite_47
+  - first:
+      213: 4583658906470538030
+    second: firework explosion sprite_48
+  - first:
+      213: -2218779638468274055
+    second: firework explosion sprite_49
+  - first:
+      213: 2071478322850197978
+    second: firework explosion sprite_50
+  - first:
+      213: 8111131891013629926
+    second: firework explosion sprite_51
+  - first:
+      213: -4219660079358102431
+    second: firework explosion sprite_52
+  - first:
+      213: 190781230552665285
+    second: firework explosion sprite_53
+  - first:
+      213: -1900247236362023038
+    second: firework explosion sprite_54
+  - first:
+      213: -6014221581285077077
+    second: firework explosion sprite_55
+  - first:
+      213: -6914131764570855347
+    second: firework explosion sprite_56
+  - first:
+      213: -47619631594910342
+    second: firework explosion sprite_57
+  - first:
+      213: -3689150877373870203
+    second: firework explosion sprite_58
+  - first:
+      213: -5473609655057951014
+    second: firework explosion sprite_59
+  - first:
+      213: -7393504343959788368
+    second: firework explosion sprite_60
+  - first:
+      213: 5049083951710299588
+    second: firework explosion sprite_61
+  - first:
+      213: -7663814405655411659
+    second: firework explosion sprite_62
+  - first:
+      213: -8352511461101807918
+    second: firework explosion sprite_63
+  - first:
+      213: 2914648735413499397
+    second: firework explosion sprite_64
+  - first:
+      213: 3813907320140703788
+    second: firework explosion sprite_65
+  - first:
+      213: 700182432990066362
+    second: firework explosion sprite_66
+  - first:
+      213: -4557862281142704863
+    second: firework explosion sprite_67
+  - first:
+      213: 5799891255048478788
+    second: firework explosion sprite_68
+  - first:
+      213: 3261260975494812478
+    second: firework explosion sprite_69
+  - first:
+      213: -537320018952882514
+    second: firework explosion sprite_70
+  - first:
+      213: -5369960743951385182
+    second: firework explosion sprite_71
+  - first:
+      213: -3447299340522567276
+    second: firework explosion sprite_72
+  - first:
+      213: 9156921877351524530
+    second: firework explosion sprite_73
+  - first:
+      213: -5544569493288904051
+    second: firework explosion sprite_74
+  - first:
+      213: -8126410607749704558
+    second: firework explosion sprite_75
+  - first:
+      213: -5566938632114254667
+    second: firework explosion sprite_76
+  - first:
+      213: -5400976047200486277
+    second: firework explosion sprite_77
+  - first:
+      213: 6168534197829043033
+    second: firework explosion sprite_78
+  - first:
+      213: -4306419203766722009
+    second: firework explosion sprite_79
+  - first:
+      213: -5711450642926349784
+    second: firework explosion sprite_80
+  - first:
+      213: 4940611208024793261
+    second: firework explosion sprite_81
+  - first:
+      213: -5183979375165090334
+    second: firework explosion sprite_82
+  - first:
+      213: 5393760612265107939
+    second: firework explosion sprite_83
+  - first:
+      213: 5044370591022025808
+    second: firework explosion sprite_84
+  - first:
+      213: 3624160533059439215
+    second: firework explosion sprite_85
+  - first:
+      213: 6809269571060170241
+    second: firework explosion sprite_86
+  - first:
+      213: 8836759252655898971
+    second: firework explosion sprite_87
+  - first:
+      213: -5652906350714215282
+    second: firework explosion sprite_88
+  - first:
+      213: 1276192862167982737
+    second: firework explosion sprite_89
+  - first:
+      213: 8649273958906938381
+    second: firework explosion sprite_90
+  - first:
+      213: 6299413417008232816
+    second: firework explosion sprite_91
+  - first:
+      213: 7795338861702740841
+    second: firework explosion sprite_92
+  - first:
+      213: -5855600869141964207
+    second: firework explosion sprite_93
+  - first:
+      213: 5245200190209265898
+    second: firework explosion sprite_94
+  - first:
+      213: 4128953966841865550
+    second: firework explosion sprite_95
+  - first:
+      213: 2788098356008580347
+    second: firework explosion sprite_96
+  - first:
+      213: 5486712767486973967
+    second: firework explosion sprite_97
+  - first:
+      213: -182293060467541558
+    second: firework explosion sprite_98
+  - first:
+      213: -1763797769550923676
+    second: firework explosion sprite_99
+  - first:
+      213: 4735006145374611788
+    second: firework explosion sprite_100
+  - first:
+      213: -2791249551393320172
+    second: firework explosion sprite_101
+  - first:
+      213: -4453631797266294301
+    second: firework explosion sprite_102
+  - first:
+      213: -1369135475633253014
+    second: firework explosion sprite_103
+  - first:
+      213: 7776311862538159172
+    second: firework explosion sprite_104
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: firework explosion sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f762379f1b823af44a9b4a6264ac0813
+      internalID: 468802720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c510118042a06d643871da6577169212
+      internalID: 1171856536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad414e4723b3c24dafc57b47989d4b4
+      internalID: 425193509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd83e9f9f5b488e47ae5c75cbd2d62ae
+      internalID: 2114898155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e3d79aa8ea75c46871f79a8dcf07d6
+      internalID: -1603285838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_5
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364c92286ef005743a6c99746a7ea0de
+      internalID: 265444048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_6
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84115edd592dd0645acdeaaf5e41ed97
+      internalID: 7283177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_7
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59621eb86f04e3340910be9c6ccbbd7d
+      internalID: 614120425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_8
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dbe51edef5f0e47ab6a590e55d7694
+      internalID: -1049553437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_9
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88277d2d8d5eaa418a0cd781d004682
+      internalID: -91594825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_10
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffa13902c0990c4c89f8eb265c7c80c
+      internalID: 1721817154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_11
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60caabedef97c1b4ebe3e730718363ae
+      internalID: 823888609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_12
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943dd270a7cef2248afbaa2018021bdb
+      internalID: -418709714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firework explosion sprite_13
+      rect:
+        serializedVersion: 2
+        x: 3973
+        y: 85
+        width: 71
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a346c06a28c4fae4b9452818106cdc98
+      internalID: 1333575342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3adc1c6fb9ed44341b065aede16aaea1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      firework explosion sprite_0: 468802720
+      firework explosion sprite_1: 1171856536
+      firework explosion sprite_10: 1721817154
+      firework explosion sprite_11: 823888609
+      firework explosion sprite_12: -418709714
+      firework explosion sprite_13: 1333575342
+      firework explosion sprite_2: 425193509
+      firework explosion sprite_3: 2114898155
+      firework explosion sprite_4: -1603285838
+      firework explosion sprite_5: 265444048
+      firework explosion sprite_6: 7283177
+      firework explosion sprite_7: 614120425
+      firework explosion sprite_8: -1049553437
+      firework explosion sprite_9: -91594825
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

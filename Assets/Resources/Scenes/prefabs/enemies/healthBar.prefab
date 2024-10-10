@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4171592697186341296}
   - component: {fileID: 1544064949030310041}
   - component: {fileID: 8620095943847120515}
+  - component: {fileID: 101840464810239664}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -93,6 +94,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &101840464810239664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619723273362680514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d11a6bb0caa2464cb9af3d3877e9426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 1544064949030310041}
 --- !u!1 &4124244640310802128
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +121,7 @@ GameObject:
   - component: {fileID: 6117182518826272579}
   - component: {fileID: 5745926739325986204}
   - component: {fileID: 7650960407137996141}
+  - component: {fileID: 4276224349029369519}
   m_Layer: 5
   m_Name: healthBar
   m_TagString: enemyHP
@@ -261,5 +276,19 @@ MonoBehaviour:
   soldierTransform: {fileID: 0}
   bunnyTransform: {fileID: 0}
   targetTransform: {fileID: 0}
+  player: {fileID: 0}
   offset: {x: 0, y: 1, z: 0}
   screenPos: {x: 0, y: 0, z: 0}
+--- !u!114 &4276224349029369519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124244640310802128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244106fa58158b446aba9a604cde3536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 619723273362680514}

@@ -30,11 +30,12 @@ public class wallCollisionHandler : MonoBehaviour
         if (other.gameObject.CompareTag("bullet"))
         {
             
-            if(!other.gameObject.name.Contains("RPG"))
+            if(!other.gameObject.name.Contains("bloodBullet") && !other.gameObject.name.Contains("RPG") && !other.gameObject.name.Contains("boomerang") && !other.gameObject.name.Contains("hypno") && !other.gameObject.name.Contains("stun"))
             {
                 Destroy(other.gameObject);
 
             }
+
                 
             
         }

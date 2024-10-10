@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,11 +13,10 @@ public class disappearAfterTutorialDone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if (tutorialDoneChecker.tutorialDone)
         {
-            Debug.Log("deactivate GUI");
             gameObject.SetActive(false);
-        }
+        }*/
     }
 }

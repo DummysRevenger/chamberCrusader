@@ -20,6 +20,16 @@ public class weaponSwitch : MonoBehaviour
     public GameObject RPGUI;
     public GameObject KnifeUI;
 
+    public GameObject scytheUI;
+    public GameObject longSwordUI;
+    public GameObject caneUI;
+    public GameObject coinGunUI;
+    public GameObject daggerUI;
+
+    public GameObject prideSwordUI;
+
+    public GameObject gluttonyForkUI;
+
     public GameObject ammoNum;
 
     // knight's weapons
@@ -38,6 +48,13 @@ public class weaponSwitch : MonoBehaviour
     public GameObject kitchenKnife;
     public GameObject Axe;
 
+    //shopkeeper's weapons
+    public GameObject coinGun;
+    public GameObject cane;
+    public GameObject longSword;
+    public GameObject scythe;
+    public GameObject dagger;
+
     //knight's sprites for weapon equips
     public Sprite knightShot;
     public Sprite knightSword;
@@ -50,6 +67,9 @@ public class weaponSwitch : MonoBehaviour
     public Sprite soldierShot;
     public Sprite soldierSword;
 
+    //wrath
+    public GameObject clawUI;
+
 
 
     public GameObject player;
@@ -59,12 +79,23 @@ public class weaponSwitch : MonoBehaviour
     public GameObject katanaHurt;
     public GameObject knifeHurt;
     public GameObject axeHurt;
+    public GameObject caneHurt;
+    public GameObject longSwordHurt;
+    public GameObject scytheHurt;
+    public GameObject daggerHurt;
 
-    public bool gunEquipped = true;
+
+    public int weaponEquipped = 1;
 
     public RawImage swordImage;
     public RawImage gunImage;
     public Text ammoText;
+
+    private SpriteRenderer weaponSpriteRenderer;
+
+    private GameObject childObject;
+
+    public GameObject greedBowUI;
 
 
     // Start is called before the first frame update
@@ -82,8 +113,8 @@ public class weaponSwitch : MonoBehaviour
 
         swordImage.enabled = false;
 
+        ammoText.enabled = false;
 
-        
 
 
         if (playerSwitcher.S.playerType == "knight")
@@ -114,22 +145,46 @@ public class weaponSwitch : MonoBehaviour
             RPGUI.SetActive(false);
             kitchenUI.SetActive(true);
         }
+        else if (playerSwitcher.S.playerType == "shop")
+        {
+            gunUI.SetActive(false);
+            shotGunUI.SetActive(false);
+            RPGUI.SetActive(false);
+            kitchenUI.SetActive(false);
+            coinGunUI.SetActive(true);
+
+        }
+        else if (playerSwitcher.S.playerType == "pride")
+        {
+            prideSwordUI.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "gluttony")
+        {
+            gluttonyForkUI.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "wrath")
+        {
+            clawUI.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "greed")
+        {
+            greedBowUI.SetActive(true);
+        }
 
     }
 
     IEnumerator equip()
     {
 
-        if (gunEquipped)
+        if (weaponEquipped == 1)
         {
             ammoText.enabled = false;
-            gunEquipped = false;
 
             
-
-
             if (playerSwitcher.S.playerType == "knight")
             {
+
+                swordUI.SetActive(true);
 
                 player.GetComponent<SpriteRenderer>().sprite = knightSword;
 
@@ -137,18 +192,19 @@ public class weaponSwitch : MonoBehaviour
                 swordImage.enabled = true;
 
 
-                GameObject childObject = sword.transform.Find("sword")?.gameObject;
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                 childObject = sword.transform.Find("sword")?.gameObject;
 
-                spriteRenderer.enabled = false;
+                weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+                weaponSpriteRenderer.enabled = false;
 
                 sword.SetActive(true);
                 swordHurt.SetActive(true);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                weaponSpriteRenderer.enabled = true;
 
                 gun.SetActive(false);
             }
@@ -169,18 +225,18 @@ public class weaponSwitch : MonoBehaviour
 
                 gunUI.SetActive(false);
 
-                GameObject childObject = katana.transform.Find("katana")?.gameObject;
+                 childObject = katana.transform.Find("katana")?.gameObject;
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
 
-                spriteRenderer.enabled = false;
+                weaponSpriteRenderer.enabled = false;
 
-                
+
                 katanaHurt.SetActive(true);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                weaponSpriteRenderer.enabled = true;
 
                 
             }
@@ -199,18 +255,18 @@ public class weaponSwitch : MonoBehaviour
                 RPGUI.SetActive(false);
 
 
-                GameObject childObject = knife.transform.Find("knife")?.gameObject;
+                 childObject = knife.transform.Find("knife")?.gameObject;
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
 
-                spriteRenderer.enabled = false;
+                weaponSpriteRenderer.enabled = false;
 
 
-               knifeHurt.SetActive(true);
+                knifeHurt.SetActive(true);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                weaponSpriteRenderer.enabled = true;
 
 
             }
@@ -230,26 +286,107 @@ public class weaponSwitch : MonoBehaviour
                 kitchenUI.SetActive(false);
 
 
-                GameObject childObject = Axe.transform.Find("axe")?.gameObject;
+                 childObject = Axe.transform.Find("axe")?.gameObject;
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
 
-                spriteRenderer.enabled = false;
+                weaponSpriteRenderer.enabled = false;
 
 
                 axeHurt.SetActive(true);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                weaponSpriteRenderer.enabled = true;
+
+            }
+            else if (playerSwitcher.S.playerType == "shop")
+            {
+
+                dagger.SetActive(false);
+
+                daggerHurt.SetActive(false);
+
+                daggerUI.SetActive(false);
+
+                coinGun.SetActive(true);
+                coinGunUI.SetActive(true);
+
+                switch (shopKeeperWeaponRandomiser.S.theWeapon)
+                {
+                    case "cane":
+
+                        
+
+                        cane.SetActive(false);
+                        caneUI.SetActive(false);
+                        caneHurt.SetActive(false);
+
+                        
+
+                        
+
+
+                        break;
+                    case "scythe":
+                        scythe.SetActive(false);
+                        scytheUI.SetActive(false);
+                        scytheHurt.SetActive(false);
+
+                        
+
+                        break;
+                    case "longSword":
+                        longSword.SetActive(false);
+                        longSwordUI.SetActive(false);
+                        longSwordHurt.SetActive(false);
+
+                        
+
+                        
+                        break;
+                }
+
+
+                GameObject offset = coinGun.transform.Find("gunoffset")?.gameObject;
+
+
+                childObject = offset.transform.Find("gunGrip")?.gameObject;
+                GameObject childObject2 = offset.transform.Find("gunBarrel")?.gameObject;
+
+
+                weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+                SpriteRenderer weaponSpriteRenderer2 = childObject2.GetComponent<SpriteRenderer>();
+
+
+                childObject = dagger.transform.Find("Dagger")?.gameObject;
+
+                SpriteRenderer weaponSpriteRenderer3 = childObject.GetComponent<SpriteRenderer>();
+
+                weaponSpriteRenderer3.enabled = false;
+
+
+                yield return new WaitForSeconds(0.1f);
+
+                weaponSpriteRenderer.enabled = true;
+
+                weaponSpriteRenderer2.enabled = true;
+
+
+
+
+
+
+
 
             }
 
         }
-        else
+        else if (weaponEquipped == 2)// melee weapon
         {
-            ammoText.enabled = true;
-            gunEquipped = true;
+            
+            
 
 
             
@@ -257,6 +394,8 @@ public class weaponSwitch : MonoBehaviour
 
             if (playerSwitcher.S.playerType == "knight")
             {
+
+                ammoText.enabled = true;
 
                 player.GetComponent<SpriteRenderer>().sprite = knightShot;
 
@@ -267,28 +406,31 @@ public class weaponSwitch : MonoBehaviour
                 GameObject offset = gun.transform.Find("gunoffset")?.gameObject;
 
 
-                GameObject childObject = offset.transform.Find("gunGrip")?.gameObject;
+                 childObject = offset.transform.Find("gunGrip")?.gameObject;
                 GameObject childObject2 = offset.transform.Find("gunBarrel")?.gameObject;
 
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
-                SpriteRenderer spriteRenderer2 = childObject2.GetComponent<SpriteRenderer>();
+                SpriteRenderer SpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer SpriteRenderer2 = childObject2.GetComponent<SpriteRenderer>();
 
-                spriteRenderer.enabled = false;
-                spriteRenderer2.enabled = false;
+                SpriteRenderer.enabled = false;
+                SpriteRenderer2.enabled = false;
 
                 sword.SetActive(false);
+                swordHurt.GetComponent<BoxCollider2D>().enabled = false;
+
                 swordHurt.SetActive(false);
 
                 gun.SetActive(true);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
-                spriteRenderer2.enabled = true;
+                SpriteRenderer.enabled = true;
+                SpriteRenderer2.enabled = true;
             }
             else if (playerSwitcher.S.playerType == "ninja")
             {
+                ammoText.enabled = true;
 
                 player.GetComponent<SpriteRenderer>().sprite = ninjaShot;
 
@@ -304,28 +446,33 @@ public class weaponSwitch : MonoBehaviour
                 GameObject offset = shotgun.transform.Find("gunoffset")?.gameObject;
 
 
-                GameObject childObject = offset.transform.Find("actualshotgun")?.gameObject;
+                 childObject = offset.transform.Find("actualshotgun")?.gameObject;
                 
 
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer SpriteRenderer = childObject.GetComponent<SpriteRenderer>();
                 
 
-                spriteRenderer.enabled = false;
+                SpriteRenderer.enabled = false;
                 
 
                 katana.SetActive(false);
+                katanaHurt.GetComponent<BoxCollider2D>().enabled = false;
+
                 katanaHurt.SetActive(false);
 
                 shotgun.SetActive(true);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                SpriteRenderer.enabled = true;
                 
             }
             else if (playerSwitcher.S.playerType == "soldier")
             {
+
+                ammoText.enabled = true;
+
                 player.GetComponent<SpriteRenderer>().sprite = soldierSword;
 
 
@@ -341,20 +488,22 @@ public class weaponSwitch : MonoBehaviour
 
                 GameObject offset = rpg.transform.Find("gunoffset")?.gameObject;
 
-                GameObject childObject = offset.transform.Find("actualshotgun")?.gameObject;
+                 childObject = offset.transform.Find("actualshotgun")?.gameObject;
 
                 
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer SpriteRenderer = childObject.GetComponent<SpriteRenderer>();
 
-                spriteRenderer.enabled = false;
+                SpriteRenderer.enabled = false;
 
+
+                knifeHurt.GetComponent<BoxCollider2D>().enabled = false;
 
                 knifeHurt.SetActive(false);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                SpriteRenderer.enabled = true;
             }
             else if (playerSwitcher.S.playerType == "bunny")
             {
@@ -373,25 +522,176 @@ public class weaponSwitch : MonoBehaviour
 
                 GameObject offset = kitchenKnife.transform.Find("gunoffset")?.gameObject;
 
-                GameObject childObject = offset.transform.Find("knifesprite")?.gameObject;
+                 childObject = offset.transform.Find("knifesprite")?.gameObject;
 
 
 
-                SpriteRenderer spriteRenderer = childObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer SpriteRenderer = childObject.GetComponent<SpriteRenderer>();
 
-                spriteRenderer.enabled = false;
+                SpriteRenderer.enabled = false;
 
+
+                axeHurt.GetComponent<BoxCollider2D>().enabled = false;
 
                 axeHurt.SetActive(false);
 
                 yield return new WaitForSeconds(0.1f);
 
-                spriteRenderer.enabled = true;
+                SpriteRenderer.enabled = true;
+            }
+            else if (playerSwitcher.S.playerType == "shop")
+            {
+
+
+                coinGun.SetActive(false);
+                coinGunUI.SetActive(false);
+
+
+
+                GameObject offset = coinGun.transform.Find("gunoffset")?.gameObject;
+
+
+                childObject = offset.transform.Find("gunGrip")?.gameObject;
+                GameObject childObject2 = offset.transform.Find("gunBarrel")?.gameObject;
+
+
+                weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+                SpriteRenderer weaponSpriteRenderer2 = childObject2.GetComponent<SpriteRenderer>();
+
+
+                weaponSpriteRenderer.enabled = false;
+                weaponSpriteRenderer2.enabled = false;
+
+
+                switch (shopKeeperWeaponRandomiser.S.theWeapon)
+                {
+                    case "cane":
+
+                        playerMovementSpeedStore.S.speed += 0.7f;
+                        cane.SetActive(true);
+                        caneUI.SetActive(true);
+                        caneHurt.SetActive(true);
+
+
+                        childObject = cane.transform.Find("walkingCane")?.gameObject;
+
+                        weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+
+
+
+                        break;
+                    case "scythe":
+                        scythe.SetActive(true);
+                        scytheUI.SetActive(true);
+                        scytheHurt.SetActive(true);
+
+                        childObject = scythe.transform.Find("scythe")?.gameObject;
+
+                        weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+
+                        break;
+                    case "longSword":
+                        longSword.SetActive(true);
+                        longSwordUI.SetActive(true);
+                        longSwordHurt.SetActive(true);
+
+                        childObject = longSword.transform.Find("longSword")?.gameObject;
+
+                        weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+
+                        break;
+                }
+
+                // implement spriterenderer disabling and enabling
+
+
+                
+
+
+
+                yield return new WaitForSeconds(0.1f);
+
+                weaponSpriteRenderer.enabled = true;
+
+
+
+
+
+
+
             }
 
         }
+        else if (weaponEquipped == 3)// other weapon
+        {
+            switch (shopKeeperWeaponRandomiser.S.theWeapon)
+            {
+                case "cane":
 
-        
+
+                    cane.SetActive(false);
+                    caneUI.SetActive(false);
+                    caneHurt.SetActive(false);
+
+
+                    playerMovementSpeedStore.S.speed -= 0.7f;
+
+
+                    childObject = cane.transform.Find("walkingCane")?.gameObject;
+
+                    weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+                    weaponSpriteRenderer.enabled = false;
+                    break;
+                case "scythe":
+                    scythe.SetActive(false);
+                    scytheUI.SetActive(false);
+                    scytheHurt.SetActive(false);
+
+                    childObject = scythe.transform.Find("scythe")?.gameObject;
+
+                    weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+                    weaponSpriteRenderer.enabled = false;
+                    break;
+                case "longSword":
+                    longSword.SetActive(false);
+                    longSwordUI.SetActive(false);
+                    longSwordHurt.SetActive(false);
+
+                    childObject = longSword.transform.Find("longSword")?.gameObject;
+
+                    weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+                    weaponSpriteRenderer.enabled = false;
+                    break;
+            }
+
+            dagger.SetActive(true);
+
+            daggerHurt.SetActive(true);
+
+            daggerUI.SetActive(true);
+
+            
+
+
+            childObject = dagger.transform.Find("Dagger")?.gameObject;
+
+            weaponSpriteRenderer = childObject.GetComponent<SpriteRenderer>();
+
+
+            yield return new WaitForSeconds(0.1f);
+
+            weaponSpriteRenderer.enabled = true;
+        }
+
+
+
     }
     
 
@@ -399,8 +699,31 @@ public class weaponSwitch : MonoBehaviour
     void Update()
     {
 
+        player = GameObject.FindWithTag("Player");
+
+
         if ((Input.GetMouseButtonDown(1)) && !hpStorePlayer.S.gameOver)
         {
+            switch(weaponEquipped)
+            {
+                case 1:
+                    weaponEquipped = 2;
+                    break;
+                case 2:
+                    if (playerSwitcher.S.playerType == "shop")
+                    {
+                        weaponEquipped = 3;
+                    }
+                    else
+                    {
+                        weaponEquipped = 1;
+                    }
+                    break;
+                case 3:
+                    weaponEquipped = 1;
+                    break;
+            }
+
             StartCoroutine(equip());
         }
 

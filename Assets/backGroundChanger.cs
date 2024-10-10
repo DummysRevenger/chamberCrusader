@@ -10,15 +10,18 @@ public class backGroundChanger : MonoBehaviour
     public Sprite dungeon;
     public Sprite bloodZone;
     public Sprite desert;
+    public Sprite theOnion;
 
     private bool dungeonOpened = false;
     private bool bloodOpened = false;
     private bool desertOpened = false;
+    private bool onionOpened = false;
 
 
     public Sprite DopenedSprite;
     public Sprite bloodOpenedSprite;
     public Sprite desertOpenedSprite;
+    public Sprite theOnionOpenedSprite;
 
     public Sprite bloodZoneClosed;
     public Sprite desertClosed;
@@ -26,6 +29,8 @@ public class backGroundChanger : MonoBehaviour
     public GameObject bloodCondition;
 
     public GameObject desertCondition;
+
+    public GameObject onionCondition;
 
     private Animator openAnimator;
 
@@ -139,6 +144,48 @@ public class backGroundChanger : MonoBehaviour
                     }
 
                     bloodCondition.SetActive(false);
+
+                    break;
+
+                case 4:
+
+
+                    onionOpened = false;
+
+
+
+                    if (!room20checker.desertRoom20Reached)
+                    {
+                        onionCondition.SetActive(true);
+                        openAnimator.enabled = false;
+                        //spriteRenderer.sprite = onionClosed;
+                        spriteRenderer.sortingOrder = 1;
+
+
+                    }
+                    else
+                    {
+                        spriteRenderer.sprite = theOnion;
+
+
+
+                        //openAnimator.SetTrigger("opendesert");
+                        onionOpened = true;
+
+                        onionCondition.SetActive(false);
+
+
+                    }
+
+
+                    spriteRenderer.color = new Color(1f, 1f, 1f);
+
+                    onionCondition.SetActive(false);
+
+                    break;
+
+                case 5:
+                    spriteRenderer.color = new Color(0.3f, 0.1f, 0f);
 
                     break;
             }

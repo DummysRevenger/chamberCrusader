@@ -52,26 +52,45 @@ public class playerMovement : MonoBehaviour
     {
         S = this;
 
+        Invoke("findPlayerMoveScript", 0.5f);
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void findPlayerMoveScript()
+    {
         switch (selectCharacter.characterSelected)
         {
             case "bunny":
-                speed = 5f;
+                playerMovementSpeedStore.S.speed = 5f;
                 break;
             case "knight":
-                speed = 5f;
+            case "pride":
+            case "envy":
+                playerMovementSpeedStore.S.speed = 4f;
+                break;
+            case "sloth":
+                playerMovementSpeedStore.S.speed = 2.5f;
+                break;
+            case "gluttony":
+                playerMovementSpeedStore.S.speed = 3f;
                 break;
 
             case "ninja":
-                speed = 7f;
+            case "greed":
+            case "lust":
+                playerMovementSpeedStore.S.speed = 7f;
                 break;
 
             case "soldier":
-                speed = 6f;
+            case "wrath":
+                playerMovementSpeedStore.S.speed = 6f;
+                break;
+            case "shop":
+                playerMovementSpeedStore.S.speed = 5f;
                 break;
 
         }
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -87,16 +106,51 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    private float GetHorizontalInput()
+    {
+        if (Input.GetKey(KeyCode.H) || Input.GetKey(KeyCode.A))
+        {
+            return -1f; // Move left
+        }
+        else if (Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.D))
+        {
+            return 1f; // Move right
+        }
+        else
+        {
+            return 0f; // Don't move horizontally
+        }
+    }
+
+    private float GetVerticalInput()
+    {
+        if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.S))
+        {
+            return -1f; // Move down
+        }
+        else if (Input.GetKey(KeyCode.U) || Input.GetKey(KeyCode.W))
+        {
+            return 1f; // Move up
+        }
+        else
+        {
+            return 0f; // Don't move vertically
+        }
+    }
+
     private void FixedUpdate()
     {
-        if (!hpStorePlayer.S.gameOver)
-        {
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
+
+       
+
+            if (!hpStorePlayer.S.gameOver)
+            {
+            float horizontalInput = GetHorizontalInput();
+            float verticalInput = GetVerticalInput();
 
 
 
-             movement = new Vector3(horizontalInput, verticalInput, 0f) * speed * Time.deltaTime;
+             movement = new Vector3(horizontalInput, verticalInput, 0f) * playerMovementSpeedStore.S.speed * Time.deltaTime;
 
 
             if (!facingShot)
@@ -105,7 +159,7 @@ public class playerMovement : MonoBehaviour
             {
                 if (Time.frameCount % 120 < 60)
                 {
-                    if (weaponSwitch.S.gunEquipped)
+                    if (weaponSwitch.S.weaponEquipped == 1)
                     {
                         spriteRenderer.sprite = upRightLeggun;
 
@@ -119,7 +173,7 @@ public class playerMovement : MonoBehaviour
 
                 else
                 {
-                    if (weaponSwitch.S.gunEquipped)
+                    if (weaponSwitch.S.weaponEquipped == 1)
                     {
                         spriteRenderer.sprite = upLeftLeggun;
 
@@ -134,7 +188,7 @@ public class playerMovement : MonoBehaviour
             {
                 if (Time.frameCount % 120 < 60)
                 {
-                    if (weaponSwitch.S.gunEquipped)
+                    if (weaponSwitch.S.weaponEquipped == 1)
                     {
                         spriteRenderer.sprite = downRightLeggun;
 
@@ -146,7 +200,7 @@ public class playerMovement : MonoBehaviour
                 }
                 else
                 {
-                    if (weaponSwitch.S.gunEquipped)
+                    if (weaponSwitch.S.weaponEquipped == 1)
                     {
                         spriteRenderer.sprite = downLeftLeggun;
 
@@ -159,7 +213,7 @@ public class playerMovement : MonoBehaviour
             }
             else if (horizontalInput > 0)
             {
-                if (weaponSwitch.S.gunEquipped)
+                if (weaponSwitch.S.weaponEquipped == 1)
                 {
                     spriteRenderer.sprite = rightSpritegun;
 
@@ -171,7 +225,7 @@ public class playerMovement : MonoBehaviour
             }
             else if (horizontalInput < 0)
             {
-                if (weaponSwitch.S.gunEquipped)
+                if (weaponSwitch.S.weaponEquipped == 1)
                 {
                     spriteRenderer.sprite = leftSpritegun;
 
@@ -189,7 +243,7 @@ public class playerMovement : MonoBehaviour
         }
 
 
-        if (weaponSwitch.S.gunEquipped)
+        if (weaponSwitch.S.weaponEquipped == 1)
         {
 
 

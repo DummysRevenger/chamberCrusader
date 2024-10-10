@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7061255075837038227}
   - component: {fileID: -3131327558473551720}
   - component: {fileID: 3938448122599189760}
+  - component: {fileID: -401740275471826329}
+  - component: {fileID: 5568586160605492455}
   m_Layer: 2
   m_Name: playerBullet
   m_TagString: bullet
@@ -123,6 +125,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2416608592549022103}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -146,7 +149,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,7 +161,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
 --- !u!114 &-3131327558473551720
@@ -172,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f67ab9b9918a01a45807f208aa7f0485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodGoblin: {fileID: 0}
 --- !u!82 &3938448122599189760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -268,3 +272,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-401740275471826329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416608592549022103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51aba1ca166e8d44be64e793b89e376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5568586160605492455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416608592549022103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364dc667338ea45468831235b432f65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -32,6 +32,38 @@ public class playerLoader : MonoBehaviour
     public GameObject ammoCounter;
 
 
+    public GameObject shopKeep;
+    public GameObject coinGun;
+    public GameObject dagger;
+    public GameObject randomWeapon;
+
+
+    public GameObject pride;
+    public GameObject prideSword;
+
+    public GameObject sloth;
+    public GameObject slothSpear;
+
+    public GameObject gluttony;
+    public GameObject gluttonyFork;
+
+    public GameObject envy;
+    public GameObject envyStaff;
+
+    public GameObject lust;
+    public GameObject lustGauntlets;
+    public GameObject lustGauntletHurtBox;
+
+    public GameObject greed;
+    public GameObject greedBow;
+
+    public GameObject wrath;
+    public GameObject wrathClaws;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +74,7 @@ public class playerLoader : MonoBehaviour
         {
             knight.SetActive(true);
             gun.SetActive(true);
+
 
         }
         else if (playerSwitcher.S.playerType == "ninja")
@@ -61,7 +94,51 @@ public class playerLoader : MonoBehaviour
             ammoCounter.SetActive(false);
             
         }
+        else if (playerSwitcher.S.playerType == "shop")
+        {
+            shopKeep.SetActive(true);
+            coinGun.SetActive(true);
 
+            shopKeep.GetComponent<SpriteRenderer>().enabled = true;
+            
+        }
+        else if (playerSwitcher.S.playerType == "pride")
+        {
+            pride.SetActive(true);
+            prideSword.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "sloth")
+        {
+            sloth.SetActive(true);
+            slothSpear.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "gluttony")
+        {
+            gluttony.SetActive(true);
+            gluttonyFork.SetActive(true);
+
+        }
+        else if (playerSwitcher.S.playerType == "envy")
+        {
+            envy.SetActive(true);
+            envyStaff.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "lust")
+        {
+            lust.SetActive(true);
+            lustGauntlets.SetActive(true);
+            lustGauntletHurtBox.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "greed")
+        {
+            greed.SetActive(true);
+            greedBow.SetActive(true);
+        }
+        else if (playerSwitcher.S.playerType == "wrath")
+        {
+            wrath.SetActive(true);
+            wrathClaws.SetActive(true);
+        }
     }
 
    

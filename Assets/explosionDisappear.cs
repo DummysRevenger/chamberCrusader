@@ -10,12 +10,21 @@ public class explosionDisappear : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Transform childTransform = transform.GetChild(0);
+        if (!gameObject.name.Contains("wrath") &&
+            !gameObject.name.Contains("firework") && 
+            !gameObject.name.Contains("spore"))
+        {
+            Transform childTransform = transform.GetChild(0);
 
-        boom = childTransform.gameObject;
+            boom = childTransform.gameObject;
 
 
-        Invoke("Disable", 0.7f);
+            Invoke("Disable", 0.7f);
+        }
+        else
+        {
+            Invoke("Disable", 1f);
+        }
         
     }
 

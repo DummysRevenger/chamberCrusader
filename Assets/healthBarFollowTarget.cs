@@ -12,45 +12,54 @@ public class healthBarFollowTarget : MonoBehaviour
 
     public Transform targetTransform;
 
+    public GameObject player;
+
     public Vector3 offset;
 
     public Vector3 screenPos;
 
     private RectTransform healthBarRectTransform;
+
     private Canvas canvas;
 
     private void Start()
     {
         healthBarRectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+        
     }
 
-    private void LateUpdate()
+    private void Update()
     {
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+
         if (gameObject.name.Contains("player"))
         {
-            if (playerSwitcher.S.playerType == "knight")
-            {
-                screenPos = Camera.main.WorldToScreenPoint(knightTransform.position + offset);
-            }
-            else if (playerSwitcher.S.playerType == "ninja")
-            {
-                screenPos = Camera.main.WorldToScreenPoint(ninjaTransform.position + offset);
-            }
-            else if (playerSwitcher.S.playerType == "soldier")
-            {
-                screenPos = Camera.main.WorldToScreenPoint(soldierTransform.position + offset);
-            }
-            else if (playerSwitcher.S.playerType == "bunny")
-            {
-                screenPos = Camera.main.WorldToScreenPoint(bunnyTransform.position + offset);
-            }
+            
+                screenPos = Camera.main.WorldToScreenPoint(player.transform.position + offset);
+            
         }
-        else
+        else if (targetTransform != null)
         {
             screenPos = Camera.main.WorldToScreenPoint(targetTransform.position + offset);
         }
+        else if (targetTransform == null)
+        {
+            Destroy(gameObject);
+        }
 
+        if (targetTransform != null && targetTransform.name == "strongZombieSprite")
+        {
+            
+
+            offset = new Vector3(-1f, 1f, 0f);
+
+        }
         
 
 

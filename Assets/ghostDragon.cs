@@ -13,24 +13,45 @@ public class ghostDragon : MonoBehaviour
 
     private GameObject sign;
 
+    private bool destroyWarningFlag;
+
+    public float movementSpeed = 0.2f;
+
+    public bool enemySlowedDown;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        if (gameObject.name.Contains("thrombus"))
+        {
+            Invoke("destroyWarning", 11f);
+        }
     }
 
 
     IEnumerator teleportBack()
     {
 
-        
-
         Vector2 newPos = new Vector2(-20f, player.transform.position.y);
 
-        sign = Instantiate(warning, newPos, Quaternion.identity);
+        if (gameObject.name.Contains("Left"))
+        {
+            newPos = new Vector2(20f, player.transform.position.y);
 
-        sign.transform.position = new Vector2(-10f, player.transform.position.y);
+            sign = Instantiate(warning, newPos, Quaternion.identity);
 
+            sign.transform.position = new Vector2(10f, player.transform.position.y);
+        }
+        else
+        {
+            newPos = new Vector2(-20f, player.transform.position.y);
+
+            sign = Instantiate(warning, newPos, Quaternion.identity);
+
+            sign.transform.position = new Vector2(-10f, player.transform.position.y);
+        }
 
         
 
@@ -53,31 +74,57 @@ public class ghostDragon : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
+
             // Inflict damage on the player
-
-            
-            
-            
-                hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage * 10f;
-            
-
+            hpStorePlayer.S.playerHealth -= nextRoomChecker.S.meleeDamage * 100f * Time.deltaTime * playerDamageTakenMultiplierStore.damageMultiplier;
         }
     }
 
+    void destroyWarning()
+    {
+        destroyWarningFlag = true;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
 
-        
-
-        transform.position = new Vector2(transform.position.x + 0.2f, transform.position.y) ;
-
-        if (transform.position.x > 15f && !randomChosen)
+        if (destroyWarningFlag)
         {
-            randomChosen = true;
-            StartCoroutine(teleportBack());
+            if (warning != null)
+            {
+                Destroy(sign);
+            }
         }
+
+
+        if (gameObject.name.Contains("Left"))
+        {
+            transform.position = new Vector2(transform.position.x - movementSpeed, transform.position.y);
+
+            if (transform.position.x < -15f && !randomChosen)
+            {
+                randomChosen = true;
+                StartCoroutine(teleportBack());
+            }
+        }
+        else
+        {
+
+
+            transform.position = new Vector2(transform.position.x + movementSpeed, transform.position.y);
+
+
+            if (transform.position.x > 15f && !randomChosen)
+            {
+                randomChosen = true;
+                StartCoroutine(teleportBack());
+            }
+        }
+
+
+
+        
 
         if (enemiesInRoomChecker.S.enemiesInRoomNumber == 0)
         {

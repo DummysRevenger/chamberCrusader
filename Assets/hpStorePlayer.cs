@@ -12,8 +12,8 @@ public class hpStorePlayer : MonoBehaviour
 
     public GameObject gameOverText;
 
-
     public bool gameOver;
+
     public bool gameOverTextShown;
 
     public GameObject sequence;
@@ -26,41 +26,65 @@ public class hpStorePlayer : MonoBehaviour
         switch(selectCharacter.characterSelected)
         {
             case "bunny":
-                playerHealth = 1500f;
-                maxHealth = 1500f;
+            case "lust":
+                playerHealth = 800f;
+                maxHealth = 800f;
                 break;
             case "knight":
+            case "sloth":
+            case "wrath":
                 playerHealth = 1750f;
                 maxHealth = 1750f;
                 break;
 
+            case "gluttony":
+                playerHealth = 2000f;
+                maxHealth = 2000f;
+                break;
+
             case "ninja":
+            case "pride":
+            case "envy":
                 playerHealth = 1000f;
                 maxHealth = 1000f;
                 break;
 
             case "soldier":
-                playerHealth = 1200f;
-                maxHealth = 1200f;
+            case "shop":
+            case "greed":
+                playerHealth = 1500f;
+                maxHealth = 1500f;
                 break;
 
 
-
-
         }
+
+        
+
+
         S = this;
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("enemySword"))
+        {
+            playerHealth -= 300 * playerDamageTakenMultiplierStore.damageMultiplier;
+        }
+    }
+
+
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (selectCharacter.mapSelected == "desert" && collision.gameObject.CompareTag("wall"))
         {
-            playerHealth -= 3f;
-
-            
-
-
+            playerHealth -= 3f * playerDamageTakenMultiplierStore.damageMultiplier;
         }
+
+
+        
     }
 
 
@@ -68,6 +92,15 @@ public class hpStorePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        playerHealth = 99999999f;
+
+
+
+        // make the player invincible
+        //playerHealth = 9999f;
+
         if (playerHealth <= 0 && !gameOver)
         {
             AudioSource audioSource = GetComponent<AudioSource>();
@@ -77,15 +110,17 @@ public class hpStorePlayer : MonoBehaviour
 
             statsStore.deaths++;
 
-            
 
+            Collider2D playerCollider = GetComponent<Collider2D>();
+
+            playerCollider.isTrigger = true;
 
             DecreaseAudioSourceVolumes();
 
             sequence.SetActive(true);
         }
 
-        if (playerHealth < maxHealth)
+        if (playerHealth < maxHealth && selectCharacter.characterSelected != "bunny" && !pauseGame.isPaused)
         {
             playerHealth += 0.1f;
         }

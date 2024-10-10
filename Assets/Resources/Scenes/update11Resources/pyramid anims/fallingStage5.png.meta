@@ -1,0 +1,656 @@
+fileFormatVersion: 2
+guid: 3f2ba9b4e1f9e674ea629e37b06dcc9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5050512015501762627
+    second: fallingStage5_0
+  - first:
+      213: -1387623980030880894
+    second: fallingStage5_1
+  - first:
+      213: -1179179643853342762
+    second: fallingStage5_2
+  - first:
+      213: 6950173059022821270
+    second: fallingStage5_3
+  - first:
+      213: 5544965985273471757
+    second: fallingStage5_4
+  - first:
+      213: -8028129218119818515
+    second: fallingStage5_5
+  - first:
+      213: 3581321027960166812
+    second: fallingStage5_6
+  - first:
+      213: -4429846684646148710
+    second: fallingStage5_7
+  - first:
+      213: -570767694406201204
+    second: fallingStage5_8
+  - first:
+      213: -5889378307345764267
+    second: fallingStage5_9
+  - first:
+      213: -8585076040051891217
+    second: fallingStage5_10
+  - first:
+      213: -546424887814908516
+    second: fallingStage5_11
+  - first:
+      213: 5177122141055156649
+    second: fallingStage5_12
+  - first:
+      213: 986028852597875254
+    second: fallingStage5_13
+  - first:
+      213: 9218907576524391589
+    second: fallingStage5_14
+  - first:
+      213: 6233029177364452266
+    second: fallingStage5_15
+  - first:
+      213: -8600058076404858016
+    second: fallingStage5_16
+  - first:
+      213: -7268228859638689252
+    second: fallingStage5_17
+  - first:
+      213: -308004514495182439
+    second: fallingStage5_18
+  - first:
+      213: -2760530300923094085
+    second: fallingStage5_19
+  - first:
+      213: -3992486434681590413
+    second: fallingStage5_20
+  - first:
+      213: -8217616939862401822
+    second: fallingStage5_21
+  - first:
+      213: -8994720710472646114
+    second: fallingStage5_22
+  - first:
+      213: -8799643291714790755
+    second: fallingStage5_23
+  - first:
+      213: -4026347347140303584
+    second: fallingStage5_24
+  - first:
+      213: -2082203125862008311
+    second: fallingStage5_25
+  - first:
+      213: -6875630308792289262
+    second: fallingStage5_26
+  - first:
+      213: 7741090229210322102
+    second: fallingStage5_27
+  - first:
+      213: -4910804960740719343
+    second: fallingStage5_28
+  - first:
+      213: -951563369584819885
+    second: fallingStage5_29
+  - first:
+      213: 7975883494870208687
+    second: fallingStage5_30
+  - first:
+      213: 7447172085966423927
+    second: fallingStage5_31
+  - first:
+      213: -8313601768984167127
+    second: fallingStage5_32
+  - first:
+      213: -8542848929805841467
+    second: fallingStage5_33
+  - first:
+      213: 5275750687472482159
+    second: fallingStage5_34
+  - first:
+      213: -1817002958688129325
+    second: fallingStage5_35
+  - first:
+      213: -5830453503936506727
+    second: fallingStage5_36
+  - first:
+      213: -1025457900026226869
+    second: fallingStage5_37
+  - first:
+      213: -4614429971369452295
+    second: fallingStage5_38
+  - first:
+      213: -2527952842167570571
+    second: fallingStage5_39
+  - first:
+      213: 441177761218069810
+    second: fallingStage5_40
+  - first:
+      213: 883153154890064012
+    second: fallingStage5_41
+  - first:
+      213: 6908253730742779308
+    second: fallingStage5_42
+  - first:
+      213: 1798042873420705531
+    second: fallingStage5_43
+  - first:
+      213: -5580468302922372540
+    second: fallingStage5_44
+  - first:
+      213: 2965003456842295678
+    second: fallingStage5_45
+  - first:
+      213: 2240043642343894110
+    second: fallingStage5_46
+  - first:
+      213: 5518488911010940201
+    second: fallingStage5_47
+  - first:
+      213: -3176571181218098420
+    second: fallingStage5_48
+  - first:
+      213: -5474417018098561685
+    second: fallingStage5_49
+  - first:
+      213: -125588745688196014
+    second: fallingStage5_50
+  - first:
+      213: -2899066747125082050
+    second: fallingStage5_51
+  - first:
+      213: -4430106441394848770
+    second: fallingStage5_52
+  - first:
+      213: 214910316612847694
+    second: fallingStage5_53
+  - first:
+      213: 6401932561279272265
+    second: fallingStage5_54
+  - first:
+      213: -4350111151886498487
+    second: fallingStage5_55
+  - first:
+      213: -8707895118095820194
+    second: fallingStage5_56
+  - first:
+      213: -6505619495923755208
+    second: fallingStage5_57
+  - first:
+      213: -2661674894720948099
+    second: fallingStage5_58
+  - first:
+      213: -6600279246746042336
+    second: fallingStage5_59
+  - first:
+      213: -4959720413275521686
+    second: fallingStage5_60
+  - first:
+      213: -6415536581405372943
+    second: fallingStage5_61
+  - first:
+      213: -9065663716988784891
+    second: fallingStage5_62
+  - first:
+      213: 6654718059317772545
+    second: fallingStage5_63
+  - first:
+      213: 4941368680383370842
+    second: fallingStage5_64
+  - first:
+      213: 6237190227396418676
+    second: fallingStage5_65
+  - first:
+      213: 845505098264498769
+    second: fallingStage5_66
+  - first:
+      213: -5453505590204005786
+    second: fallingStage5_67
+  - first:
+      213: 4629584780867131262
+    second: fallingStage5_68
+  - first:
+      213: -4447783974988208467
+    second: fallingStage5_69
+  - first:
+      213: -6184175958708206730
+    second: fallingStage5_70
+  - first:
+      213: -8448338082114321974
+    second: fallingStage5_71
+  - first:
+      213: -4058260731165054315
+    second: fallingStage5_72
+  - first:
+      213: 4942776840389475358
+    second: fallingStage5_73
+  - first:
+      213: -622731487205253670
+    second: fallingStage5_74
+  - first:
+      213: -7909531326730146120
+    second: fallingStage5_75
+  - first:
+      213: 4931052966710663972
+    second: fallingStage5_76
+  - first:
+      213: -4467702863230642856
+    second: fallingStage5_77
+  - first:
+      213: -378350436009946520
+    second: fallingStage5_78
+  - first:
+      213: -1178795381709482995
+    second: fallingStage5_79
+  - first:
+      213: -3119164486906569988
+    second: fallingStage5_80
+  - first:
+      213: -2318116208686742128
+    second: fallingStage5_81
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fallingStage5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bcbecbc846f414e825826158d6c8e9
+      internalID: -1839857371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fc5307a0f023349839dcb04a1c9b84
+      internalID: -576783527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_2
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfffdb50b8732c54ca9d0c89c981dd16
+      internalID: -669703820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_3
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c101ca56c921d7e4a8600f7f38dd5cff
+      internalID: 1304493809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289a0569ccdc45248b6fbfa774b9109c
+      internalID: -13795863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_5
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c71750bb887e2446adc721e82e84861
+      internalID: -376457304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1d7f7adb905cf4eab62e483d925c34
+      internalID: 1595184985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_7
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e4dd28fd3fa36418b94fceba8609eb
+      internalID: 2145884715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_8
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af99421e9b5a3a94187c8b53bd0fee31
+      internalID: -289184275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_9
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e73f68728bceed4f917d5b0cc263b17
+      internalID: 1573709492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_10
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732f8c3f65a9c104f9c3a68570f9a12b
+      internalID: 497165353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_11
+      rect:
+        serializedVersion: 2
+        x: 11000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4e2158db0b3b748a1925198433621a
+      internalID: -452869867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fallingStage5_12
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 0
+        width: 1000
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a575787e4b2aa4fbdccb9e705fb6e2
+      internalID: -432123849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e4871c187f2e12a4b9b99a2ed25a8cc7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      fallingStage5_0: -1839857371
+      fallingStage5_1: -576783527
+      fallingStage5_10: 497165353
+      fallingStage5_11: -452869867
+      fallingStage5_12: -432123849
+      fallingStage5_2: -669703820
+      fallingStage5_3: 1304493809
+      fallingStage5_4: -13795863
+      fallingStage5_5: -376457304
+      fallingStage5_6: 1595184985
+      fallingStage5_7: 2145884715
+      fallingStage5_8: -289184275
+      fallingStage5_9: 1573709492
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

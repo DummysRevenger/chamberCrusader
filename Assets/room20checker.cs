@@ -7,6 +7,7 @@ public class room20checker : MonoBehaviour
     public static room20checker S;
     public static bool room20Reached = false;
     public static bool bloodRoom20Reached = false;
+    public static bool desertRoom20Reached = false;
 
 
     // Start is called before the first frame update
@@ -20,12 +21,17 @@ public class room20checker : MonoBehaviour
     {
         room20Reached = true;
 
-        Debug.Log("20 unlocked");
+        
     }
 
     public void bloodZone20Reached()
     {
         bloodRoom20Reached = true;
+    }
+
+    public void desert20Reached()
+    {
+        desertRoom20Reached = true;
     }
     
     

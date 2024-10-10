@@ -17,38 +17,17 @@ public class destroyWall : MonoBehaviour
     {
 
 
-        
 
-        knight = GameObject.Find("player");
 
-        ninja = GameObject.Find("playerninja");
-
-        soldier = GameObject.Find("playersoldier");
-
-        bunny = GameObject.Find("playerbunny");
+        playerObject = GameObject.FindGameObjectWithTag("Player");
     }
 
     void FixedUpdate()
     {
 
-        if (playerSwitcher.S.playerType == "knight")
-        {
-            playerObject = knight;
-        }
-        else if (playerSwitcher.S.playerType == "ninja")
-        {
-            playerObject = ninja;
-        }
-        else if (playerSwitcher.S.playerType == "soldier")
-        {
-            playerObject = soldier;
-        }
-        else if (playerSwitcher.S.playerType == "bunny")
-        {
-            playerObject = bunny;
-        }
 
-        if (playerObject.transform.position.y > 7.9f)
+        if (playerObject.transform.position.y > 7.9f && enemiesInRoomChecker.S.enemiesInRoomNumber == 0
+            && tutorialDoneChecker.tutorialDone)
         {
             transform.position = new Vector2(99f, 99f);
             Destroy(gameObject);

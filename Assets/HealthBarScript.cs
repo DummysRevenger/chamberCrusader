@@ -23,6 +23,13 @@ public class HealthBarScript : MonoBehaviour
     {
         initialFillWidth = fillRect.sizeDelta.x;
 
+        Invoke("setPlayer", 0.5f);
+
+    }
+
+
+    void setPlayer()
+    {
         if (gameObject.name.Contains("player"))
         {
 
@@ -43,10 +50,16 @@ public class HealthBarScript : MonoBehaviour
                 player = bunny;
             }
         }
-
     }
+
     public void Update()
     {
+
+        if (hpStorePlayer.S.playerHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
 
 
         if (!gameObject.CompareTag("enemyHP"))

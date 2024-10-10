@@ -30,6 +30,7 @@ public class playerPrefsTest : MonoBehaviour
     public static int roomsSeenValue;
     public static int roomsSkippedValue;
     public static int charactersUnlockedValue;
+    public static int coinNumberValue;
 
     private void Start()
     {
@@ -65,7 +66,7 @@ public class playerPrefsTest : MonoBehaviour
         {
         // Save game data using PlayerPrefs
 
-        tutorialValue = tutorialDoneChecker.tutorialDone ? 1 : 0;
+            //tutorialValue = tutorialDoneChecker.tutorialDone ? 1 : 0;
             
             room10Value = room10Skipper.room10reached ? 1 : 0;
 
@@ -78,6 +79,8 @@ public class playerPrefsTest : MonoBehaviour
             room30Value = room30checker.room30Reached ? 1 : 0;
 
             blueBunnyValue = blueBunnyUnlockStore.bunnyUnlocked ? 1 : 0;
+
+        
 
         // stats for stats screen
 
@@ -95,9 +98,14 @@ public class playerPrefsTest : MonoBehaviour
         roomsSeenValue = statsStore.roomsSeen;
         roomsSkippedValue = statsStore.roomsSkipped;
 
+
+
         charactersUnlockedValue = statsStore.charactersUnlocked;
 
-        
+
+        coinNumberValue = coinCounterStore.coinNumber;
+
+
 
 
         PlayerPrefs.SetInt("deaths", deathValue);
@@ -112,11 +120,12 @@ public class playerPrefsTest : MonoBehaviour
         PlayerPrefs.SetInt("roomsSeen", roomsSeenValue);
         PlayerPrefs.SetInt("roomsSkipped", roomsSkippedValue);
         PlayerPrefs.SetInt("charsUnlocked", charactersUnlockedValue);
+        PlayerPrefs.SetInt("coinNumber", coinNumberValue);
 
 
 
 
-        PlayerPrefs.SetInt("tutorialDone", tutorialValue);
+        //PlayerPrefs.SetInt("tutorialDone", tutorialValue);
 
             PlayerPrefs.SetInt("room10", room10Value);
             PlayerPrefs.SetInt("room20", room20Value);
@@ -236,9 +245,9 @@ public class playerPrefsTest : MonoBehaviour
 
         if (PlayerPrefs.HasKey("tutorialDone"))
         {
-            tutorialValue = PlayerPrefs.GetInt("tutorialDone");
+            //tutorialValue = PlayerPrefs.GetInt("tutorialDone");
 
-            tutorialDoneChecker.tutorialDone = true;
+            //tutorialDoneChecker.tutorialDone = true;
         }
 
 
@@ -320,6 +329,10 @@ public class playerPrefsTest : MonoBehaviour
                 room30checker.room30Reached = false;
                 }
                 
+            }
+            if (PlayerPrefs.HasKey("coinNumber"))
+            {
+                coinNumberValue = PlayerPrefs.GetInt("coinNumber");
             }
 
         }
