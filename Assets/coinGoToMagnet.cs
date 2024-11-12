@@ -5,7 +5,7 @@ using UnityEngine;
 public class coinGoToMagnet : MonoBehaviour
 {
     private GameObject player;
-    private float moveSpeed = 3f;
+    private float moveSpeed = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +14,7 @@ public class coinGoToMagnet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (magnetiseGold.magnetFound)
         {

@@ -39,6 +39,8 @@ public class LineOfSightCheck : MonoBehaviour
                 // The ray hit the target, the target is in line of sight
                 playerMovementSpeedStore.S.speed = 2f;
 
+                targetGameObject.GetComponent<hpStorePlayer>().playerHealth -= 5 * Time.deltaTime;
+
                 theAnimator.SetBool("eyeOpen", true);
             }
             else

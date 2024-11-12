@@ -145,8 +145,8 @@ public class playerMovement : MonoBehaviour
 
             if (!hpStorePlayer.S.gameOver)
             {
-            float horizontalInput = GetHorizontalInput();
-            float verticalInput = GetVerticalInput();
+                float horizontalInput = GetHorizontalInput();
+                float verticalInput = GetVerticalInput();
 
 
 

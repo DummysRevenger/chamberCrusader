@@ -64,7 +64,7 @@ public class hpStore : MonoBehaviour
 
         if (!gameObject.name.Contains("dragon") && !gameObject.name.Contains("ghost") &&
             !gameObject.name.Contains("Skull") && !gameObject.name.Contains("sporangium") && !gameObject.name.Contains("UFO")
-            && !gameObject.name.Contains("voidWraith") && !gameObject.name.Contains("waspHive"))
+            && !gameObject.name.Contains("voidWraith") && !gameObject.name.Contains("waspHive") && !gameObject.name.Contains("the Plant"))
         {
 
             enemiesInRoomChecker.S.enemiesInRoomNumber += 1;
@@ -83,9 +83,15 @@ public class hpStore : MonoBehaviour
             pyramidDown = false;
         }
 
-        halfWyvernLeft = Resources.Load("Scenes/update12Resources/luststorm/halfWyvernLeft") as GameObject;
 
-        halfWyvernRight = Resources.Load("Scenes/update12Resources/luststorm/halfWyvernRight") as GameObject;
+        if (gameObject.name.Contains("wyvern"))
+        {
+            halfWyvernLeft = Resources.Load("Scenes/update12Resources/luststorm/halfWyvernLeft") as GameObject;
+
+            halfWyvernRight = Resources.Load("Scenes/update12Resources/luststorm/halfWyvernRight") as GameObject;
+        }
+
+
 
         string bonbonPath = "Scenes/update11Resources/newprefabs/candy/bonbon";
         string candyCanePath = "Scenes/update11Resources/newprefabs/candy/candyCane";
@@ -276,7 +282,7 @@ public class hpStore : MonoBehaviour
 
         }
 
-        else if (gameObject.name.Contains("trapPlant"))
+        else if (gameObject.name.Contains("trapPlant") || gameObject.name.Contains("halfWyvern"))
         {
             health = nextRoomChecker.S.enemyHealth * 3f;
             maxHealth = nextRoomChecker.S.enemyHealth * 3f;
@@ -556,12 +562,21 @@ public class hpStore : MonoBehaviour
 
             if (gameObject.name.Contains("worm") || gameObject.name.Contains("Leviathan"))
             {
+
+
+                GetComponent<jumpAtPlayer>().CancelInvoke("warn");
+
+                GetComponent<jumpAtPlayer>().CancelInvoke("disappear");
+
+
+                Debug.Log("wtf bro");
+
                 if (GetComponent<jumpAtPlayer>().theWarning != null)
                 {
                     GetComponent<jumpAtPlayer>().deleteWarning();
                 }
 
-                GetComponent<jumpAtPlayer>().CancelInvoke("warn");
+                
 
             }
 

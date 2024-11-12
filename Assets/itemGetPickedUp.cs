@@ -26,6 +26,8 @@ public class itemGetPickedUp : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
 
+
+
             
 
             switch (gameObject.name)
@@ -38,7 +40,7 @@ public class itemGetPickedUp : MonoBehaviour
 
                         consumableItemStore.S.itemEquipped = "warmBoots";
 
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     break;
 
@@ -49,7 +51,7 @@ public class itemGetPickedUp : MonoBehaviour
                         coinCounterStore.roundCoinNumber -= 2000;
                         hpStorePlayer.S.maxHealth += 150;
                         Debug.Log("max health increased");
-                        Destroy(gameObject);    
+                        delayDisappear();
                     }
                     break;
                 case "grindStone(Clone)":
@@ -58,7 +60,7 @@ public class itemGetPickedUp : MonoBehaviour
                     {
                         coinCounterStore.roundCoinNumber -= 1500;
                         extraMeleeWeaponDamageStore.meleeDamageMultiplier += 0.5f;
-                        Destroy(gameObject);
+                        delayDisappear();
 
                     }
                     break;
@@ -66,9 +68,9 @@ public class itemGetPickedUp : MonoBehaviour
                     if (coinCounterStore.roundCoinNumber >= 1500)
                     {
                         coinCounterStore.roundCoinNumber -= 1500;
-                        playerMovementSpeedStore.S.speed *= 1.20f;
+                        playerMovementSpeedStore.S.baseMovementSpeed *= 1.20f;
                         Debug.Log("movement speed increased");
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     break;
                 case "ragePotion(Clone)":
@@ -107,7 +109,7 @@ public class itemGetPickedUp : MonoBehaviour
                                 sword.GetComponent<swordRotation>().cooldown /= 1.1f;
                                 break;
                         }
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     break;
 
@@ -119,7 +121,7 @@ public class itemGetPickedUp : MonoBehaviour
                         coinCounterStore.roundCoinNumber -= 2500;
                         ammoStore.S.playerAmmo += 100;
                         Debug.Log("ammo increased by 100");
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     else if (playerSwitcher.S.playerType != "knight"
                         && playerSwitcher.S.playerType != "ninja"
@@ -139,7 +141,7 @@ public class itemGetPickedUp : MonoBehaviour
                         coinCounterStore.roundCoinNumber -= 1000;
                         ammoStore.S.playerAmmo += 40;
                         Debug.Log("ammo increased by 40");
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     else if (playerSwitcher.S.playerType != "knight"
                         && playerSwitcher.S.playerType != "ninja"
@@ -159,7 +161,7 @@ public class itemGetPickedUp : MonoBehaviour
                         coinCounterStore.roundCoinNumber -= 500;
                         ammoStore.S.playerAmmo += 20;
                         Debug.Log("ammo increased by 20");
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     else if (playerSwitcher.S.playerType != "knight" 
                         && playerSwitcher.S.playerType != "ninja"
@@ -232,7 +234,7 @@ public class itemGetPickedUp : MonoBehaviour
 
                                 
                         }
-                        Destroy(gameObject);
+                        delayDisappear();
 
                     }
                     break;
@@ -244,7 +246,7 @@ public class itemGetPickedUp : MonoBehaviour
                         coinCounterStore.roundCoinNumber -= 200;
                         // enable the magnet attract object's script
                         magnetiseGold.magnetFound = true;
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     break;
                 case "extraBarrel(Clone)":
@@ -254,7 +256,7 @@ public class itemGetPickedUp : MonoBehaviour
                         coinCounterStore.roundCoinNumber -= 2000;
 
                         barrelCountStore.barrelCount++;
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     break;
                 case "hypnoticVortex(Clone)":
@@ -270,7 +272,7 @@ public class itemGetPickedUp : MonoBehaviour
                         nextRoomChecker.S.projectileDamage /= 1.25f;
                         nextRoomChecker.S.meleeDamage /= 1.25f;
                         nextRoomChecker.S.enemyMovementSpeed /= 1.5f;
-                        Destroy(gameObject);
+                        delayDisappear();
                     }
                     break;
             }
@@ -299,6 +301,6 @@ public class itemGetPickedUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log(coinCounterStore.roundCoinNumber);
     }
 }

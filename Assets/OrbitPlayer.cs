@@ -88,7 +88,7 @@ public class OrbitPlayer : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("metawall"))
+        if (collision.gameObject.CompareTag("metawall") || collision.gameObject.CompareTag("wall"))
         {
             orbitDirection *= -1;
         }

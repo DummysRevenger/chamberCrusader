@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 4949601568678059918}
   - component: {fileID: 6206080491308187138}
   - component: {fileID: -6909364775921326320}
+  - component: {fileID: 3326107965800671630}
   m_Layer: 2
   m_Name: waspEnemy
   m_TagString: enemy
@@ -186,6 +187,8 @@ MonoBehaviour:
   smallSkeleton: {fileID: 0}
   downAnim: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  paladinSword: {fileID: 0}
+  paladinHurtBox: {fileID: 0}
 --- !u!114 &5841736593734729296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +207,7 @@ MonoBehaviour:
   leftSprite: {fileID: 0}
   spriteRenderer: {fileID: 0}
   movementSpeed: 0
+  enemySlowedDown: 0
   Webbed: 0
   healthBar: {fileID: 4124244640310802128, guid: 4d969ec75c3513b4fad282a5bee14914, type: 3}
 --- !u!114 &-2510519232649988571
@@ -325,3 +329,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3326107965800671630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520558845528515100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450cf7291b8450545a5ce927112ea46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

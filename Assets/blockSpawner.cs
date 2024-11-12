@@ -157,7 +157,9 @@ public class blockSpawner : MonoBehaviour
 
             Debug.Log("spawn the shop");
         }
-        else if (nextRoomChecker.S.roomNumber != 20 && nextRoomChecker.S.roomNumber != 10 && nextRoomChecker.S.roomNumber % 15 != 0)
+        else if (nextRoomChecker.S.roomNumber != 20 && nextRoomChecker.S.roomNumber != 10 && nextRoomChecker.S.roomNumber % 15 != 0
+            && !(gameObject.name.Contains("middleMiddleSpawner") && (selectCharacter.mapSelected == "retribution" && (retributionMapStore.S.mapType == "vestibule" 
+            || retributionMapStore.S.mapType == "limbo" || retributionMapStore.S.mapType == "angry"))))
         {
             int enemyType = random.Next(0, 15);
 

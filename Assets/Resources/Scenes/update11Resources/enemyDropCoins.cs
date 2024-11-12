@@ -53,6 +53,10 @@ public class enemyDropCoins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Quaternion desiredRotation = Quaternion.Euler(0, 0, 0);
+
+
         if (healthScript.health <= 0)
         {
 
@@ -63,32 +67,32 @@ public class enemyDropCoins : MonoBehaviour
                 {
                     if (!dropExtraCash && !envyStealAttackAbility.S.extraCash)
                     {
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
                     }
                     else
                     {
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
                     }
                 }
                 else
                 {
                     if (!dropExtraCash)
                     {
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
                     }
                     else
                     {
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
                     }
                 }
             }
@@ -102,25 +106,25 @@ public class enemyDropCoins : MonoBehaviour
 
                         if (randomNumber > 20 && randomNumber < 70)
                         {
-                            Instantiate(coin, transform.position, transform.rotation);
+                            Instantiate(coin, transform.position, desiredRotation);
                         }
                         else if (randomNumber < 90)
                         {
-                            Instantiate(smallNote, transform.position, transform.rotation);
+                            Instantiate(smallNote, transform.position, desiredRotation);
                         }
                         else if (randomNumber < 99)
                         {
-                            Instantiate(bigNote, transform.position, transform.rotation);
+                            Instantiate(bigNote, transform.position, desiredRotation);
                         }
                         else if (randomNumber == 99)
                         {
-                            Instantiate(bar, transform.position, transform.rotation);
+                            Instantiate(bar, transform.position, desiredRotation);
                         }
                     }
                     else
                     {
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
                     }
                 }
                 else
@@ -131,36 +135,36 @@ public class enemyDropCoins : MonoBehaviour
 
                         if (randomNumber > 20 && randomNumber < 70)
                         {
-                            Instantiate(coin, transform.position, transform.rotation);
+                            Instantiate(coin, transform.position, desiredRotation);
                         }
                         else if (randomNumber < 90)
                         {
-                            Instantiate(smallNote, transform.position, transform.rotation);
+                            Instantiate(smallNote, transform.position, desiredRotation);
                         }
                         else if (randomNumber < 99)
                         {
-                            Instantiate(bigNote, transform.position, transform.rotation);
+                            Instantiate(bigNote, transform.position, desiredRotation);
                         }
                         else if (randomNumber == 99)
                         {
-                            Instantiate(bar, transform.position, transform.rotation);
+                            Instantiate(bar, transform.position, desiredRotation);
                         }
                     }
                     else
                     {
-                        Instantiate(bigNote, transform.position, transform.rotation);
-                        Instantiate(bigNote, transform.position, transform.rotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
+                        Instantiate(bigNote, transform.position, desiredRotation);
                     }
                 }
             }
             else
             {
-                Instantiate(bar, transform.position, transform.rotation);
-                Instantiate(bigNote, transform.position, transform.rotation);
-                Instantiate(bigNote, transform.position, transform.rotation);
-                Instantiate(bigNote, transform.position, transform.rotation);
-                Instantiate(bigNote, transform.position, transform.rotation);
-                Instantiate(bigNote, transform.position, transform.rotation);
+                Instantiate(bar, transform.position, desiredRotation);
+                Instantiate(bigNote, transform.position, desiredRotation);
+                Instantiate(bigNote, transform.position, desiredRotation);
+                Instantiate(bigNote, transform.position, desiredRotation);
+                Instantiate(bigNote, transform.position, desiredRotation);
+                Instantiate(bigNote, transform.position, desiredRotation);
 
             }
             

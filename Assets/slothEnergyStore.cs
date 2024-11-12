@@ -20,6 +20,8 @@ public class slothEnergyStore : MonoBehaviour
     public GameObject slothCircleObject;
 
     public Animation spearAnimation;
+
+    
     
 
     // Start is called before the first frame update
@@ -36,7 +38,7 @@ public class slothEnergyStore : MonoBehaviour
 
         if (totalEnergy > 0 && totalEnergy <= 25)
         {
-            playerMovementSpeedStore.S.speed = 2.5f;
+            playerMovementSpeedStore.S.speed = playerMovementSpeedStore.S.baseMovementSpeed;
 
             weaponScript.cooldown = 2f;
 
@@ -55,7 +57,7 @@ public class slothEnergyStore : MonoBehaviour
         }
         else if (totalEnergy > 25 && totalEnergy <= 50)
         {
-            playerMovementSpeedStore.S.speed = 3.5f;
+            playerMovementSpeedStore.S.speed = playerMovementSpeedStore.S.baseMovementSpeed + 1;
 
             weaponScript.cooldown = 1.5f;
 
@@ -71,7 +73,7 @@ public class slothEnergyStore : MonoBehaviour
         }
         else if (totalEnergy > 50 && totalEnergy <= 75)
         {
-            playerMovementSpeedStore.S.speed = 5.5f;
+            playerMovementSpeedStore.S.speed = playerMovementSpeedStore.S.baseMovementSpeed + 2;
 
             weaponScript.cooldown = 1f;
 
@@ -92,7 +94,7 @@ public class slothEnergyStore : MonoBehaviour
 
             spearAnimation["slothSpearThrust"].speed = 3f;
 
-            playerMovementSpeedStore.S.speed = 6f;
+            playerMovementSpeedStore.S.speed = playerMovementSpeedStore.S.baseMovementSpeed + 3;
 
             totalEnergy -= 20 * Time.deltaTime;
 

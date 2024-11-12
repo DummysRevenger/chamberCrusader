@@ -33,6 +33,8 @@ public class enemySpawner : MonoBehaviour
 
     public GameObject spider;
 
+    public GameObject spiderPrefab;
+
     public GameObject dragon;
 
     public GameObject sandDragon;
@@ -164,7 +166,7 @@ public class enemySpawner : MonoBehaviour
 
 
 
-
+        spiderPrefab = Resources.Load("Scenes/prefabs/enemies/spidersentryspritesheet_0") as GameObject;
 
         // retribution enemies
 
@@ -180,7 +182,7 @@ public class enemySpawner : MonoBehaviour
         caveSpider = Resources.Load("Scenes/update12Resources/limbocaves/prefab/caveSpider") as GameObject;
         crawlingSnake = Resources.Load("Scenes/update12Resources/limbocaves/prefab/crawlingSnake") as GameObject;
 
-        Debug.Log(crawlingSnake);
+        
 
 
         // storm
@@ -1239,7 +1241,7 @@ public class enemySpawner : MonoBehaviour
 
                     dragon = crawlingSnake;
 
-                    strongEnemy = hornet;
+                    strongEnemy = spiderPrefab;
 
                     ghostEnemy = ghostEnemyPrefab;
                     break;
@@ -1275,7 +1277,7 @@ public class enemySpawner : MonoBehaviour
 
                     spider = goldPool;
 
-                    dragon = dragon;
+                    dragon = gildedHorror;
 
                     strongEnemy = auricLeviathan;
 

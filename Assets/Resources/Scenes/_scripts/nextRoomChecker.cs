@@ -384,8 +384,13 @@ public class nextRoomChecker : MonoBehaviour
 
     public void triggerSpawners()
     {
+
+        player.GetComponent<playerMovement>().enabled = false;
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = playerBeginning.transform.position;
+        player.GetComponent<playerMovement>().enabled = true;
+
+
 
         if (roomNumber != 0)
         {
